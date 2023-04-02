@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>io.qameta.allure</groupId>
+  <artifactId>io.qameta.allure.gradle.plugin</artifactId>
+  <versioning>
+    <release>2.9</release>
+    <versions>
+      <version>2.9</version>
+    </versions>
+    <lastUpdated>20210523075043</lastUpdated>
+  </versioning>
+</metadata>

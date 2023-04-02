@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.1
+      author: vondacho
+      changes:
+        - createTable:
+            tableName: customer
+            columns:
+              - column:
+                  name: pk
+                  type: varchar(64)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: id
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(50)
+              - column:
+                  name: lastname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 1.2
+      author: vondacho
+      changes:
+        - createIndex:
+            tableName: customer
+            indexName: idx_customer_id
+            column:
+              name: id

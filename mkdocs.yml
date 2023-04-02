@@ -1,0 +1,24 @@
+site_name: arch-blueprint-java
+site_url: https://vondacho.github.io/arch-blueprint-java/
+repo_url: https://github.com/vondacho/arch-blueprint-java/
+repo_name: GitHub repository
+docs_dir: doc
+
+nav:
+  - Home: index.md
+  - Use cases: usecases.md
+  - Requirements: requirements.md
+  - Architecture: architecture.md
+  - Testing: testing.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: True
+
+theme: material
+
+extra_css:
+  - stylesheets/colors.css

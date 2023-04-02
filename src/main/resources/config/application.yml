@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: jpa
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password: sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+  jackson:
+    default-property-inclusion: non_null
+
+openapi:
+  spec:
+    url: openapi.yaml
