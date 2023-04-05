@@ -39,20 +39,15 @@ public class CustomerRepositoryJpaAdapter implements CustomerRepository {
 
     @Override
     public boolean update(Customer customer) {
-        return repository.findById(customer.getId().getId())
-                .map(data -> {
-                    data.setLogicalId(customer.getId());
-                    data.setLastName(customer.getLastName());
-                    data.setFirstName(customer.getFirstName());
-                    return data;
-                })
+        return repository.findByLogicalId(customer.getId())
+                .map(data -> data.set(customer))
                 .map(repository::save)
                 .isPresent();
     }
 
     @Override
     public boolean remove(CustomerId customerId) {
-        return repository.findById(customerId.getId())
+        return repository.findByLogicalId(customerId)
                 .map(data -> {
                     repository.deleteById(data.getPk());
                     return data;
@@ -61,12 +56,7 @@ public class CustomerRepositoryJpaAdapter implements CustomerRepository {
     }
 
     private JpaCustomer toData(Customer entity) {
-        return new JpaCustomer(
-            pkSupplier.get(),
-            entity.getId(),
-            entity.getFirstName(),
-            entity.getLastName()
-        );
+        return JpaCustomer.from(entity, pkSupplier.get());
     }
 
     private Customer toCustomer(JpaCustomer data) {
