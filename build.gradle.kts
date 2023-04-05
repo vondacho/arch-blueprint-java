@@ -45,6 +45,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.zalando:problem-spring-web-starter:${property("problem.spring.web.version")}")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.liquibase:liquibase-core:${property("liquibase.version")}")
     implementation("com.atlassian.oai:swagger-request-validator-springmvc:${property("atlassian.validator.version")}")
     compileOnly("org.projectlombok:lombok")

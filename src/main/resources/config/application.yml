@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: jpa
+    active: dev,jpa
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test
@@ -20,4 +20,39 @@ spring:
 
 openapi:
   spec:
-    url: openapi.yaml
+    url: api/openapi.yaml
+
+
+# all actuators (JMX, HTTP) are ENABLED by default
+## management.endpoints.enabled-by-default: true
+## management.endpoints.info.enabled: true
+## management.endpoints.health.enabled: true
+
+# all JMX actuators are EXPOSED by default
+## management.endpoints.jmx.exposure.exclude:
+## management.endpoints.jmx.exposure.include: "*"
+## JMX actuators must be secured in production
+
+# For security reasons, only info and health HTTP actuators are EXPOSED by default
+## health and info disabled unless listed
+
+management:
+  info:
+    java:
+      enabled: true
+    env:
+      enabled: true
+    build:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,shutdown
+      base-path: /admin
+
+info.blueprint.api.url: https://api.obya.edu/blueprint

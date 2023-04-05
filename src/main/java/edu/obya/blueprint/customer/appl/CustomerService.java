@@ -2,15 +2,16 @@ package edu.obya.blueprint.customer.appl;
 
 import edu.obya.blueprint.common.util.search.FindCriteria;
 import edu.obya.blueprint.customer.domain.*;
-import edu.obya.blueprint.customer.web.CustomerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Supplier;
 
+@PreAuthorize("hasRole('USER')")
 @Transactional
 @RequiredArgsConstructor
 public class CustomerService {
@@ -19,19 +20,17 @@ public class CustomerService {
     private final Supplier<CustomerId> idSupplier = () -> CustomerId.of(UUID.randomUUID());
 
     @Transactional(readOnly = true)
-    public CustomerDto get(CustomerId customerId) {
+    public Customer get(CustomerId customerId) {
         return repository
                 .findById(customerId)
-                .map(CustomerDto::from)
                 .orElseThrow(() -> new CustomerNotFoundException(customerId));
     }
 
     @Transactional(readOnly = true)
-    public List<CustomerDto> findByCriteria(List<FindCriteria> criteria) {
+    public List<Customer> findByCriteria(List<FindCriteria> criteria) {
         return repository
                 .findByCriteria(criteria)
                 .stream()
-                .map(CustomerDto::from)
                 .toList();
     }
 
@@ -55,6 +54,7 @@ public class CustomerService {
         }
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     public void remove(CustomerId customerId) {
         if (!repository.remove(customerId)) {
             throw new CustomerNotFoundException(customerId);

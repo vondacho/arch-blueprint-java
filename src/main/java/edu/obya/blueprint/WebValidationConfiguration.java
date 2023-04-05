@@ -1,4 +1,4 @@
-package edu.obya.blueprint.customer.web;
+package edu.obya.blueprint;
 
 import com.atlassian.oai.validator.OpenApiInteractionValidator;
 import com.atlassian.oai.validator.springmvc.OpenApiValidationFilter;
@@ -6,8 +6,6 @@ import com.atlassian.oai.validator.springmvc.OpenApiValidationInterceptor;
 import com.atlassian.oai.validator.springmvc.SpringMVCLevelResolverFactory;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -16,14 +14,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.Filter;
 import java.io.IOException;
 
-@EnableAutoConfiguration(exclude = ErrorMvcAutoConfiguration.class)
 @Configuration
-public class CustomerWebConfiguration {
+public class WebValidationConfiguration {
 
     @Bean
     public Filter validationFilter() {
         return new OpenApiValidationFilter(
-                true, // enable request validation
+                false, // enable request validation
                 false  // enable response validation
         );
     }
