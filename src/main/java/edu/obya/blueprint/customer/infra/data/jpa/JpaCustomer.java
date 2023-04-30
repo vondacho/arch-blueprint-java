@@ -1,6 +1,6 @@
 package edu.obya.blueprint.customer.infra.data.jpa;
 
-import edu.obya.blueprint.customer.domain.Customer;
+import edu.obya.blueprint.customer.domain.CustomerState;
 import edu.obya.blueprint.customer.domain.CustomerId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,17 +26,17 @@ public class JpaCustomer {
     @Column(name = "lastname")
     String lastName;
 
-    public static JpaCustomer from(Customer customer, UUID pk) {
+    public static JpaCustomer from(CustomerState customer, CustomerId customerId, UUID pk) {
         return new JpaCustomer(
             pk,
-            customer.getId(),
+            customerId,
             customer.getFirstName(),
             customer.getLastName()
         );
     }
 
-    public JpaCustomer set(Customer customer) {
-        setLogicalId(customer.getId());
+    public JpaCustomer set(CustomerState customer, CustomerId customerId) {
+        setLogicalId(customerId);
         setLastName(customer.getLastName());
         setFirstName(customer.getFirstName());
         return this;

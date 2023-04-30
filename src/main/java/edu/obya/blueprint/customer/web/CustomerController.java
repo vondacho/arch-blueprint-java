@@ -1,25 +1,30 @@
 package edu.obya.blueprint.customer.web;
 
 import edu.obya.blueprint.common.util.search.FindCriteria;
-import edu.obya.blueprint.customer.appl.CustomerDto;
-import edu.obya.blueprint.customer.appl.CustomerService;
+import edu.obya.blueprint.customer.application.CustomerDto;
+import edu.obya.blueprint.customer.application.CustomerService;
 import edu.obya.blueprint.customer.domain.CustomerId;
 import io.micrometer.core.annotation.Timed;
 import io.micrometer.core.instrument.MeterRegistry;
-import io.micrometer.core.instrument.Timer;
-import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
+
+import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
+import static org.springframework.http.ResponseEntity.*;
 
 @Timed("customers.summary")
-@RequestMapping("/customers")
+@RequestMapping(path = "/customers", produces = MediaType.APPLICATION_JSON_VALUE)
 @RestController
 public class CustomerController {
 
+    @Autowired
     private final CustomerService customerService;
 
     public CustomerController(CustomerService customerService, MeterRegistry registry) {
@@ -28,35 +33,34 @@ public class CustomerController {
     }
 
     @GetMapping
-    @ResponseStatus(code = HttpStatus.OK)
-    public List<CustomerSummary> findByCriteria(@RequestParam(required = false) String filter, Pageable pageable) {
-        return customerService
-                .findByCriteria(StringUtils.hasText(filter) ? FindCriteria.from(filter) : FindCriteria.empty())
+    public ResponseEntity<List<CustomerSummary>> list(@RequestParam(required = false) String filter) {
+        return ok(customerService
+                .list(StringUtils.hasText(filter) ? FindCriteria.from(filter) : FindCriteria.empty())
                 .stream().map(CustomerSummary::from)
-                .toList();
+                .toList());
     }
 
     @GetMapping("/{id}")
-    @ResponseStatus(code = HttpStatus.OK)
-    public CustomerSummary findById(@PathVariable String id) {
-        return CustomerSummary.from(customerService.get(CustomerId.from(id)));
+    public ResponseEntity<CustomerSummary> get(@PathVariable UUID id) {
+        return ok(CustomerSummary.from(customerService.get(CustomerId.builder().id(id).build())));
     }
 
-    @PostMapping
-    @ResponseStatus(code = HttpStatus.CREATED)
-    public CustomerId create(@RequestBody CustomerDto customerDto) {
-        return customerService.create(customerDto);
+    @PostMapping(produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> create(@RequestBody CustomerDto customerDto) {
+        return status(HttpStatus.CREATED)
+                .header(CONTENT_TYPE, MediaType.TEXT_PLAIN_VALUE)
+                .body(customerService.create(customerDto).getId().toString());
     }
 
     @PutMapping("/{id}")
-    @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void update(@PathVariable String id, @RequestBody CustomerDto customerDto) {
-        customerService.update(customerDto, CustomerId.from(id));
+    public ResponseEntity<Void> replace(@PathVariable UUID id, @RequestBody CustomerDto customerDto) {
+        customerService.update(customerDto, CustomerId.builder().id(id).build());
+        return noContent().build();
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void remove(@PathVariable String id) {
-        customerService.remove(CustomerId.from(id));
+    public ResponseEntity<Void> remove(@PathVariable UUID id) {
+        customerService.remove(CustomerId.builder().id(id).build());
+        return noContent().build();
     }
 }

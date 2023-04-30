@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -26,8 +25,7 @@ public class WebSecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authz) -> authz
-                        // Matches /customers, /customers/, /customers/123
-                        .mvcMatchers("/customers/**").hasAnyRole("USER","ADMIN")
+                        .mvcMatchers("/customers", "/customers/**").hasAnyRole("USER","ADMIN")
                         .requestMatchers(EndpointRequest.to("health","info","metrics","loggers")).permitAll()
                         .requestMatchers(EndpointRequest.toAnyEndpoint()).hasAnyRole("ADMIN")
                         .anyRequest().authenticated()
@@ -37,19 +35,34 @@ public class WebSecurityConfiguration {
         return http.build();
     }
 
-    @Bean
-    public WebSecurityCustomizer webSecurityCustomizer() {
-        // By-passing Security
-        return (web) -> web.ignoring().antMatchers("/resources/**");
-    }
-
     @Profile("dev")
     @Bean
-    public UserDetailsService userDetailsService() {
-        // Uses BCrypt as a default "best practice" encoding scheme for now
+    public UserDetailsService devUserDetailsService() {
         PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-
         return new InMemoryUserDetailsManager(
+                User.builder()
+                        .username("user")
+                        .password(passwordEncoder.encode("user"))
+                        .roles("USER")
+                        .build(),
+                User.builder()
+                        .username("admin")
+                        .password(passwordEncoder.encode("admin"))
+                        .roles("ADMIN")
+                        .build()
+        );
+    }
+
+    @Profile("test")
+    @Bean
+    public UserDetailsService testUserDetailsService() {
+        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        return new InMemoryUserDetailsManager(
+            User.builder()
+                    .username("anonymous")
+                    .password(passwordEncoder.encode("none"))
+                    .roles("NONE")
+                    .build(),
             User.builder()
                     .username("test")
                     .password(passwordEncoder.encode("test"))

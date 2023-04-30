@@ -1,9 +1,10 @@
 package edu.obya.blueprint.customer.web;
 
 import edu.obya.blueprint.customer.domain.Customer;
-import lombok.Builder;
-import lombok.Value;
+import lombok.*;
+import lombok.extern.jackson.Jacksonized;
 
+@Jacksonized
 @Builder
 @Value
 public class CustomerSummary {
@@ -15,9 +16,9 @@ public class CustomerSummary {
     public static CustomerSummary from(Customer customer) {
         return CustomerSummary.builder()
                 .id(customer.getId().getId().toString())
-                .firstName(customer.getFirstName())
-                .lastName(customer.getLastName())
-                .fullName(String.format("%s %s", customer.getFirstName(), customer.getLastName()))
+                .firstName(customer.getState().getFirstName())
+                .lastName(customer.getState().getLastName())
+                .fullName(String.format("%s %s", customer.getState().getFirstName(), customer.getState().getLastName()))
                 .build();
     }
 }

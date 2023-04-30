@@ -10,7 +10,5 @@ public class Customer {
     @NonNull
     CustomerId id;
     @NonNull
-    String firstName;
-    @NonNull
-    String lastName;
+    CustomerState state;
 }

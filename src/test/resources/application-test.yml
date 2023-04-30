@@ -1,0 +1,5 @@
+zonky:
+  test:
+    database:
+      provider: DOCKER
+      type: POSTGRES

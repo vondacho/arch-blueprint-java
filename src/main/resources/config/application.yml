@@ -1,6 +1,6 @@
 spring:
-  profiles:
-    active: dev,jpa
+  banner:
+    location: classpath:/config/banner.txt
   jackson:
     default-property-inclusion: non_null
 

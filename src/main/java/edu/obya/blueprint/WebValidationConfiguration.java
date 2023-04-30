@@ -19,23 +19,28 @@ public class WebValidationConfiguration {
 
     @Bean
     public Filter validationFilter() {
-        return new OpenApiValidationFilter(
-                false, // enable request validation
-                false  // enable response validation
-        );
+        return new OpenApiValidationFilter(true, false);
     }
 
     @Bean
-    public WebMvcConfigurer addOpenApiValidationInterceptor(@Value("${openapi.spec.url}") final String specificationUrl) throws IOException {
+    public WebMvcConfigurer addOpenApiValidationInterceptor(OpenApiValidationInterceptor interceptor) throws IOException {
         return new WebMvcConfigurer() {
             @Override
             public void addInterceptors(final @NonNull InterceptorRegistry registry) {
-                registry.addInterceptor(
-                        new OpenApiValidationInterceptor(
-                                OpenApiInteractionValidator.createForSpecificationUrl(specificationUrl)
-                                    .withLevelResolver(SpringMVCLevelResolverFactory.create())
-                                    .build()));
+                registry.addInterceptor(interceptor);
             }
         };
+    }
+
+    @Bean
+    public OpenApiValidationInterceptor openApiValidationInterceptor(OpenApiInteractionValidator validator) {
+        return new OpenApiValidationInterceptor(validator);
+    }
+
+    @Bean
+    public OpenApiInteractionValidator openApiInteractionValidator(@Value("${openapi.spec.url}") final String specificationUrl) {
+        return OpenApiInteractionValidator.createForSpecificationUrl(specificationUrl)
+                .withLevelResolver(SpringMVCLevelResolverFactory.create())
+                .build();
     }
 }

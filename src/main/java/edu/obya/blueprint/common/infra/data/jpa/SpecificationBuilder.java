@@ -2,59 +2,47 @@ package edu.obya.blueprint.common.infra.data.jpa;
 
 import edu.obya.blueprint.common.util.search.FindCriteria;
 import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class SpecificationBuilder<E> {
 
-    private final List<Specification<E>> params;
+    private final List<Specification<E>> params = new ArrayList<>();
 
-    public static <E> SpecificationBuilder<E> from(List<FindCriteria> criteriaList) {
-        return new SpecificationBuilder<E>(
-            criteriaList
-                .stream()
-                .map(FindCriteriaSpecification::<E>from)
-                .filter(Optional::isPresent)
-                .map(Optional::get)
-                .toList()
-        );
+    public SpecificationBuilder<E> with(FindCriteria criteria) {
+        params.add(SpecificationFactory.from(criteria));
+        return this;
     }
 
-    public Specification<E> build() {
-        return params.stream()
-                .reduce(Specification::and)
-                .orElse(null);
+    public Optional<Specification<E>> build() {
+        return params.stream().reduce(Specification::and);
     }
 
-    private static class FindCriteriaSpecification {
+    @NoArgsConstructor(access = AccessLevel.PRIVATE)
+    private static class SpecificationFactory {
 
-        private FindCriteriaSpecification() {
-        }
-
-        public static <E> Optional<Specification<E>> from(FindCriteria criteria) {
-            return Optional.ofNullable(toSpec(criteria));
-        }
-
-        private static <E> Specification<E> toSpec(FindCriteria criteria) {
+        public static <E> Specification<E> from(FindCriteria criteria) {
             return (root, query, builder) -> {
-                if (criteria.getOperation().equalsIgnoreCase(">")) {
-                    return builder.greaterThanOrEqualTo(root.get(criteria.getKey()), criteria.getValue().toString());
-                }
-                else if (criteria.getOperation().equalsIgnoreCase("<")) {
-                    return builder.lessThanOrEqualTo(root.get(criteria.getKey()), criteria.getValue().toString());
-                }
-                else if (criteria.getOperation().equalsIgnoreCase(":")) {
-                    if (root.get(criteria.getKey()).getJavaType() == String.class) {
-                        return builder.like(root.get(criteria.getKey()), criteria.getValue() + "%");
-                    } else {
-                        return builder.equal(root.get(criteria.getKey()), criteria.getValue());
+                switch (criteria.getOperation()) {
+                    case ">" -> {
+                        return builder.greaterThanOrEqualTo(root.get(criteria.getKey()), criteria.getValue().toString());
+                    }
+                    case "<" -> {
+                        return builder.lessThanOrEqualTo(root.get(criteria.getKey()), criteria.getValue().toString());
+                    }
+                    case ":" -> {
+                        return (String.class == root.get(criteria.getKey()).getJavaType()) ?
+                            builder.like(root.get(criteria.getKey()), criteria.getValue() + "%") :
+                            builder.equal(root.get(criteria.getKey()), criteria.getValue());
+                    }
+                    default -> {
+                        return null;
                     }
                 }
-                return null;
             };
         }
     }

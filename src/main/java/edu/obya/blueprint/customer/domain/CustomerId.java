@@ -1,14 +1,15 @@
 package edu.obya.blueprint.customer.domain;
 
-import lombok.Value;
+import lombok.*;
 
 import java.util.UUID;
 
-@Value(staticConstructor = "of")
+@Builder
+@Value
 public class CustomerId {
     UUID id;
 
-    public static CustomerId from(String id) {
-        return CustomerId.of(UUID.fromString(id));
+    public static CustomerId parse(String id) {
+        return CustomerId.builder().id(UUID.fromString(id)).build();
     }
 }

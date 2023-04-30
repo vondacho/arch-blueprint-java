@@ -2,9 +2,8 @@ package edu.obya.blueprint.customer.infra.data.jpa;
 
 import edu.obya.blueprint.common.infra.data.jpa.SpecificationBuilder;
 import edu.obya.blueprint.common.util.search.FindCriteria;
-import edu.obya.blueprint.customer.domain.Customer;
-import edu.obya.blueprint.customer.domain.CustomerId;
-import edu.obya.blueprint.customer.domain.CustomerRepository;
+import edu.obya.blueprint.customer.domain.*;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -18,52 +17,56 @@ public class CustomerRepositoryJpaAdapter implements CustomerRepository {
     private final Supplier<UUID> pkSupplier = UUID::randomUUID;
 
     @Override
-    public Optional<Customer> findById(CustomerId customerId) {
+    public Optional<Customer> findById(@NonNull CustomerId customerId) {
         return repository.findByLogicalId(customerId).map(this::toCustomer);
     }
 
     @Override
+    public Optional<Customer> findByFirstNameAndLastName(String firstName, String lastName) {
+        return repository.findByFirstNameAndLastName(firstName, lastName).map(this::toCustomer);
+    }
+
+    @Override
     public List<Customer> findByCriteria(List<FindCriteria> criteria) {
-        SpecificationBuilder<JpaCustomer> builder = SpecificationBuilder.from(criteria);
-        return repository
-                .findAll(builder.build())
+        SpecificationBuilder<JpaCustomer> builder = new SpecificationBuilder<>();
+        criteria.forEach(builder::with);
+        return repository.findAll(builder.build().orElse(null))
                 .stream()
                 .map(this::toCustomer)
                 .toList();
     }
 
     @Override
-    public void add(Customer customer) {
-        repository.save(toData(customer));
+    public void add(@NonNull CustomerId id, @NonNull CustomerState state) {
+        repository.save(toData(state, id));
     }
 
     @Override
-    public boolean update(Customer customer) {
-        return repository.findByLogicalId(customer.getId())
-                .map(data -> data.set(customer))
-                .map(repository::save)
-                .isPresent();
+    public void update(@NonNull CustomerId customerId, @NonNull CustomerState customer) {
+        JpaCustomer data = repository.findByLogicalId(customerId)
+                .orElseThrow(() -> new CustomerNotFoundException(customerId));
+        data.set(customer, customerId);
+        repository.save(data);
     }
 
     @Override
-    public boolean remove(CustomerId customerId) {
-        return repository.findByLogicalId(customerId)
-                .map(data -> {
-                    repository.deleteById(data.getPk());
-                    return data;
-                })
-                .isPresent();
+    public void remove(@NonNull CustomerId customerId) {
+        JpaCustomer data = repository.findByLogicalId(customerId)
+                .orElseThrow(() -> new CustomerNotFoundException(customerId));
+        repository.deleteById(data.getPk());
     }
 
-    private JpaCustomer toData(Customer entity) {
-        return JpaCustomer.from(entity, pkSupplier.get());
+    private JpaCustomer toData(CustomerState state, CustomerId id) {
+        return JpaCustomer.from(state, id, pkSupplier.get());
     }
 
     private Customer toCustomer(JpaCustomer data) {
         return Customer.builder()
                 .id(data.getLogicalId())
-                .firstName(data.getFirstName())
-                .lastName(data.getLastName())
+                .state(CustomerState.builder()
+                    .firstName(data.getFirstName())
+                    .lastName(data.getLastName())
+                    .build())
                 .build();
     }
 }

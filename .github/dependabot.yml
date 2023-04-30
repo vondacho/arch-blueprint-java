@@ -1,0 +1,17 @@
+version: 2
+updates:
+
+  # Maintain dependencies for Gradle
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "gradle"
+      include: "scope"
+    labels:
+      - "gradle"
+      - "dependencies"
+    open-pull-requests-limit: 3
+    pull-request-branch-name:
+      separator: "-"

@@ -1,5 +1,5 @@
 ---
-openapi: 3.0.0
+openapi: 3.0.3
 info:
   title: Blueprint API
   description: |
@@ -7,21 +7,30 @@ info:
   contact:
     name: API Support
   version: 1.0.0
-  x-audience: internal-public
 servers:
-  - url: /
+  - url: 'http://localhost:8080'
 tags:
   - name: customer
     description: Management of Customer entity store
+    externalDocs:
+      description: Pretty API documentation
+      url: 'https://vondacho.github.io/arch-blueprint-java/api/'
 paths:
   /customers:
     get:
       tags:
         - customer
-      summary: Search customers by criteria
-      description: Searches existing customers given a set of matching filters
-      operationId: searchCustomers
+      summary: List customers by criteria
+      description: List existing customers given a set of matching filters
+      operationId: listCustomers
       parameters:
+        - name: limit
+          in: query
+          description: how many items to return at one time (max 100)
+          required: false
+          schema:
+            type: integer
+            format: int32
         - name: filter
           in: query
           description: term used as matching criteria for the name attribute
@@ -60,18 +69,19 @@ paths:
         Add a new customer to the store, a valid response contains a generated unique ID and the creation date
       operationId: addCustomer
       requestBody:
+        required: true
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/CustomerInput'
-        required: true
       responses:
         '201':
           description: successful operation
           content:
-            application/json:
+            text/plain:
               schema:
-                $ref: '#/components/schemas/CustomerOutput'
+                type: string
+                format: uuid
         '400':
           description: Bad request
           content:
@@ -80,7 +90,6 @@ paths:
                 $ref: '#/components/schemas/ProblemOutput'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
-
         default:
           description: Other problem
           content:
@@ -124,7 +133,6 @@ paths:
                 $ref: '#/components/schemas/ProblemOutput'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
-
         default:
           description: Other problem
           content:
@@ -169,7 +177,6 @@ paths:
                 $ref: '#/components/schemas/ProblemOutput'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
-
         default:
           description: Other problem
           content:
@@ -208,7 +215,6 @@ paths:
                 $ref: '#/components/schemas/ProblemOutput'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
-
         default:
           description: Other problem
           content:

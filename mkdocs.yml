@@ -1,8 +1,8 @@
 site_name: arch-blueprint-java
-site_url: https://vondacho.github.io/arch-blueprint-java/
+site_url: https://vondacho.github.io/arch-blueprint-java
 repo_url: https://github.com/vondacho/arch-blueprint-java/
 repo_name: GitHub repository
-docs_dir: doc
+docs_dir: doc/tech
 
 nav:
   - Home: index.md

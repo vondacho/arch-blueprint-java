@@ -15,6 +15,6 @@ public class CustomerIdAttributeConverter implements AttributeConverter<Customer
 
     @Override
     public CustomerId convertToEntityAttribute(String dbData) {
-        return StringUtils.hasText(dbData) ? CustomerId.from(dbData) : null;
+        return StringUtils.hasText(dbData) ? CustomerId.parse(dbData) : null;
     }
 }
