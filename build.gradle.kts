@@ -4,7 +4,7 @@ import org.springframework.cloud.contract.verifier.config.TestMode
 
 plugins {
     id("java")
-    id("org.springframework.boot") version "2.7.10"
+    id("org.springframework.boot") version "3.0.6"
     id("org.springframework.cloud.contract") version "3.1.6"
     id("au.com.dius.pact") version "4.5.5"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
