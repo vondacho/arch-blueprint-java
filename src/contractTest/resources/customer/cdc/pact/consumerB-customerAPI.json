@@ -1,0 +1,179 @@
+{
+  "consumer": {
+    "name": "consumerB"
+  },
+  "interactions": [
+    {
+      "comments": {
+        "text": [
+
+        ]
+      },
+      "description": "get existing customer interaction",
+      "key": "e93e0039",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "an existing customer"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Authorization": [
+            "Basic dGVzdDp0ZXN0"
+          ],
+          "Content-Type": [
+            "application/json;charset=UTF-8"
+          ]
+        },
+        "matchingRules": {
+          "header": {
+            "Authorization": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "Basic (?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?"
+                }
+              ]
+            },
+            "Content-Type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "application/json"
+                }
+              ]
+            }
+          },
+          "path": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "regex",
+                "regex": "^/customers/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$"
+              }
+            ]
+          }
+        },
+        "method": "GET",
+        "path": "/customers/64a0f7d1-7b25-412d-b1e0-abacde3c21cd"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "firstName": "John",
+            "fullName": "John Doe",
+            "id": "64a0f7d1-7b25-412d-b1e0-abacde3c21cd",
+            "lastName": "Doe"
+          },
+          "contentType": "application/json; charset=UTF-8",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json; charset=UTF-8"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$.firstName": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.fullName": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+                }
+              ]
+            },
+            "$.lastName": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {
+            "Content-Type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "application/json(;\\s?charset=[\\w\\-]+)?"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      },
+      "transport": "https",
+      "type": "Synchronous/HTTP"
+    },
+    {
+      "comments": {
+        "text": [
+
+        ]
+      },
+      "description": "get existing customer without authentication",
+      "key": "fa02067d",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "an existing customer"
+        }
+      ],
+      "request": {
+        "matchingRules": {
+          "path": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "regex",
+                "regex": "^/customers/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$"
+              }
+            ]
+          }
+        },
+        "method": "GET",
+        "path": "/customers/64a0f7d1-7b25-412d-b1e0-abacde3c21cd"
+      },
+      "response": {
+        "status": 401
+      },
+      "transport": "https",
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pact-jvm": {
+      "version": "4.5.5"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "customerAPI"
+  }
+}

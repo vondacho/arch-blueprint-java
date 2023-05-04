@@ -5,10 +5,6 @@ on:
   release:
     types: [ published ]
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,36 +22,8 @@ jobs:
         id: release
         run: echo "version=$(echo ${{ github.ref }} | cut -d / -f3)" >> ${{ github.output }}
 
-      - name: Setup Build
-        env:
-          GITHUB_USERNAME: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          ./.github/scripts/setup-gradle.sh
+      - name: Build main branch
+        run: ./gradlew -Pversion=${{ steps.release.outputs.version }} build
 
-      - name: Build and Push Docker images
-        run: ./gradlew -Pversion=${{ steps.release.outputs.version }} jar
-
-      - name: Log in to the Container registry
-        uses: docker/login-action@v2
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v2
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Deploy to GH pages
+      - name: Publish documentation
         uses: ./.github/actions/mkdocs-publish

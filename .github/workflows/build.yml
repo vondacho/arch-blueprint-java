@@ -26,4 +26,4 @@ jobs:
         uses: gradle/wrapper-validation-action@v1.0.4
 
       - name: Build Branch
-        run: ./gradlew clean build
+        run: ./gradlew build

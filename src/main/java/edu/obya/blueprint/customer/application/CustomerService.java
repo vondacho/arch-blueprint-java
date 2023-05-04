@@ -1,5 +1,7 @@
 package edu.obya.blueprint.customer.application;
 
+import com.structurizr.annotation.Component;
+import com.structurizr.annotation.UsesComponent;
 import edu.obya.blueprint.common.util.search.FindCriteria;
 import edu.obya.blueprint.customer.domain.*;
 import lombok.RequiredArgsConstructor;
@@ -11,11 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.function.Supplier;
 
+@Component(description = "Manages customer entities", technology = "Java")
 @PreAuthorize("hasAnyRole('USER','ADMIN')")
 @Transactional
 @RequiredArgsConstructor
 public class CustomerService {
 
+    @UsesComponent(description = "stores customer entities using", technology = "Java")
     private final CustomerRepository repository;
     private final Supplier<CustomerId> idSupplier;
 

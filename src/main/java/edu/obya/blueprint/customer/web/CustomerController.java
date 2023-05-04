@@ -1,5 +1,8 @@
 package edu.obya.blueprint.customer.web;
 
+import com.structurizr.annotation.Component;
+import com.structurizr.annotation.UsedByPerson;
+import com.structurizr.annotation.UsesComponent;
 import edu.obya.blueprint.common.util.search.FindCriteria;
 import edu.obya.blueprint.customer.application.CustomerDto;
 import edu.obya.blueprint.customer.application.CustomerService;
@@ -19,11 +22,14 @@ import java.util.UUID;
 import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 import static org.springframework.http.ResponseEntity.*;
 
+@Component(description = "API for customer management", technology = "Java")
+@UsedByPerson(name = "User", description = "Uses", technology = "HTTPS/REST/JWT")
 @Timed("customers.summary")
 @RequestMapping(path = "/customers", produces = MediaType.APPLICATION_JSON_VALUE)
 @RestController
 public class CustomerController {
 
+    @UsesComponent(description = "manages customer resources using", technology = "Java")
     @Autowired
     private final CustomerService customerService;
 

@@ -11,6 +11,7 @@ plugins {
     id("io.qameta.allure-aggregate-report") version "2.11.2"
     id("net.saliman.properties") version "1.5.2"
     id("com.appland.appmap") version "1.1.1"
+    id("org.hidetake.swagger.generator") version "2.19.2"
 }
 
 java {
@@ -23,6 +24,13 @@ sourceSets {
         resources.srcDir("src/acceptanceTest/resources")
         compileClasspath += sourceSets.main.get().compileClasspath + sourceSets.test.get().compileClasspath
         annotationProcessorPath += sourceSets.test.get().annotationProcessorPath
+    }
+    create("c4") {
+        java.srcDir("src/c4/java")
+        resources.srcDir("src/c4/resources")
+        compileClasspath += sourceSets.main.get().compileClasspath
+        runtimeClasspath += sourceSets.main.get().runtimeClasspath
+        annotationProcessorPath += sourceSets.main.get().annotationProcessorPath
     }
 }
 
@@ -39,6 +47,10 @@ ext {
     set("spring.cloud.contract.version", "3.1.6")
     set("embedded-database-spring-test.version", "2.2.0")
     set("junit.platform.version", "5.7.1")
+    set("structurizr.version", "1.9.4")
+    set("structurizr-dsl.version", "1.10.0")
+    set("structurizr-annotations.version", "1.3.5")
+    set("structurizr-analysis.version", "1.3.5")
 }
 
 dependencies {
@@ -85,6 +97,19 @@ dependencies {
     testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier:${property("spring.cloud.contract.version")}")
     testImplementation("org.springframework.cloud:spring-cloud-contract-spec-kotlin:${property("spring.cloud.contract.version")}")
     testImplementation("org.hibernate:hibernate-validator:5.2.5.Final")
+
+    // ARCH testing
+    testImplementation("com.tngtech.archunit:archunit:1.0.1")
+
+    // API documentation
+    swaggerUI("org.webjars:swagger-ui:4.1.3")
+
+    // C4 documentation
+    implementation("com.structurizr:structurizr-core:${property("structurizr.version")}")
+    implementation("com.structurizr:structurizr-client:${property("structurizr.version")}")
+    implementation("com.structurizr:structurizr-annotations:${property("structurizr-annotations.version")}")
+    implementation("com.structurizr:structurizr-dsl:${property("structurizr-dsl.version")}")
+    implementation("com.structurizr:structurizr-analysis:${property("structurizr-analysis.version")}")
 }
 
 contracts {
@@ -104,6 +129,12 @@ appmap {
     debug = "info"
     debugFile.set(file("$buildDir/appmap/agent.log"))
     eventValueSize = 1024
+}
+
+swaggerSources {
+    create("apidoc") {
+        setInputFile(file("$rootDir/src/main/resources/api/openapi.yaml"))
+    }
 }
 
 tasks {
@@ -135,8 +166,10 @@ tasks {
     named<Copy>("processAcceptanceTestResources") {
         duplicatesStrategy = DuplicatesStrategy.WARN
     }
+    named<Copy>("processC4Resources") {
+        duplicatesStrategy = DuplicatesStrategy.WARN
+    }
     check {
         dependsOn(acceptanceTest)
     }
 }
-

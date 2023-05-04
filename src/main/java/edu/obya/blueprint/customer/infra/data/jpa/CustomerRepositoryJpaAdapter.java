@@ -1,5 +1,7 @@
 package edu.obya.blueprint.customer.infra.data.jpa;
 
+import com.structurizr.annotation.Component;
+import com.structurizr.annotation.UsesComponent;
 import edu.obya.blueprint.common.infra.data.jpa.SpecificationBuilder;
 import edu.obya.blueprint.common.util.search.FindCriteria;
 import edu.obya.blueprint.customer.domain.*;
@@ -11,8 +13,11 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.function.Supplier;
 
+@Component(description = "Adapter for customer entity storage using JPA", technology = "Java")
 @RequiredArgsConstructor
 public class CustomerRepositoryJpaAdapter implements CustomerRepository {
+
+    @UsesComponent(description = "stores customer data using", technology = "Java")
     private final JpaCustomerRepository repository;
     private final Supplier<UUID> pkSupplier = UUID::randomUUID;
 
