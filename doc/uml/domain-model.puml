@@ -1,0 +1,32 @@
+@startuml
+
+class Customer {
+    CustomerId id
+    CustomerState state
+}
+
+Customer *--> "1" CustomerId
+Customer *--> "1" CustomerState
+
+class CustomerId {
+    UUID id
+    +parse(String): CustomerId
+}
+
+class CustomerState {
+    String firstName
+    String lastName
+}
+
+interface CustomerRepository {
+    +Optional<Customer> findById(CustomerId)
+    +Optional<Customer> findByFirstNameAndLastName(firstName, lastName)
+    +List<Customer> findByCriteria(List<FindCriteria>)
+    +void add(CustomerId, CustomerState)
+    +void update(CustomerId, CustomerState)
+    +void remove(CustomerId)
+}
+
+CustomerRepository --> "read and writes" Customer
+
+@enduml

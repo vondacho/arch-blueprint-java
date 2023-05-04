@@ -6,8 +6,7 @@ docs_dir: doc/tech
 
 nav:
   - Home: index.md
-  - Use cases: usecases.md
-  - Requirements: requirements.md
+  - API: api/
   - Architecture: architecture.md
   - Testing: testing.md
 

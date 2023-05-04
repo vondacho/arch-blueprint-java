@@ -1,9 +1,9 @@
-workspace "C4 Laboratory" "A set of system architectures represented with the C4 model" {
+workspace "Obya" "A set of system architectures represented with the C4 model" {
 
     model {
         impliedRelationships true
 
-        enterprise "C4 company" {
+        enterprise "Obya" {
 
             # internal systems
             system = softwareSystem "blueprint-system" "A small system with one service and one database" "blueprint" {

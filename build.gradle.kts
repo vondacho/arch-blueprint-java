@@ -1,3 +1,4 @@
+import io.freefair.gradle.plugins.mkdocs.tasks.MkDocs
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.springframework.cloud.contract.verifier.config.TestMode
@@ -12,6 +13,8 @@ plugins {
     id("net.saliman.properties") version "1.5.2"
     id("com.appland.appmap") version "1.1.1"
     id("org.hidetake.swagger.generator") version "2.19.2"
+    id("io.github.redgreencoding.plantuml") version "0.2.0"
+    id("io.freefair.mkdocs") version "8.0.1"
 }
 
 java {
@@ -137,8 +140,25 @@ swaggerSources {
     }
 }
 
+plantuml {
+    options {
+        format = "svg"
+    }
+    diagrams {
+        create("domain") {
+            sourceFile = project.file("doc/uml/domain-model.puml")
+        }
+        create("data") {
+            sourceFile = project.file("doc/uml/data-model.puml")
+        }
+    }
+}
+
 tasks {
     test {
+        doFirst {
+            appmap
+        }
         useJUnitPlatform()
         testLogging {
             exceptionFormat = TestExceptionFormat.FULL
@@ -171,5 +191,32 @@ tasks {
     }
     check {
         dependsOn(acceptanceTest)
+    }
+    named<MkDocs>("mkdocs") {
+        dependsOn("allureAggregateReport")
+        dependsOn("plantumlAll")
+        dependsOn("generateSwaggerUI")
+        doLast {
+            copy {
+                from("build/reports/tests")
+                into("build/docs/mkdocs/reports/tests")
+            }
+            copy {
+                from("build/reports/allure-report/allureAggregateReport")
+                into("build/docs/mkdocs/reports/tests/allure")
+            }
+            copy {
+                from("build/plantuml")
+                into("build/docs/mkdocs/uml")
+            }
+            copy {
+                from("build/appmap")
+                into("build/docs/mkdocs/appmap")
+            }
+            copy {
+                from("build/swagger-ui-apidoc")
+                into("build/docs/mkdocs/api")
+            }
+        }
     }
 }

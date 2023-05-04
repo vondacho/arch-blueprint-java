@@ -1,0 +1,18 @@
+@startuml
+
+class JpaCustomer {
+    UUID pk
+    String firstName
+    String lastName
+
+    +JpaCustomer from(CustomerState, CustomerId, UUID)
+    +JpaCustomer set(CustomerState, CustomerId)
+}
+
+JpaCustomer *--> "logicalId" CustomerId
+
+class CustomerId {
+    UUID id
+}
+
+@enduml
