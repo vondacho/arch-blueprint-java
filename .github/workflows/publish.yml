@@ -20,7 +20,7 @@ jobs:
 
       - name: Set up gradle properties
         shell: bash
-        run: scripts/setup-gradle.sh
+        run: ./scripts/setup-gradle.sh
 
       - name: Release version
         id: release
