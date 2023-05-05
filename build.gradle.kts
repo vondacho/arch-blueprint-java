@@ -193,7 +193,7 @@ tasks {
     }
     named<MkDocs>("mkdocs") {
         dependsOn("allureAggregateReport")
-        dependsOn("plantumlAll")
+        //dependsOn("plantumlAll")
         dependsOn("generateSwaggerUI")
         doLast {
             copy {
