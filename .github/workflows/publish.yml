@@ -28,8 +28,13 @@ jobs:
       - name: Build main branch
         run: ./gradlew -Pversion=${{ steps.release.outputs.version }} build
 
-      - name: Build documentation
-        run: ./gradlew mkdocs
+      - name: Prepare documentation
+        run: ./gradlew allureAggregateReport plantumlAll generateSwaggerUI
 
-      - name: Publish documentation
-        uses: ./.github/actions/mkdocs-publish
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Build and publish documentation to GH pages
+        run: ./gradlew -Pversion=${{ steps.release.outputs.version }} mkdocsPublish

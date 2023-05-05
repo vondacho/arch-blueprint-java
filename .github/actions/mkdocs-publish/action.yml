@@ -8,11 +8,7 @@ runs:
       with:
         python-version: 3.x
 
-    - shell: bash
-      run: |
-        pip install mkdocs mkdocs-material
-
     - name: Deploy to GH pages
       shell: bash
       run: |
-        mkdocs gh-deploy --force --clean --verbose
+        mkdocs gh-deploy --config-file src/doc/mkdocs.yml --force --clean --verbose

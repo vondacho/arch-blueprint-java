@@ -6,9 +6,9 @@
 - [Component view](https://www.structurizr.com/share/38199/diagrams#blueprint-api-components)
 
 ## AppMap
-- [App maps](../appmap/junit)
 - To install the AppMap extension in your IDE
 - To build the app maps with `./gradlew appmap test`
+- To visualize the app maps using the AppMap extension
 
 ## Hexagonal
 The logical layers are organized like an onion with the domain layer at the center.
@@ -21,10 +21,10 @@ ACL is used to protect the internal ubiquitous language from external languages.
 ![Domain model](../uml/hexagonal.svg)
 
 ## Domain model
-![Domain model](../uml/domain.svg)
+![Domain model](../uml/domain-model.svg)
 
 ## Data model
-![Data model](../uml/data.svg)
+![Data model](../uml/data-model.svg)
 
 ## CI/CD
 [Github actions](https://github.com/vondacho/arch-blueprint-java/actions)

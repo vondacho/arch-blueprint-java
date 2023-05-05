@@ -5,7 +5,7 @@ IFS=$'\n\t'
 
 cat <<EOF >> gradle-local.properties
 
-githubUsername=$GITHUB_USERNAME
-githubToken=$GITHUB_TOKEN
+org.ajoberstar.grgit.auth.username=$GITHUB_USERNAME
+org.ajoberstar.grgit.auth.password=$GITHUB_TOKEN
 
 EOF

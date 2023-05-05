@@ -22,4 +22,3 @@ To launch the contract tests with `./gradlew contractTest`
 - [Acceptance test](../reports/tests/acceptanceTest)
 - [Contract tests](../reports/tests/contractTest)
 - [Unit and integration tests](../reports/tests/test)
-- [Allure](../reports/tests/allure)

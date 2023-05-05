@@ -1,7 +1,7 @@
-import io.freefair.gradle.plugins.mkdocs.tasks.MkDocs
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.springframework.cloud.contract.verifier.config.TestMode
+import ru.vyarus.gradle.plugin.python.PythonExtension
 
 plugins {
     id("java")
@@ -13,7 +13,8 @@ plugins {
     id("com.appland.appmap") version "1.1.1"
     id("org.hidetake.swagger.generator") version "2.19.2"
     id("io.github.redgreencoding.plantuml") version "0.2.0"
-    id("io.freefair.mkdocs") version "8.0.1"
+    id("ru.vyarus.mkdocs") version "3.0.0"
+    id("net.saliman.properties") version "1.5.2"
 }
 
 java {
@@ -125,7 +126,7 @@ allure {
 }
 
 appmap {
-    configFile.set(file("$projectDir/appmap.yml"))
+    configFile.set(file("$projectDir/src/doc/appmap.yml"))
     outputDirectory.set(file("$buildDir/appmap"))
     isSkip = false
     debug = "info"
@@ -145,13 +146,40 @@ plantuml {
     }
     diagrams {
         create("hexagonal") {
-            sourceFile = project.file("doc/uml/hexagonal.puml")
+            sourceFile = project.file("src/doc/uml/hexagonal.puml")
         }
-        create("domain") {
-            sourceFile = project.file("doc/uml/domain-model.puml")
+        create("domain-model") {
+            sourceFile = project.file("src/doc/uml/domain-model.puml")
         }
-        create("data") {
-            sourceFile = project.file("doc/uml/data-model.puml")
+        create("data-model") {
+            sourceFile = project.file("src/doc/uml/data-model.puml")
+        }
+    }
+}
+
+python {
+    scope = PythonExtension.Scope.USER
+}
+
+mkdocs {
+    strict = false
+    updateSiteUrl = false
+    sourcesDir = "src/doc"
+    buildDir = "build/mkdocs"
+    publish.docPath = "$version".ifEmpty { "snapshot" }
+}
+
+gitPublish {
+    contents {
+        from("${mkdocs.buildDir}")
+        from("build/reports/tests") {
+            into("${mkdocs.publish.docPath}/reports/tests")
+        }
+        from("build/plantuml") {
+            into("${mkdocs.publish.docPath}/uml")
+        }
+        from("build/swagger-ui-apidoc") {
+            into("${mkdocs.publish.docPath}/api")
         }
     }
 }
@@ -190,32 +218,5 @@ tasks {
     }
     check {
         dependsOn(acceptanceTest)
-    }
-    named<MkDocs>("mkdocs") {
-        dependsOn("allureAggregateReport")
-        //dependsOn("plantumlAll")
-        dependsOn("generateSwaggerUI")
-        doLast {
-            copy {
-                from("build/reports/tests")
-                into("build/docs/mkdocs/reports/tests")
-            }
-            copy {
-                from("build/reports/allure-report/allureAggregateReport")
-                into("build/docs/mkdocs/reports/tests/allure")
-            }
-            copy {
-                from("build/plantuml")
-                into("build/docs/mkdocs/uml")
-            }
-            copy {
-                from("build/appmap")
-                into("build/docs/mkdocs/appmap")
-            }
-            copy {
-                from("build/swagger-ui-apidoc")
-                into("build/docs/mkdocs/api")
-            }
-        }
     }
 }
