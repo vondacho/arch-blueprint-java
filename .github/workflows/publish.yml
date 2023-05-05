@@ -18,9 +18,12 @@ jobs:
           java-version: '17'
           distribution: zulu
 
-      - name: Set up gradle properties
-        shell: bash
-        run: ./scripts/setup-gradle.sh
+      - name: Setup Build
+        env:
+          GITHUB_USERNAME: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./.github/scripts/setup-gradle.sh
 
       - name: Release version
         id: release
