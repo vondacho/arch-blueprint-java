@@ -166,12 +166,11 @@ mkdocs {
     updateSiteUrl = false
     sourcesDir = "src/doc"
     buildDir = "build/mkdocs"
-    publish.docPath = "$version".ifEmpty { "snapshot" }
 }
 
 gitPublish {
     contents {
-        from("${mkdocs.buildDir}")
+        from(mkdocs.buildDir)
         from("build/reports/tests") {
             into("${mkdocs.publish.docPath}/reports/tests")
         }

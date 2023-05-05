@@ -35,6 +35,9 @@ jobs:
       - name: Build main branch
         run: ./gradlew -Pversion=${{ steps.release.outputs.version }} build
 
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+
       - name: Prepare documentation
         run: ./gradlew allureAggregateReport plantumlAll generateSwaggerUI
 
