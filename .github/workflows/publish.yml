@@ -29,7 +29,7 @@ jobs:
         run: ./gradlew -Pversion=${{ steps.release.outputs.version }} build
 
       - name: Build documentation
-        uses: ./gradlew mkdocs
+        run: ./gradlew mkdocs
 
       - name: Publish documentation
         uses: ./.github/actions/mkdocs-publish
