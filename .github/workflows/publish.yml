@@ -19,7 +19,7 @@ jobs:
           distribution: zulu
 
       - name: Set up gradle properties
-        uses: bash
+        shell: bash
         run: scripts/setup-gradle.sh
 
       - name: Release version
