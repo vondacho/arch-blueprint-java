@@ -18,6 +18,9 @@ jobs:
           java-version: '17'
           distribution: zulu
 
+      - name: Set up gradle properties
+        run: scripts/setup-gradle.sh
+
       - name: Release version
         id: release
         run: echo "version=$(echo ${{ github.ref }} | cut -d / -f3)" >> ${{ github.output }}
