@@ -166,6 +166,7 @@ mkdocs {
     updateSiteUrl = false
     sourcesDir = "src/doc"
     buildDir = "build/mkdocs"
+    publish.docPath = "$version".ifEmpty { "snapshot" }
 }
 
 gitPublish {
