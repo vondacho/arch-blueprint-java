@@ -10,7 +10,6 @@ plugins {
     id("au.com.dius.pact") version "4.5.5"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
     id("io.qameta.allure-aggregate-report") version "2.11.2"
-    id("net.saliman.properties") version "1.5.2"
     id("com.appland.appmap") version "1.1.1"
     id("org.hidetake.swagger.generator") version "2.19.2"
     id("io.github.redgreencoding.plantuml") version "0.2.0"
@@ -145,6 +144,9 @@ plantuml {
         format = "svg"
     }
     diagrams {
+        create("hexagonal") {
+            sourceFile = project.file("doc/uml/hexagonal.puml")
+        }
         create("domain") {
             sourceFile = project.file("doc/uml/domain-model.puml")
         }
@@ -156,9 +158,6 @@ plantuml {
 
 tasks {
     test {
-        doFirst {
-            appmap
-        }
         useJUnitPlatform()
         testLogging {
             exceptionFormat = TestExceptionFormat.FULL

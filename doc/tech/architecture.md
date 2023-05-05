@@ -11,12 +11,14 @@
 - To build the app maps with `./gradlew appmap test`
 
 ## Hexagonal
-The logical layers are organized like an onion.
+The logical layers are organized like an onion with the domain layer at the center.
+Infrastructure layer adapts the output ports exposed by the application and domain layers.
+Web layer consumes input ports exposed by the application layer.
+Application layer acts as a use case orchestrator and consumes input ports exposed by the domain layer.
+Models are segregated and mapped between the different layers.
+ACL is used to protect the internal ubiquitous language from external languages.
 
-- **web** (web api): `- uses ->` _appl_, _domain_
-- **appl** (application logic, orchestration of the use cases, transactional): `- uses ->` _domain_
-- **domain** (Domain model composed of core entities and core logic)
-- **infra** (External systems models and adapters) `- imports ->` _appl_, _domain_
+![Domain model](../uml/hexagonal.svg)
 
 ## Domain model
 ![Domain model](../uml/domain.svg)

@@ -1,0 +1,65 @@
+@startuml
+
+!includeurl https://raw.githubusercontent.com/skleanthous/C4-PlantumlSkin/master/build/output/general/general.puml
+!includeurl https://raw.githubusercontent.com/skleanthous/C4-PlantumlSkin/master/build/output/general/notes.puml
+
+package edu.obya.blueprint.customer {
+
+component application as appl {
+    portin service as appls
+    portout repository as applr
+    portout client as applc
+    component "Command model" as applm
+}
+
+component domain {
+    portin service as dos
+    portout repository as dor
+    component "Domain model" as dom
+}
+
+component web {
+    component "API model" as webm
+}
+
+component infra.data as data {
+    component "Data model" as dam
+}
+
+component infra.external as external
+
+}
+
+database CustomerStorage as db
+() "AddressChecker API" as addrc
+
+web ..> appls
+web ..> applm
+web ..> dom : uses/maps
+appl ..> dos
+appl ..> dor
+appl ..> dom
+data ..> dom : uses/maps
+data .left.> db : reads/writes
+data .up.|> dor : adapts
+data .up.|> applr : adapts
+external .up.> dom : uses/maps
+external .up.|> applc : adapts (ACL)
+external ..> addrc : consumes
+
+note right of domain
+  Domain model composed of
+  entities, objects, and logic
+end note
+
+note left of appl
+  Application logic,
+  orchestration of the use cases,
+  transaction boundaries
+end note
+
+note left of external
+  Interface to external systems and models
+end note
+
+@enduml

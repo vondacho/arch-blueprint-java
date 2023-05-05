@@ -22,8 +22,14 @@ jobs:
         id: release
         run: echo "version=$(echo ${{ github.ref }} | cut -d / -f3)" >> ${{ github.output }}
 
+      - name: Build app maps
+        run: ./gradlew appmap test
+
       - name: Build main branch
         run: ./gradlew -Pversion=${{ steps.release.outputs.version }} build
+
+      - name: Build documentation
+        uses: ./gradlew mkdocs
 
       - name: Publish documentation
         uses: ./.github/actions/mkdocs-publish
