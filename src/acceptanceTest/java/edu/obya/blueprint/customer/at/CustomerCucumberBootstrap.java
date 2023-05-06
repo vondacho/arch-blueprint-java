@@ -1,13 +1,13 @@
 package edu.obya.blueprint.customer.at;
 
-import edu.obya.blueprint.ExceptionHandling;
-import edu.obya.blueprint.WebSecurityConfiguration;
-import edu.obya.blueprint.WebValidationConfiguration;
+import edu.obya.blueprint.config.ExceptionHandling;
+import edu.obya.blueprint.config.WebSecurityConfiguration;
+import edu.obya.blueprint.config.WebValidationConfiguration;
 import edu.obya.blueprint.customer.application.CustomerApplicationConfiguration;
-import edu.obya.blueprint.customer.domain.CustomerId;
-import edu.obya.blueprint.customer.infra.data.jpa.CustomerJpaConfiguration;
-import edu.obya.blueprint.customer.web.CustomerController;
-import edu.obya.blueprint.customer.web.CustomerWebConfiguration;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
+import edu.obya.blueprint.customer.adapter.jpa.CustomerJpaConfiguration;
+import edu.obya.blueprint.customer.adapter.rest.CustomerController;
+import edu.obya.blueprint.customer.adapter.rest.CustomerWebConfiguration;
 import io.cucumber.spring.CucumberContextConfiguration;
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

@@ -1,7 +1,7 @@
 package edu.obya.blueprint.customer.at.steps;
 
-import edu.obya.blueprint.customer.domain.Customer;
-import edu.obya.blueprint.customer.domain.CustomerId;
+import edu.obya.blueprint.customer.domain.model.Customer;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
 import io.cucumber.java.en.Given;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;

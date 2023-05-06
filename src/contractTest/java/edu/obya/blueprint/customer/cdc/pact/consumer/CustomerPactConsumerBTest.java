@@ -7,7 +7,7 @@ import au.com.dius.pact.consumer.junit5.PactTestFor;
 import au.com.dius.pact.core.model.V4Pact;
 import au.com.dius.pact.core.model.annotations.Pact;
 import au.com.dius.pact.core.model.annotations.PactDirectory;
-import edu.obya.blueprint.customer.web.CustomerSummary;
+import edu.obya.blueprint.customer.adapter.rest.CustomerSummary;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,8 +16,8 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import static au.com.dius.pact.consumer.dsl.LambdaDsl.newJsonBody;
-import static edu.obya.blueprint.customer.TestCustomer.TEST_CUSTOMER_ID;
-import static edu.obya.blueprint.customer.TestCustomer.TEST_CUSTOMER_OUT;
+import static edu.obya.blueprint.customer.adapter.rest.TestCustomerOut.TEST_CUSTOMER_OUT;
+import static edu.obya.blueprint.customer.domain.model.TestCustomer.TEST_CUSTOMER_ID;
 import static edu.obya.blueprint.customer.cdc.TestUserTokens.TEST_USER_TOKEN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -40,7 +40,7 @@ public class CustomerPactConsumerBTest {
                 .given("an existing customer")
                 .uponReceiving("get existing customer interaction")
                 .method("GET")
-                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID.getId()))
+                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID))
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_UTF8)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
                 .willRespondWith()
@@ -62,7 +62,7 @@ public class CustomerPactConsumerBTest {
                 .given("an existing customer")
                 .uponReceiving("get existing customer without authentication")
                 .method("GET")
-                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID.getId()))
+                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID))
                 .willRespondWith()
                 .status(401)
                 .toPact()
@@ -86,7 +86,7 @@ public class CustomerPactConsumerBTest {
     }
 
     private CustomerSummary fetchCustomer(RestTemplate restTemplate) {
-        return restTemplate.getForObject("/customers/{id}", CustomerSummary.class, TEST_CUSTOMER_ID.getId());
+        return restTemplate.getForObject("/customers/{id}", CustomerSummary.class, TEST_CUSTOMER_ID);
     }
 
     private RestTemplate templateWithAuth(MockServer mockServer) {

@@ -1,7 +1,7 @@
 package edu.obya.blueprint.customer.application;
 
-import edu.obya.blueprint.customer.domain.CustomerId;
-import edu.obya.blueprint.customer.domain.CustomerRepository;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
+import edu.obya.blueprint.customer.domain.service.CustomerRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;

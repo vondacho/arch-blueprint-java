@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.obya.blueprint.customer.application.CustomerDto;
 import edu.obya.blueprint.customer.at.TestUser;
 import edu.obya.blueprint.customer.at.infra.TestContext;
-import edu.obya.blueprint.customer.domain.CustomerId;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
 import io.cucumber.java.en.When;
 import lombok.RequiredArgsConstructor;
 import lombok.val;

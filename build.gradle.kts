@@ -28,6 +28,12 @@ sourceSets {
         compileClasspath += sourceSets.main.get().compileClasspath + sourceSets.test.get().compileClasspath
         annotationProcessorPath += sourceSets.test.get().annotationProcessorPath
     }
+    create("archTest") {
+        java.srcDir("src/archTest/java")
+        resources.srcDir("src/archTest/resources")
+        compileClasspath += sourceSets.main.get().compileClasspath + sourceSets.test.get().compileClasspath
+        annotationProcessorPath += sourceSets.test.get().annotationProcessorPath
+    }
     create("c4") {
         java.srcDir("src/c4/java")
         resources.srcDir("src/c4/resources")
@@ -102,7 +108,7 @@ dependencies {
     testImplementation("org.hibernate:hibernate-validator:5.2.5.Final")
 
     // ARCH testing
-    testImplementation("com.tngtech.archunit:archunit:1.0.1")
+    testImplementation("com.tngtech.archunit:archunit-junit5:1.0.1")
 
     // API documentation
     swaggerUI("org.webjars:swagger-ui:4.1.3")
@@ -181,6 +187,9 @@ gitPublish {
         from("build/swagger-ui-apidoc") {
             into("${mkdocs.publish.docPath}/api")
         }
+        from("src/doc/postman") {
+            into("${mkdocs.publish.docPath}/postman")
+        }
     }
 }
 
@@ -210,7 +219,21 @@ tasks {
             events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
         }
     }
+    val archTest by registering(Test::class) {
+        description = "Runs the architecture tests"
+        group = "verification"
+        testClassesDirs = sourceSets["archTest"].output.classesDirs
+        classpath += sourceSets["archTest"].runtimeClasspath
+        useJUnitPlatform()
+        testLogging {
+            exceptionFormat = TestExceptionFormat.FULL
+            events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+        }
+    }
     named<Copy>("processAcceptanceTestResources") {
+        duplicatesStrategy = DuplicatesStrategy.WARN
+    }
+    named<Copy>("processArchTestResources") {
         duplicatesStrategy = DuplicatesStrategy.WARN
     }
     named<Copy>("processC4Resources") {
@@ -218,5 +241,6 @@ tasks {
     }
     check {
         dependsOn(acceptanceTest)
+        dependsOn(archTest)
     }
 }

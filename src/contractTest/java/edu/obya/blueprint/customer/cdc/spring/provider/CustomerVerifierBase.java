@@ -1,9 +1,9 @@
 package edu.obya.blueprint.customer.cdc.spring.provider;
 
-import edu.obya.blueprint.customer.TestCustomer;
+import edu.obya.blueprint.customer.domain.model.TestCustomer;
 import edu.obya.blueprint.customer.cdc.TestUserTokens;
-import edu.obya.blueprint.customer.domain.CustomerRepository;
-import edu.obya.blueprint.customer.web.CustomerController;
+import edu.obya.blueprint.customer.domain.service.CustomerRepository;
+import edu.obya.blueprint.customer.adapter.rest.CustomerController;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;

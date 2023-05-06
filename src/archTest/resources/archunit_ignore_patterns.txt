@@ -1,0 +1,4 @@
+# Because Spring context configuration depends on JPA adapter configuration
+.*CustomerEndpointIT.*
+# Because Spring context configuration depends on JPA adapter configuration
+.*CustomerServiceIT.*

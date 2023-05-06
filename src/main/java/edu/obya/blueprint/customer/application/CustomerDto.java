@@ -1,6 +1,6 @@
 package edu.obya.blueprint.customer.application;
 
-import edu.obya.blueprint.customer.domain.CustomerState;
+import edu.obya.blueprint.customer.domain.model.CustomerState;
 import lombok.Builder;
 import lombok.Data;
 import lombok.extern.jackson.Jacksonized;

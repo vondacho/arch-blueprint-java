@@ -1,10 +1,10 @@
 package edu.obya.blueprint.customer.at.steps;
 
 import edu.obya.blueprint.customer.at.infra.TestContext;
-import edu.obya.blueprint.customer.domain.Customer;
-import edu.obya.blueprint.customer.domain.CustomerId;
-import edu.obya.blueprint.customer.domain.CustomerState;
-import edu.obya.blueprint.customer.web.CustomerSummary;
+import edu.obya.blueprint.customer.domain.model.Customer;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
+import edu.obya.blueprint.customer.domain.model.CustomerState;
+import edu.obya.blueprint.customer.adapter.rest.CustomerSummary;
 import io.cucumber.java.en.Then;
 import lombok.RequiredArgsConstructor;
 import lombok.val;

@@ -1,9 +1,12 @@
 package edu.obya.blueprint.customer.application;
 
-import edu.obya.blueprint.customer.domain.Customer;
-import edu.obya.blueprint.customer.domain.CustomerNotFoundException;
-import edu.obya.blueprint.customer.domain.CustomerId;
-import edu.obya.blueprint.customer.infra.data.jpa.CustomerJpaConfiguration;
+import edu.obya.blueprint.customer.application.CustomerApplicationConfiguration;
+import edu.obya.blueprint.customer.application.CustomerDto;
+import edu.obya.blueprint.customer.application.CustomerService;
+import edu.obya.blueprint.customer.domain.model.Customer;
+import edu.obya.blueprint.customer.domain.service.CustomerNotFoundException;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
+import edu.obya.blueprint.customer.adapter.jpa.CustomerJpaConfiguration;
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +15,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
+import static edu.obya.blueprint.customer.application.TestCustomerIn.TEST_CUSTOMER_IN;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
@@ -27,27 +31,23 @@ public class CustomerServiceIT {
     @Test
     @Transactional
     public void shouldCreateAndFindAndModifyAndRemoveACustomer() {
-        CustomerDto dto = CustomerDto.builder()
-                        .firstName("test")
-                        .lastName("test")
-                        .build();
-        CustomerId id = service.create(dto);
+        CustomerId id = service.create(TEST_CUSTOMER_IN);
 
         Customer retrieved = service.get(id);
         assertThat(retrieved.getState())
                 .extracting("firstName", "lastName")
-                .containsExactly(dto.firstName, dto.lastName);
+                .containsExactly(TEST_CUSTOMER_IN.getFirstName(), TEST_CUSTOMER_IN.getLastName());
 
         CustomerDto modified = CustomerDto.builder()
-                .firstName("john")
-                .lastName("doe")
+                .firstName("Bob")
+                .lastName("Dylan")
                 .build();
         service.update(modified, id);
 
         retrieved = service.get(id);
         assertThat(retrieved.getState())
                 .extracting("firstName", "lastName")
-                .containsExactly(modified.firstName, modified.lastName);
+                .containsExactly(modified.getFirstName(), modified.getLastName());
 
         service.remove(id);
         assertThatThrownBy(() -> { service.get(id); }).isInstanceOf(CustomerNotFoundException.class);

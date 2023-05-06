@@ -6,8 +6,8 @@ import au.com.dius.pact.provider.junit5.PactVerificationInvocationContextProvide
 import au.com.dius.pact.provider.junitsupport.Provider;
 import au.com.dius.pact.provider.junitsupport.State;
 import au.com.dius.pact.provider.junitsupport.loader.PactFolder;
-import edu.obya.blueprint.customer.domain.CustomerId;
-import edu.obya.blueprint.customer.domain.CustomerRepository;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
+import edu.obya.blueprint.customer.domain.service.CustomerRepository;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestTemplate;
@@ -22,8 +22,8 @@ import org.springframework.test.context.ActiveProfiles;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import static edu.obya.blueprint.customer.TestCustomer.TEST_CUSTOMER;
-import static edu.obya.blueprint.customer.TestCustomer.TEST_CUSTOMER_ID;
+import static edu.obya.blueprint.customer.domain.model.TestCustomer.TEST_CUSTOMER;
+import static edu.obya.blueprint.customer.domain.model.TestCustomer.TEST_CUSTOMER_ID;
 import static org.mockito.ArgumentMatchers.any;
 
 @ActiveProfiles("test")

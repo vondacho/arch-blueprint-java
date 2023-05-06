@@ -7,8 +7,8 @@ import au.com.dius.pact.consumer.junit5.PactTestFor;
 import au.com.dius.pact.core.model.V4Pact;
 import au.com.dius.pact.core.model.annotations.Pact;
 import au.com.dius.pact.core.model.annotations.PactDirectory;
-import edu.obya.blueprint.customer.domain.CustomerId;
-import edu.obya.blueprint.customer.web.CustomerSummary;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
+import edu.obya.blueprint.customer.adapter.rest.CustomerSummary;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,7 +16,9 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
 
 import static au.com.dius.pact.consumer.dsl.LambdaDsl.newJsonBody;
-import static edu.obya.blueprint.customer.TestCustomer.*;
+import static edu.obya.blueprint.customer.adapter.rest.TestCustomerOut.TEST_CUSTOMER_OUT;
+import static edu.obya.blueprint.customer.application.TestCustomerIn.TEST_CUSTOMER_IN;
+import static edu.obya.blueprint.customer.domain.model.TestCustomer.*;
 import static edu.obya.blueprint.customer.cdc.TestUserTokens.TEST_ADMIN_TOKEN;
 import static edu.obya.blueprint.customer.cdc.TestUserTokens.TEST_USER_TOKEN;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
@@ -38,7 +40,7 @@ public class CustomerPactConsumerATest {
                 .given("an existing customer")
                 .uponReceiving("get existing customer interaction")
                 .method("GET")
-                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID.getId()))
+                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID))
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
                 .willRespondWith()
@@ -81,7 +83,7 @@ public class CustomerPactConsumerATest {
                 .given("an existing customer")
                 .uponReceiving("replace existing customer interaction")
                 .method("PUT")
-                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID.getId()))
+                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID))
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
                 .body(newJsonBody(object -> {
@@ -101,7 +103,7 @@ public class CustomerPactConsumerATest {
                 .given("an existing customer")
                 .uponReceiving("remove existing customer interaction")
                 .method("DELETE")
-                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID.getId()))
+                .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID))
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_ADMIN_TOKEN)
                 .willRespondWith()
                 .status(204)
@@ -118,7 +120,7 @@ public class CustomerPactConsumerATest {
     }
 
     private CustomerSummary fetchCustomer(RestTemplate restTemplate) {
-        return restTemplate.getForObject("/customers/{id}", CustomerSummary.class, TEST_CUSTOMER_ID.getId());
+        return restTemplate.getForObject("/customers/{id}", CustomerSummary.class, TEST_CUSTOMER_ID);
     }
 
     @Test
@@ -131,13 +133,13 @@ public class CustomerPactConsumerATest {
     @Test
     @PactTestFor(pactMethod = "replaceCustomer")
     void replaceCustomer(MockServer mockServer) {
-        templateWithAuth(mockServer).put("/customers/{id}", TEST_CUSTOMER_IN, TEST_CUSTOMER_ID.getId());
+        templateWithAuth(mockServer).put("/customers/{id}", TEST_CUSTOMER_IN, TEST_CUSTOMER_ID);
     }
 
     @Test
     @PactTestFor(pactMethod = "removeCustomer")
     void removeCustomer(MockServer mockServer) {
-        templateWithAuthElevatedMode(mockServer).delete("/customers/{id}", TEST_CUSTOMER_ID.getId());
+        templateWithAuthElevatedMode(mockServer).delete("/customers/{id}", TEST_CUSTOMER_ID);
     }
 
     private RestTemplate templateWithAuth(MockServer mockServer) {

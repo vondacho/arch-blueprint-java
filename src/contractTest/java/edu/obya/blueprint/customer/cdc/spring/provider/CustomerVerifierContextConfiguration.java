@@ -1,9 +1,9 @@
 package edu.obya.blueprint.customer.cdc.spring.provider;
 
-import edu.obya.blueprint.WebSecurityConfiguration;
-import edu.obya.blueprint.WebValidationConfiguration;
+import edu.obya.blueprint.config.WebSecurityConfiguration;
+import edu.obya.blueprint.config.WebValidationConfiguration;
 import edu.obya.blueprint.customer.application.CustomerApplicationConfiguration;
-import edu.obya.blueprint.customer.web.CustomerController;
+import edu.obya.blueprint.customer.adapter.rest.CustomerController;
 import org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration;
 import org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration;
 import org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration;
