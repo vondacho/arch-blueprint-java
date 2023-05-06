@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="413px" preserveAspectRatio="none" style="width:469px;height:413px;background:#FFFFFF;" version="1.1" viewBox="0 0 469 413" width="469px" zoomAndPan="magnify"><defs><filter height="300%" id="fzb2kbk85pr21" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[2ce0c9fb7f55b1e256ab28a8ea6b25ec]
+class Customer--><rect codeLine="4" fill="#FEFECE" filter="url(#fzb2kbk85pr21)" height="73.6094" id="Customer" style="stroke:#A80036;stroke-width:1.5;" width="131" x="165.5" y="192"/><ellipse cx="198.05" cy="208" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M201.0188,213.6406 Q200.4406,213.9375 199.8,214.0781 Q199.1594,214.2344 198.4563,214.2344 Q195.9563,214.2344 194.6281,212.5938 Q193.3156,210.9375 193.3156,207.8125 Q193.3156,204.6875 194.6281,203.0313 Q195.9563,201.375 198.4563,201.375 Q199.1594,201.375 199.8,201.5313 Q200.4563,201.6875 201.0188,201.9844 L201.0188,204.7031 Q200.3938,204.125 199.8,203.8594 Q199.2063,203.5781 198.5813,203.5781 Q197.2375,203.5781 196.55,204.6563 Q195.8625,205.7188 195.8625,207.8125 Q195.8625,209.9063 196.55,210.9844 Q197.2375,212.0469 198.5813,212.0469 Q199.2063,212.0469 199.8,211.7813 Q200.3938,211.5 201.0188,210.9219 L201.0188,213.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="60" x="215.95" y="212.1543">Customer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="166.5" x2="295.5" y1="224" y2="224"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="171.5" y="238.2104">CustomerId id</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="171.5" y="251.0151">CustomerState state</text><line style="stroke:#A80036;stroke-width:1.5;" x1="166.5" x2="295.5" y1="257.6094" y2="257.6094"/><!--MD5=[052b4b5cf7aa81bb3f0d5ba6d67d7b48]
+class CustomerId--><rect codeLine="12" fill="#FEFECE" filter="url(#fzb2kbk85pr21)" height="73.6094" id="CustomerId" style="stroke:#A80036;stroke-width:1.5;" width="175" x="50.5" y="326"/><ellipse cx="98.25" cy="342" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M101.2188,347.6406 Q100.6406,347.9375 100,348.0781 Q99.3594,348.2344 98.6563,348.2344 Q96.1563,348.2344 94.8281,346.5938 Q93.5156,344.9375 93.5156,341.8125 Q93.5156,338.6875 94.8281,337.0313 Q96.1563,335.375 98.6563,335.375 Q99.3594,335.375 100,335.5313 Q100.6563,335.6875 101.2188,335.9844 L101.2188,338.7031 Q100.5938,338.125 100,337.8594 Q99.4063,337.5781 98.7813,337.5781 Q97.4375,337.5781 96.75,338.6563 Q96.0625,339.7188 96.0625,341.8125 Q96.0625,343.9063 96.75,344.9844 Q97.4375,346.0469 98.7813,346.0469 Q99.4063,346.0469 100,345.7813 Q100.5938,345.5 101.2188,344.9219 L101.2188,347.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="71" x="118.75" y="346.1543">CustomerId</text><line style="stroke:#A80036;stroke-width:1.5;" x1="51.5" x2="224.5" y1="358" y2="358"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="41" x="56.5" y="372.2104">UUID id</text><line style="stroke:#A80036;stroke-width:1.5;" x1="51.5" x2="224.5" y1="378.8047" y2="378.8047"/><ellipse cx="61.5" cy="389.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="70.5" y="393.0151">parse(String): CustomerId</text><!--MD5=[6476c1cd18361670bc1c0ddef7ea6443]
+class CustomerState--><rect codeLine="17" fill="#FEFECE" filter="url(#fzb2kbk85pr21)" height="73.6094" id="CustomerState" style="stroke:#A80036;stroke-width:1.5;" width="126" x="261" y="326"/><ellipse cx="276" cy="342" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M278.9688,347.6406 Q278.3906,347.9375 277.75,348.0781 Q277.1094,348.2344 276.4063,348.2344 Q273.9063,348.2344 272.5781,346.5938 Q271.2656,344.9375 271.2656,341.8125 Q271.2656,338.6875 272.5781,337.0313 Q273.9063,335.375 276.4063,335.375 Q277.1094,335.375 277.75,335.5313 Q278.4063,335.6875 278.9688,335.9844 L278.9688,338.7031 Q278.3438,338.125 277.75,337.8594 Q277.1563,337.5781 276.5313,337.5781 Q275.1875,337.5781 274.5,338.6563 Q273.8125,339.7188 273.8125,341.8125 Q273.8125,343.9063 274.5,344.9844 Q275.1875,346.0469 276.5313,346.0469 Q277.1563,346.0469 277.75,345.7813 Q278.3438,345.5 278.9688,344.9219 L278.9688,347.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="290" y="346.1543">CustomerState</text><line style="stroke:#A80036;stroke-width:1.5;" x1="262" x2="386" y1="358" y2="358"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="267" y="372.2104">String firstName</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="267" y="385.0151">String lastName</text><line style="stroke:#A80036;stroke-width:1.5;" x1="262" x2="386" y1="391.6094" y2="391.6094"/><!--MD5=[e69d6994dde37a3d0167e5476c791457]
+class CustomerRepository--><rect codeLine="22" fill="#FEFECE" filter="url(#fzb2kbk85pr21)" height="124.8281" id="CustomerRepository" style="stroke:#A80036;stroke-width:1.5;" width="448" x="7" y="7"/><ellipse cx="164.25" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M160.1719,18.7656 L160.1719,16.6094 L167.5625,16.6094 L167.5625,18.7656 L165.0938,18.7656 L165.0938,26.8438 L167.5625,26.8438 L167.5625,29 L160.1719,29 L160.1719,26.8438 L162.6406,26.8438 L162.6406,18.7656 L160.1719,18.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="125" x="184.75" y="27.1543">CustomerRepository</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="454" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="454" y1="47" y2="47"/><ellipse cx="18" cy="58" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="244" x="27" y="61.2104">Optional&lt;Customer&gt; findById(CustomerId)</text><ellipse cx="18" cy="70.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="422" x="27" y="74.0151">Optional&lt;Customer&gt; findByFirstNameAndLastName(firstName, lastName)</text><ellipse cx="18" cy="83.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="286" x="27" y="86.8198">List&lt;Customer&gt; findByCriteria(List&lt;FindCriteria&gt;)</text><ellipse cx="18" cy="96.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="216" x="27" y="99.6245">void add(CustomerId, CustomerState)</text><ellipse cx="18" cy="109.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="234" x="27" y="112.4292">void update(CustomerId, CustomerState)</text><ellipse cx="18" cy="122.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="144" x="27" y="125.2339">void remove(CustomerId)</text><!--MD5=[286061980877f1b699964421b7d5abc6]
+link Customer to CustomerId--><path codeLine="9" d="M198.6802,275.8809 C198.6802,275.8809 179.66,302.87 170.88,315.33 " fill="none" id="Customer-CustomerId" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="163.38,325.97,171.8327,320.9151,166.2591,321.8821,165.2921,316.3085,163.38,325.97" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="166.2591" x2="170.87" y1="321.8821" y2="315.35"/><polygon fill="#A80036" points="205.59,266.07,198.8648,268.6722,198.6802,275.8809,205.4054,273.2787,205.59,266.07" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="159.3219" y="314.8749">1</text><!--MD5=[f372bd80b91f99e24f13f6f3e6a6c506]
+link Customer to CustomerState--><path codeLine="10" d="M263.3198,275.8809 C263.3198,275.8809 282.34,302.87 291.12,315.33 " fill="none" id="Customer-CustomerState" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="298.62,325.97,296.7079,316.3085,295.7409,321.8821,290.1673,320.9151,298.62,325.97" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="295.7409" x2="291.13" y1="321.8821" y2="315.35"/><polygon fill="#A80036" points="256.41,266.07,256.5946,273.2787,263.3198,275.8809,263.1352,268.6722,256.41,266.07" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="285.2031" y="314.8749">1</text><!--MD5=[3ae97d11c2ca570632e7e7ed3510da9a]
+link CustomerRepository to Customer--><path codeLine="31" d="M231,132.3 C231,150.57 231,170.13 231,186.77 " fill="none" id="CustomerRepository-to-Customer" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="231,191.83,235,182.83,231,186.83,227,182.83,231,191.83" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="124.2719" y="180.9867">read and writes</text><!--MD5=[189b60aeaccbd2b7ede93351e2445e2e]
+@startuml
+
+!includeurl https://raw.githubusercontent.com/skleanthous/C4-PlantumlSkin/master/build/output/general/notes.puml
+
+class Customer {
+    CustomerId id
+    CustomerState state
+}
+
+Customer *- -> "1" CustomerId
+Customer *- -> "1" CustomerState
+
+class CustomerId {
+    UUID id
+    +parse(String): CustomerId
+}
+
+class CustomerState {
+    String firstName
+    String lastName
+}
+
+interface CustomerRepository {
+    +Optional<Customer> findById(CustomerId)
+    +Optional<Customer> findByFirstNameAndLastName(firstName, lastName)
+    +List<Customer> findByCriteria(List<FindCriteria>)
+    +void add(CustomerId, CustomerState)
+    +void update(CustomerId, CustomerState)
+    +void remove(CustomerId)
+}
+
+CustomerRepository - -> "read and writes" Customer
+
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+skinparam note {
+  BackgroundColor #F5F5F5
+  BorderColor #707070
+  FontColor #707070
+}
+
+class Customer {
+    CustomerId id
+    CustomerState state
+}
+
+Customer *- -> "1" CustomerId
+Customer *- -> "1" CustomerState
+
+class CustomerId {
+    UUID id
+    +parse(String): CustomerId
+}
+
+class CustomerState {
+    String firstName
+    String lastName
+}
+
+interface CustomerRepository {
+    +Optional<Customer> findById(CustomerId)
+    +Optional<Customer> findByFirstNameAndLastName(firstName, lastName)
+    +List<Customer> findByCriteria(List<FindCriteria>)
+    +void add(CustomerId, CustomerState)
+    +void update(CustomerId, CustomerState)
+    +void remove(CustomerId)
+}
+
+CustomerRepository - -> "read and writes" Customer
+
+@enduml
+
+PlantUML version 1.2021.16(Wed Dec 08 17:25:22 UTC 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: 
+--></g></svg>
