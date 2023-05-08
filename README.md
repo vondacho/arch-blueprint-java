@@ -8,12 +8,12 @@ A Java project as template and pedagogical support for the teaching of Clean Arc
 
 CRUD operations on Customer entities exposed by a REST API.
 
-- Web request validation with Atlassian
+- Web request validation with [Swagger request validator](https://bitbucket.org/atlassian/swagger-request-validator/src/master/)
 - Web security based on Basic Authentication
 - Application management with Spring Actuator
-- Acceptance testing with Cucumber
-- Contract testing with Pact and Spring Cloud Contract
-- Architecture testing with ArchUnit
+- Acceptance testing with [Cucumber](https://cucumber.io/docs/cucumber/)
+- Contract testing with [Pact](https://docs.pact.io/) and [Spring Cloud Contract](https://softwaremill.com/contract-testing-spring-cloud-contract/)
+- Architecture testing with [ArchUnit](https://www.archunit.org/motivation)
 
 ## Getting started
 
@@ -23,7 +23,7 @@ CRUD operations on Customer entities exposed by a REST API.
 
 ## Technical documentation
 
-- Powered by MkDocs
-- API documentation powered by Swagger UI
-- Architecture documentation powered by Structurizr and AppMap
+- Powered by [MkDocs](https://www.mkdocs.org/getting-started/)
+- API documentation powered by [Swagger UI](https://swagger.io/tools/swagger-ui/)
+- Architecture documentation powered by [Structurizr](https://structurizr.com/) and [AppMap](https://appmap.io/docs/appmap-overview.html)
 - [Latest release](https://vondacho.github.io/arch-blueprint-java)
