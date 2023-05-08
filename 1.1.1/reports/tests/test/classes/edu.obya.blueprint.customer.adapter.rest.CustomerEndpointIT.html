@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CustomerEndpointIT</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CustomerEndpointIT</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/edu.obya.blueprint.customer.adapter.rest.html">edu.obya.blueprint.customer.adapter.rest</a> &gt; CustomerEndpointIT</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.615s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">shouldCreateAndModifyAndDeleteCustomer()</td>
+<td class="success">0.615s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-05-08 17:17:00.393  INFO 3058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.obya.blueprint.customer.adapter.rest.CustomerEndpointIT], using SpringBootContextLoader
+2023-05-08 17:17:00.395  INFO 3058 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [edu.obya.blueprint.customer.adapter.rest.CustomerEndpointIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-08 17:17:00.396  INFO 3058 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.obya.blueprint.customer.adapter.rest.CustomerEndpointIT]: CustomerEndpointIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-08 17:17:00.414  INFO 3058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.obya.blueprint.Application for test class edu.obya.blueprint.customer.adapter.rest.CustomerEndpointIT
+2023-05-08 17:17:00.419  INFO 3058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener, io.zonky.test.db.event.EventPublishingTestExecutionListener, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener]
+2023-05-08 17:17:00.421  INFO 3058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d364bce, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1aa7d66e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5cc85ffc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@189f2184, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@57386162, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7388d94d, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener@6da14f7f, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener@c53c04e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@18f493d7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2d036335, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4a3e1b5d, org.springframework.test.context.event.EventPublishingTestExecutionListener@587df3e4, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@64abb917, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5207747c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@68596992, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f0c45ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@66d62c59, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@f1b006b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2c2dfde3, io.zonky.test.db.event.EventPublishingTestExecutionListener@1131fcfd]
+ ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗███████╗██████╗ 
+██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║██╔════╝██╔══██╗
+██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║█████╗  ██████╔╝
+██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗
+╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║
+ ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
+2023-05-08 17:17:00.483  WARN 3058 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/runner/.gradle/caches/modules-2/files-2.1/org.json/json/20220924/5aa95e7688f76c664af205c5937620f02688dfbc/json-20220924.jar!/org/json/JSONObject.class
+	jar:file:/home/runner/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-05-08 17:17:00.491  INFO 3058 --- [    Test worker] e.o.b.c.adapter.rest.CustomerEndpointIT  : Starting CustomerEndpointIT using Java 17.0.7 on fv-az216-589 with PID 3058 (started by runner in /home/runner/work/arch-blueprint-java/arch-blueprint-java)
+2023-05-08 17:17:00.492  INFO 3058 --- [    Test worker] e.o.b.c.adapter.rest.CustomerEndpointIT  : The following 2 profiles are active: &quot;test&quot;, &quot;jpa&quot;
+2023-05-08 17:17:00.934  INFO 3058 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-08 17:17:00.939  INFO 3058 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2023-05-08 17:17:01.234  INFO 3058 --- [    Test worker] EmbeddedDatabaseContextCustomizerFactory : Replacing 'dataSource' DataSource bean with embedded version
+2023-05-08 17:17:01.428  INFO 3058 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration' of type [org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-08 17:17:01.446  INFO 3058 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration' of type [io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$f7a0b772] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-08 17:17:01.770  INFO 3058 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-08 17:17:01.784  INFO 3058 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-05-08 17:17:01.821  INFO 3058 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-08 17:17:01.822  INFO 3058 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-08 17:17:03.180  INFO 3058 --- [    Test worker] s.w.a.s.ProblemSecurityBeanPostProcessor : Register HttpSecurity's exceptionHandling
+2023-05-08 17:17:03.504  INFO 3058 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/admin'
+2023-05-08 17:17:03.547  INFO 3058 --- [    Test worker] o.z.p.s.w.a.s.ProblemHttpConfigurer      : Register HttpSecurity's exceptionHandling
+2023-05-08 17:17:03.597  INFO 3058 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4288d7b6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a0773, org.springframework.security.web.context.SecurityContextPersistenceFilter@15da3ce9, org.springframework.security.web.header.HeaderWriterFilter@3567edfe, org.springframework.security.web.authentication.logout.LogoutFilter@1f481ec3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2f074818, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a0c027a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ef55aa6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4169db10, org.springframework.security.web.session.SessionManagementFilter@26838837, org.springframework.security.web.access.ExceptionTranslationFilter@6b4684b4, org.springframework.security.web.access.intercept.AuthorizationFilter@41f5f4ba]
+2023-05-08 17:17:04.106  INFO 3058 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-08 17:17:04.106  INFO 3058 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-08 17:17:04.108  INFO 3058 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-08 17:17:04.241  INFO 3058 --- [    Test worker] e.o.b.c.adapter.rest.CustomerEndpointIT  : Started CustomerEndpointIT in 3.813 seconds (JVM running for 13.694)
+2023-05-08 17:17:04.344  INFO 3058 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5793cd84 testClass = CustomerEndpointIT, testInstance = edu.obya.blueprint.customer.adapter.rest.CustomerEndpointIT@eef9471, testMethod = shouldCreateAndModifyAndDeleteCustomer@CustomerEndpointIT, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7454f141 testClass = CustomerEndpointIT, locations = '{}', classes = '{class edu.obya.blueprint.Application}', contextInitializerClasses = '[]', activeProfiles = '{test, jpa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4a37191a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3cad68df, [ImportsContextCustomizer@17699e35 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, edu.obya.blueprint.customer.adapter.rest.CustomerWebConfiguration, edu.obya.blueprint.config.WebSecurityConfiguration, edu.obya.blueprint.config.WebValidationConfiguration, edu.obya.blueprint.config.ExceptionHandling, edu.obya.blueprint.customer.adapter.jpa.CustomerJpaConfiguration, edu.obya.blueprint.customer.application.CustomerApplicationConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7bac686b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@404eca05, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@e149d7f5, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@72f5fb36, io.zonky.test.db.EmbeddedDatabaseContextCustomizerFactory$EmbeddedDatabaseContextCustomizer@4637c061, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@73163d48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@9edb372]; rollback [true]
+2023-05-08 17:17:04.348  INFO 3058 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:32773/efrzvaysdthh?user=postgres&amp;password=docker', scope='CustomerEndpointIT#shouldCreateAndModifyAndDeleteCustomer'
+Hibernate: select jpacustome0_.pk as pk1_0_, jpacustome0_.firstname as firstnam2_0_, jpacustome0_.lastname as lastname3_0_, jpacustome0_.id as id4_0_ from customer jpacustome0_ where jpacustome0_.firstname=? and jpacustome0_.lastname=?
+Hibernate: select jpacustome0_.pk as pk1_0_0_, jpacustome0_.firstname as firstnam2_0_0_, jpacustome0_.lastname as lastname3_0_0_, jpacustome0_.id as id4_0_0_ from customer jpacustome0_ where jpacustome0_.pk=?
+Hibernate: insert into customer (firstname, lastname, id, pk) values (?, ?, ?, ?)
+Hibernate: select jpacustome0_.pk as pk1_0_, jpacustome0_.firstname as firstnam2_0_, jpacustome0_.lastname as lastname3_0_, jpacustome0_.id as id4_0_ from customer jpacustome0_ where jpacustome0_.firstname=? and jpacustome0_.lastname=?
+Hibernate: select jpacustome0_.pk as pk1_0_, jpacustome0_.firstname as firstnam2_0_, jpacustome0_.lastname as lastname3_0_, jpacustome0_.id as id4_0_ from customer jpacustome0_ where jpacustome0_.id=?
+Hibernate: update customer set firstname=?, lastname=?, id=? where pk=?
+Hibernate: select jpacustome0_.pk as pk1_0_, jpacustome0_.firstname as firstnam2_0_, jpacustome0_.lastname as lastname3_0_, jpacustome0_.id as id4_0_ from customer jpacustome0_ where jpacustome0_.id=?
+Hibernate: delete from customer where pk=?
+2023-05-08 17:17:04.949  INFO 3058 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@5793cd84 testClass = CustomerEndpointIT, testInstance = edu.obya.blueprint.customer.adapter.rest.CustomerEndpointIT@eef9471, testMethod = shouldCreateAndModifyAndDeleteCustomer@CustomerEndpointIT, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7454f141 testClass = CustomerEndpointIT, locations = '{}', classes = '{class edu.obya.blueprint.Application}', contextInitializerClasses = '[]', activeProfiles = '{test, jpa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4a37191a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3cad68df, [ImportsContextCustomizer@17699e35 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, edu.obya.blueprint.customer.adapter.rest.CustomerWebConfiguration, edu.obya.blueprint.config.WebSecurityConfiguration, edu.obya.blueprint.config.WebValidationConfiguration, edu.obya.blueprint.config.ExceptionHandling, edu.obya.blueprint.customer.adapter.jpa.CustomerJpaConfiguration, edu.obya.blueprint.customer.application.CustomerApplicationConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7bac686b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@404eca05, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@e149d7f5, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@72f5fb36, io.zonky.test.db.EmbeddedDatabaseContextCustomizerFactory$EmbeddedDatabaseContextCustomizer@4637c061, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@73163d48], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 8, 2023, 5:17:05 PM</p>
+</div>
+</div>
+</body>
+</html>

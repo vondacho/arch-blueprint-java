@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="979px" preserveAspectRatio="none" style="width:1145px;height:979px;background:#FFFFFF;" version="1.1" viewBox="0 0 1145 979" width="1145px" zoomAndPan="magnify"><defs><filter height="300%" id="f19nemsgwd0lnr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[54acd98e04652503a12ad714ff2e5c26]
+cluster edu.obya.blueprint.customer--><polygon fill="#FFFFFF" filter="url(#f19nemsgwd0lnr)" points="212,6,447,6,454,28.2969,901,28.2969,901,849.5,212,849.5,212,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="212" x2="454" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="229" x="216" y="20.9951">edu.obya.blueprint.customer</text><!--MD5=[431e82c70218a45a651187a9676a332a]
+cluster appl--><rect fill="#FFFFFF" filter="url(#f19nemsgwd0lnr)" height="158" style="stroke:#000000;stroke-width:1.5;" width="290" x="369" y="250"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="639" y="255"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="637" y="257"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="637" y="261"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="85" x="471.5" y="275.9951">application</text><!--MD5=[27f772719433d509ddbc20ff768eba08]
+cluster domain--><rect fill="#FFFFFF" filter="url(#f19nemsgwd0lnr)" height="289" style="stroke:#000000;stroke-width:1.5;" width="301" x="576" y="460"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="857" y="465"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="855" y="467"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="855" y="471"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="698" y="485.9951">domain</text><!--MD5=[db7683648a36033af5014485fe1667bc]
+cluster web--><rect fill="#FFFFFF" filter="url(#f19nemsgwd0lnr)" height="132" style="stroke:#000000;stroke-width:1.5;" width="175" x="633" y="57"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="788" y="62"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="786" y="64"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="786" y="68"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="34" x="703.5" y="82.9951">web</text><!--MD5=[dce4c2b5694dd28223e7b1d160ba96c4]
+cluster data--><rect fill="#FFFFFF" filter="url(#f19nemsgwd0lnr)" height="132" style="stroke:#000000;stroke-width:1.5;" width="176" x="372" y="492.5"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="528" y="497.5"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="526" y="499.5"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="526" y="503.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="75" x="422.5" y="518.4951">infra.data</text><!--MD5=[ce1c0195088fc6ead5c2a3aeac01380f]
+entity external--><rect fill="#FEFECE" filter="url(#f19nemsgwd0lnr)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="128" x="719" y="787.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="827" y="792.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="825" y="794.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="825" y="798.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="734" y="820.4951">infra.external</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="616.5" y="228.6982">service</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="635" y="244"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="434.5" y="426.9951">repository</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="463" y="402"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="368.5" y="426.9951">client</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="381" y="402"/><!--MD5=[96e4b3dc1abe32a7f76a75976d592d03]
+entity applm--><rect fill="#FEFECE" filter="url(#f19nemsgwd0lnr)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="158" x="397" y="321.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="535" y="326.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="533" y="328.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="533" y="332.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="412" y="354.4951">Command model</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="616.5" y="438.6982">service</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="635" y="454"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="559.5" y="767.9951">repository</text><rect fill="#A80036" height="12" style="stroke:#FEFECE;stroke-width:1.5;" width="12" x="588" y="743"/><!--MD5=[086b1281b1127995763cd5b7e3480964]
+entity dom--><rect fill="#FEFECE" filter="url(#f19nemsgwd0lnr)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="140" x="713" y="664.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="833" y="669.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="831" y="671.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="831" y="675.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="728" y="697.4951">Domain model</text><!--MD5=[d04fdf3b274b633506dabc6920e8b246]
+entity webm--><rect fill="#FEFECE" filter="url(#f19nemsgwd0lnr)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="108" x="676" y="119"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="764" y="124"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="762" y="126"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="762" y="130"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="691" y="151.9951">API model</text><!--MD5=[3a1a0951a50258183b731b61554c572e]
+entity dam--><rect fill="#FEFECE" filter="url(#f19nemsgwd0lnr)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="119" x="404.5" y="554.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="503.5" y="559.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="501.5" y="561.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="501.5" y="565.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="419.5" y="587.4951">Data model</text><!--MD5=[7468467f3b6b392f1d176d828c753b77]
+entity db--><path d="M6,565 C6,555 77,555 77,555 C77,555 148,555 148,565 L148,590.2969 C148,600.2969 77,600.2969 77,600.2969 C77,600.2969 6,600.2969 6,590.2969 L6,565 " fill="#FEFECE" filter="url(#f19nemsgwd0lnr)" style="stroke:#000000;stroke-width:1.5;"/><path d="M6,565 C6,575 77,575 77,575 C77,575 148,575 148,565 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="16" y="591.9951">CustomerStorage</text><!--MD5=[b24760b0d8d7d81ed410bc087ce25465]
+entity addrc--><ellipse cx="783" cy="941.5" fill="#FEFECE" filter="url(#f19nemsgwd0lnr)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="713" y="971.4951">AddressChecker API</text><path d="M917,667.5 L917,707.7656 L1119,707.7656 L1119,677.5 L1109,667.5 L917,667.5 " fill="#F5F5F5" filter="url(#f19nemsgwd0lnr)" style="stroke:#707070;stroke-width:1.0;"/><path d="M1109,667.5 L1109,677.5 L1119,677.5 L1109,667.5 " fill="#F5F5F5" style="stroke:#707070;stroke-width:1.0;"/><text fill="#707070" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="923" y="684.5669">Domain model composed of</text><text fill="#707070" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="930.5" y="699.6997">entities, objects, and logic</text><path d="M917.5,317 L917.5,372.3984 L1136.5,372.3984 L1136.5,327 L1126.5,317 L917.5,317 " fill="#F5F5F5" filter="url(#f19nemsgwd0lnr)" style="stroke:#707070;stroke-width:1.0;"/><path d="M1126.5,317 L1126.5,327 L1136.5,327 L1126.5,317 " fill="#F5F5F5" style="stroke:#707070;stroke-width:1.0;"/><text fill="#707070" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="107" x="969" y="334.0669">Application logic,</text><text fill="#707070" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="198" x="923.5" y="349.1997">orchestration of the use cases,</text><text fill="#707070" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="949" y="364.3325">transaction boundaries</text><path d="M917,790.5 L917,806.5 L847.22,810.5 L917,814.5 L917,830.7656 A0,0 0 0 0 917,830.7656 L1129,830.7656 A0,0 0 0 0 1129,830.7656 L1129,800.5 L1119,790.5 L917,790.5 A0,0 0 0 0 917,790.5 " fill="#F5F5F5" filter="url(#f19nemsgwd0lnr)" style="stroke:#707070;stroke-width:1.0;"/><path d="M1119,790.5 L1119,800.5 L1129,800.5 L1119,790.5 " fill="#F5F5F5" style="stroke:#707070;stroke-width:1.0;"/><text fill="#707070" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="923" y="807.5669">Interface to external systems</text><text fill="#707070" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="981" y="822.6997">and models</text><!--MD5=[9ac72483af294831723cc7a201d3e1f2]
+link web to appls--><path d="M641,189.1686 C641,189.331 641,189.4934 641,189.6559 C641,192.2563 641,194.8773 641,197.4935 C641,202.7259 641,207.9389 641,212.9284 C641,222.9075 641,231.9925 641,238.55 " fill="none" id="web-to-appls" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="641,243.76,645,234.76,641,238.76,637,234.76,641,243.76" style="stroke:#707070;stroke-width:1.0;"/><!--MD5=[a00fa6a1b67661cbdbba0e78dd47a815]
+link web to applm--><path d="M632.7956,148.6587 C632.6181,148.7839 632.4381,148.9111 632.2557,149.0401 C631.5259,149.5563 630.757,150.1029 629.9513,150.6787 C623.5056,155.2856 614.71,161.7675 604.8425,169.5775 C585.1075,185.1975 561.085,206.13 543,228 C520.15,255.63 500.45,292.04 488.44,316.53 " fill="none" id="web-to-applm" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="486.14,321.27,493.6702,314.922,488.3245,316.7725,486.4741,311.4268,486.14,321.27" style="stroke:#707070;stroke-width:1.0;"/><!--MD5=[567fcf081c6d69d2fd24b5923d698d12]
+link web to dom--><path d="M649.8111,189.2865 C649.8562,189.3877 649.9016,189.4888 649.9473,189.5898 C650.3123,190.3981 650.6922,191.1997 651.0875,191.9929 C651.8781,193.5793 652.7304,195.1323 653.6494,196.6383 C655.4872,199.6502 657.5913,202.4738 660,205 C697.76,244.61 775,194.28 775,249 C775,249 775,249 775,461 C775,532.57 779.07,616.83 781.41,659.22 " fill="none" id="web-to-dom" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="781.7,664.42,785.18,655.2065,781.4148,659.4281,777.1931,655.6629,781.7,664.42" style="stroke:#707070;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70" x="776" y="349.0669">uses/maps</text><!--MD5=[d268b87c627c9791318e82b817fb0310]
+link appl to dos--><path d="M641,408.2852 C641,408.5695 641,408.8536 641,409.1374 C641,409.7051 641,410.2718 641,410.8374 C641,411.9686 641,413.0951 641,414.2151 C641,418.695 641,423.0709 641,427.2239 C641,435.53 641,442.945 641,448.52 " fill="none" id="appl-to-dos" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="641,453.74,645,444.74,641,448.74,637,444.74,641,453.74" style="stroke:#707070;stroke-width:1.0;"/><!--MD5=[e455b23dee20426fc8b029eda1a4b581]
+link appl to dor--><path d="M624.5399,408.0038 C624.0665,410.0028 623.5969,412.0123 623.1333,414.0261 C621.2788,422.0813 619.52,430.205 618,438 C599.91,530.75 594.68,554.24 588,648.5 C585.55,683.08 583.3,692.15 588,726.5 C588.51,730.23 589.5,734.22 590.53,737.74 " fill="none" id="appl-to-dor" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="592.11,742.78,593.2268,732.9947,590.6105,738.0101,585.595,735.3939,592.11,742.78" style="stroke:#707070;stroke-width:1.0;"/><!--MD5=[cebcdcdb0a3a936548ca3924372b8e80]
+link appl to dom--><path d="M659.0696,366.8778 C659.6466,367.5972 660.2322,368.3309 660.8256,369.0783 C665.5731,375.0572 670.8225,381.9106 676.1625,389.3238 C686.8425,404.15 697.885,421.215 706,438 C746.85,522.51 736.38,551.43 766,640.5 C768.01,646.56 770.31,653.02 772.54,659.12 " fill="none" id="appl-to-dom" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="774.4,664.14,775.0379,654.3118,772.6695,659.449,767.5323,657.0806,774.4,664.14" style="stroke:#707070;stroke-width:1.0;"/><!--MD5=[524c55b1e8fb30b05760c87e8f39ab1e]
+link data to dom--><path d="M378.5563,624.789 C378.6758,625.1878 378.8005,625.5845 378.9305,625.9788 C379.1907,626.7675 379.4724,627.5467 379.777,628.3145 C380.3861,629.8501 381.0866,631.3403 381.8886,632.7699 C383.4925,635.6292 385.5025,638.2463 388,640.5 C400.67,651.93 678.34,644.83 695,648.5 C708.75,651.53 723.02,656.71 735.97,662.28 " fill="none" id="data-to-dom" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="740.68,664.35,734.0569,657.0606,736.1045,662.3339,730.8312,664.3815,740.68,664.35" style="stroke:#707070;stroke-width:1.0;"/><!--MD5=[a4c314b15e7e407d66f9cd5c8919482a]
+reverse link db to data--><path d="M101.36,551.39 C126.37,526.67 167.79,491.21 212,476.5 C246.58,465 349.72,451.24 376,476.5 C377.93,478.355 379.4569,481.2016 380.6493,484.7771 C381.2455,486.5649 381.7581,488.5349 382.1957,490.6543 C382.3051,491.1841 382.4098,491.7233 382.5099,492.2713 " fill="none" id="db-backto-data" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="97.79,554.96,106.9895,551.443,101.3327,551.4316,101.3441,545.7748,97.79,554.96" style="stroke:#707070;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="148.5" y="464.5669">reads/writes</text><!--MD5=[b70349a1689424225f59ed5f95e5fc52]
+reverse link dor to data--><path d="M569.13,736.17 C548.66,731.27 536.27,736.3 513,726.5 C481.93,713.41 405.57,669.28 388,640.5 C386.2463,637.6288 384.8,634.5438 383.6125,631.3389 C383.0187,629.7364 382.4896,628.104 382.0192,626.4534 C381.9015,626.0407 381.7876,625.6269 381.6772,625.2121 C381.622,625.0048 381.5677,624.7971 381.5142,624.5893 " fill="none" id="dor-backto-data" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="571.64,729.64,588.14,742.93,566.95,742.83,571.64,729.64" style="stroke:#707070;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="514" y="692.0669">adapts</text><!--MD5=[df1355832b8f3c0ff2d6c7503d412374]
+reverse link applr to data--><path d="M445.21,421.67 C426.16,433.22 400.6,452.17 388,476.5 C385.4763,481.3713 383.4525,486.5578 381.8439,491.9083 C381.7936,492.0755 381.7438,492.2429 381.6943,492.4104 " fill="none" id="applr-backto-data" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="442.03,415.43,462.92,411.89,448.8,427.68,442.03,415.43" style="stroke:#707070;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="422" y="464.5669">adapts</text><!--MD5=[7417d67084e6fe892fde0281385c3519]
+reverse link dom to external--><path d="M783,715.73 C783,737.38 783,767.28 783,787.45 " fill="none" id="dom-backto-external" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="783,710.69,779,719.69,783,715.69,787,719.69,783,710.69" style="stroke:#707070;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70" x="784" y="753.5669">uses/maps</text><!--MD5=[f8be33db0a18765190ee1b885b456f0a]
+reverse link applc to external--><path d="M361.55,416.76 C335.52,426.21 296.48,444.96 279,476.5 C243.67,540.25 247.5,574.77 279,640.5 C340.61,769.06 432.51,741.61 572,771 C621.01,781.33 676.76,791.43 718.65,798.69 " fill="none" id="applc-backto-external" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="359.63,410.02,380.81,410.59,363.9,423.35,359.63,410.02" style="stroke:#707070;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83" x="280" y="582.0669">adapts (ACL)</text><!--MD5=[e2e1cd8a6af7e2827c7ff9595755e640]
+link external to addrc--><path d="M783,833.68 C783,860.64 783,905.27 783,927.32 " fill="none" id="external-to-addrc" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#707070" points="783,932.42,787,923.42,783,927.42,779,923.42,783,932.42" style="stroke:#707070;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66" x="784" y="878.5669">consumes</text><!--MD5=[ab3a0f0069f5afd5c6ca74034a251c3d]
+link domain to GMN49--><path d="M877.1027,569.1879 C877.3424,569.3054 877.582,569.4233 877.8215,569.5415 C878.7793,570.0147 879.735,570.4943 880.6884,570.9801 C882.5952,571.9517 884.4929,572.9482 886.3808,573.9676 C890.1566,576.0064 893.8931,578.137 897.5844,580.3445 C912.3494,589.1747 926.39,599.2356 939.3225,609.5738 C965.1875,630.25 986.62,652.035 1000.55,667.3 " fill="none" id="domain-GMN49" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[a9861fe33a1dd150bfd681d55342f051]
+link GMN52 to appl--><path d="M974.52,317 C918.49,291.23 827.25,259.6 749.5,280.75 C730,286.055 710.425,295.85 693.3763,306.1975 C684.8519,311.3713 676.9591,316.6831 670.023,321.6409 C666.5549,324.1198 663.3261,326.5102 660.377,328.7506 C660.0084,329.0306 659.6441,329.3083 659.2843,329.5836 C659.1944,329.6524 659.1047,329.721 659.0153,329.7895 " fill="none" id="GMN52-appl" style="stroke:#707070;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[d6ed64f07f34dc4666d72b8c52907a2b]
+@startuml
+
+!includeurl https://raw.githubusercontent.com/skleanthous/C4-PlantumlSkin/master/build/output/general/general.puml
+!includeurl https://raw.githubusercontent.com/skleanthous/C4-PlantumlSkin/master/build/output/general/notes.puml
+
+package edu.obya.blueprint.customer {
+
+component application as appl {
+    portin service as appls
+    portout repository as applr
+    portout client as applc
+    component "Command model" as applm
+}
+
+component domain {
+    portin service as dos
+    portout repository as dor
+    component "Domain model" as dom
+}
+
+component web {
+    component "API model" as webm
+}
+
+component infra.data as data {
+    component "Data model" as dam
+}
+
+component infra.external as external
+
+}
+
+database CustomerStorage as db
+() "AddressChecker API" as addrc
+
+web ..> appls
+web ..> applm
+web ..> dom : uses/maps
+appl ..> dos
+appl ..> dor
+appl ..> dom
+data ..> dom : uses/maps
+data .left.> db : reads/writes
+data .up.|> dor : adapts
+data .up.|> applr : adapts
+external .up.> dom : uses/maps
+external .up.|> applc : adapts (ACL)
+external ..> addrc : consumes
+
+note right of domain
+  Domain model composed of
+  entities, objects, and logic
+end note
+
+note left of appl
+  Application logic,
+  orchestration of the use cases,
+  transaction boundaries
+end note
+
+note left of external
+  Interface to external systems and models
+end note
+
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+skinparam {
+  shadowing true
+  arrowColor #707070
+  defaultTextAlignment center
+  wrapWidth 200
+  maxMessageSize 150
+}
+
+skinparam note {
+  BackgroundColor #F5F5F5
+  BorderColor #707070
+  FontColor #707070
+}
+
+package edu.obya.blueprint.customer {
+
+component application as appl {
+    portin service as appls
+    portout repository as applr
+    portout client as applc
+    component "Command model" as applm
+}
+
+component domain {
+    portin service as dos
+    portout repository as dor
+    component "Domain model" as dom
+}
+
+component web {
+    component "API model" as webm
+}
+
+component infra.data as data {
+    component "Data model" as dam
+}
+
+component infra.external as external
+
+}
+
+database CustomerStorage as db
+() "AddressChecker API" as addrc
+
+web ..> appls
+web ..> applm
+web ..> dom : uses/maps
+appl ..> dos
+appl ..> dor
+appl ..> dom
+data ..> dom : uses/maps
+data .left.> db : reads/writes
+data .up.|> dor : adapts
+data .up.|> applr : adapts
+external .up.> dom : uses/maps
+external .up.|> applc : adapts (ACL)
+external ..> addrc : consumes
+
+note right of domain
+  Domain model composed of
+  entities, objects, and logic
+end note
+
+note left of appl
+  Application logic,
+  orchestration of the use cases,
+  transaction boundaries
+end note
+
+note left of external
+  Interface to external systems and models
+end note
+
+@enduml
+
+PlantUML version 1.2021.16(Wed Dec 08 17:25:22 UTC 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: 
+--></g></svg>

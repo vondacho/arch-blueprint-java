@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ConsumerATest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ConsumerATest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/edu.obya.blueprint.customer.cdc.spring.provider.html">edu.obya.blueprint.customer.cdc.spring.provider</a> &gt; ConsumerATest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.079s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">validate_should_remove_the_customer_at_given_id()</td>
+<td class="success">0.120s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">validate_should_replace_the_existing_customer_at_given_id()</td>
+<td class="success">0.673s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">validate_should_return_a_well_formatted_existing_customer()</td>
+<td class="success">0.147s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">validate_should_return_the_id_of_created_customer()</td>
+<td class="success">0.139s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-05-08 17:17:21.067  INFO 3419 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest], using SpringBootContextLoader
+2023-05-08 17:17:21.068  INFO 3419 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-08 17:17:21.068  INFO 3419 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest]: ConsumerATest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-08 17:17:21.080  INFO 3419 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.obya.blueprint.Application for test class edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest
+2023-05-08 17:17:21.081  INFO 3419 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener, io.zonky.test.db.event.EventPublishingTestExecutionListener, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener]
+2023-05-08 17:17:21.081  INFO 3419 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@326c526a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2094a7be, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@57f2a68c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2c63f1fe, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7c4c091a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7960e87a, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener@3be4e71c, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener@83b0d9f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@14a3d15b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6afed88d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@763e1ec9, org.springframework.test.context.event.EventPublishingTestExecutionListener@26b9a264, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2c1a86e1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@303c195f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@36f291c7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5db3afff, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@25e60726, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@75401424, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@571ecfe2, io.zonky.test.db.event.EventPublishingTestExecutionListener@17125ea9]
+ ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗███████╗██████╗ 
+██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║██╔════╝██╔══██╗
+██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║█████╗  ██████╔╝
+██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗
+╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║
+ ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
+2023-05-08 17:17:21.122  WARN 3419 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/runner/.gradle/caches/modules-2/files-2.1/org.json/json/20220924/5aa95e7688f76c664af205c5937620f02688dfbc/json-20220924.jar!/org/json/JSONObject.class
+	jar:file:/home/runner/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-05-08 17:17:21.123  INFO 3419 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : Starting ConsumerATest using Java 17.0.7 on fv-az216-589 with PID 3419 (started by runner in /home/runner/work/arch-blueprint-java/arch-blueprint-java)
+2023-05-08 17:17:21.123  INFO 3419 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : The following 1 profile is active: &quot;test&quot;
+2023-05-08 17:17:21.546  INFO 3419 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration' of type [org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-08 17:17:22.128  INFO 3419 --- [    Test worker] s.w.a.s.ProblemSecurityBeanPostProcessor : Register HttpSecurity's exceptionHandling
+2023-05-08 17:17:22.271  INFO 3419 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoint(s) beneath base path '/admin'
+2023-05-08 17:17:22.302  INFO 3419 --- [    Test worker] o.z.p.s.w.a.s.ProblemHttpConfigurer      : Register HttpSecurity's exceptionHandling
+2023-05-08 17:17:22.346  INFO 3419 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29cbbff7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49924fc6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4835e10a, org.springframework.security.web.header.HeaderWriterFilter@3e590067, org.springframework.security.web.authentication.logout.LogoutFilter@f542e08, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c1e569, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50f88cea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2654f4aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a8b1e67, org.springframework.security.web.session.SessionManagementFilter@2a0c9309, org.springframework.security.web.access.ExceptionTranslationFilter@641f9947, org.springframework.security.web.access.intercept.AuthorizationFilter@1aaf3aa1]
+2023-05-08 17:17:22.626  INFO 3419 --- [    Test worker] o.s.c.c.v.m.i.ContractVerifierMessaging  : The message verifier implementation is of type [class org.springframework.cloud.contract.verifier.messaging.noop.NoOpStubMessages]
+2023-05-08 17:17:22.652  INFO 3419 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : Started ConsumerATest in 1.565 seconds (JVM running for 12.33)
+2023-05-08 17:17:23.029  INFO 3419 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-08 17:17:23.030  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-08 17:17:23.030  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-08 17:17:23.267  INFO 3419 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-05-08 17:17:23.271  INFO 3419 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /customers/64a0f7d1-7b25-412d-b1e0-abacde3c21cd
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json&quot;, &quot;application/json&quot;, Authorization:&quot;Basic dGVzdDp0ZXN0&quot;, Content-Length:&quot;70&quot;]
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=test, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_USER]]]}
+
+Handler:
+             Type = edu.obya.blueprint.customer.adapter.rest.CustomerController
+           Method = edu.obya.blueprint.customer.adapter.rest.CustomerController#replace(UUID, CustomerDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 204
+    Error message = null
+          Headers = [X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2023-05-08 17:17:23.353  INFO 3419 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-08 17:17:23.353  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-08 17:17:23.353  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /customers
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json&quot;, &quot;application/json&quot;, Authorization:&quot;Basic dGVzdDp0ZXN0&quot;, Content-Length:&quot;70&quot;]
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=test, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_USER]]]}
+
+Handler:
+             Type = edu.obya.blueprint.customer.adapter.rest.CustomerController
+           Method = edu.obya.blueprint.customer.adapter.rest.CustomerController#create(CustomerDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:&quot;text/plain&quot;, Content-Length:&quot;36&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/plain
+             Body = eb157d38-2743-453e-881a-c043396f7ebb
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2023-05-08 17:17:23.492  INFO 3419 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-08 17:17:23.492  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-08 17:17:23.492  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /customers/64a0f7d1-7b25-412d-b1e0-abacde3c21cd
+       Parameters = {}
+          Headers = [Authorization:&quot;Basic YWRtaW46YWRtaW4=&quot;]
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]]}
+
+Handler:
+             Type = edu.obya.blueprint.customer.adapter.rest.CustomerController
+           Method = edu.obya.blueprint.customer.adapter.rest.CustomerController#remove(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 204
+    Error message = null
+          Headers = [X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2023-05-08 17:17:23.618  INFO 3419 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-08 17:17:23.619  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-08 17:17:23.619  INFO 3419 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers/64a0f7d1-7b25-412d-b1e0-abacde3c21cd
+       Parameters = {}
+          Headers = [Authorization:&quot;Basic dGVzdDp0ZXN0&quot;]
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=test, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_USER]]]}
+
+Handler:
+             Type = edu.obya.blueprint.customer.adapter.rest.CustomerController
+           Method = edu.obya.blueprint.customer.adapter.rest.CustomerController#get(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = application/json
+             Body = {&quot;id&quot;:&quot;64a0f7d1-7b25-412d-b1e0-abacde3c21cd&quot;,&quot;fullName&quot;:&quot;John Doe&quot;,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 8, 2023, 5:17:23 PM</p>
+</div>
+</div>
+</body>
+</html>
