@@ -172,26 +172,26 @@ mkdocs {
     updateSiteUrl = false
     sourcesDir = "src/doc"
     buildDir = "build/mkdocs"
-    publish.docPath = "$version".ifEmpty { "snapshot" }
+    publish.docPath = ""
 }
 
 gitPublish {
     contents {
         from(mkdocs.buildDir)
         from("build/reports/tests") {
-            into("${mkdocs.publish.docPath}/reports/tests")
+            into("reports/tests")
         }
         from("build/plantuml") {
-            into("${mkdocs.publish.docPath}/uml")
+            into("uml")
         }
         from("build/swagger-ui-apidoc") {
-            into("${mkdocs.publish.docPath}/api")
+            into("api")
         }
         from("src/doc/postman") {
-            into("${mkdocs.publish.docPath}/postman")
+            into("postman")
         }
         from("build/appmap/junit") {
-            into("${mkdocs.publish.docPath}/appmap")
+            into("appmap")
         }
     }
 }
