@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ConsumerBTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ConsumerBTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/edu.obya.blueprint.customer.cdc.spring.provider.html">edu.obya.blueprint.customer.cdc.spring.provider</a> &gt; ConsumerBTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.128s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">validate_should_return_a_well_formatted_existing_customer()</td>
+<td class="success">0.128s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-05-09 14:26:09.393  INFO 3396 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerBTest], using SpringBootContextLoader
+2023-05-09 14:26:09.394  INFO 3396 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-09 14:26:09.394  INFO 3396 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerBTest]: ConsumerBTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-09 14:26:09.396  INFO 3396 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.obya.blueprint.Application for test class edu.obya.blueprint.customer.cdc.spring.provider.ConsumerBTest
+2023-05-09 14:26:09.398  INFO 3396 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener, io.zonky.test.db.event.EventPublishingTestExecutionListener, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener]
+2023-05-09 14:26:09.398  INFO 3396 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5bf52832, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7df0a05b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@485c31d7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@60c2c500, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1204d592, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6a8e4df1, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener@43f50bfe, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener@35e92c45, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1f5d72f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@198cf325, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@72cdb111, org.springframework.test.context.event.EventPublishingTestExecutionListener@eba3009, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2159c25e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5fb2088b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40e86f55, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1f8d3539, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@70295fa4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3f90f77a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3c81a51a, io.zonky.test.db.event.EventPublishingTestExecutionListener@4a536b4e]
+2023-05-09 14:26:09.418  INFO 3396 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-09 14:26:09.419  INFO 3396 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-09 14:26:09.419  INFO 3396 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customers/64a0f7d1-7b25-412d-b1e0-abacde3c21cd
+       Parameters = {}
+          Headers = [Authorization:&quot;Basic dGVzdDp0ZXN0&quot;]
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=test, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_USER]]]}
+
+Handler:
+             Type = edu.obya.blueprint.customer.adapter.rest.CustomerController
+           Method = edu.obya.blueprint.customer.adapter.rest.CustomerController#get(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = application/json
+             Body = {&quot;id&quot;:&quot;64a0f7d1-7b25-412d-b1e0-abacde3c21cd&quot;,&quot;fullName&quot;:&quot;John Doe&quot;,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 9, 2023, 2:26:09 PM</p>
+</div>
+</div>
+</body>
+</html>
