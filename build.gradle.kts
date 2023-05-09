@@ -190,6 +190,9 @@ gitPublish {
         from("src/doc/postman") {
             into("${mkdocs.publish.docPath}/postman")
         }
+        from("build/appmap/junit") {
+            into("${mkdocs.publish.docPath}/appmap")
+        }
     }
 }
 
