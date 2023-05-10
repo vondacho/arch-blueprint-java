@@ -2,7 +2,7 @@ package edu.obya.blueprint.customer.at.steps;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.obya.blueprint.customer.application.CustomerDto;
-import edu.obya.blueprint.customer.at.TestUser;
+import edu.obya.blueprint.customer.at.TestWebUser;
 import edu.obya.blueprint.customer.at.infra.TestContext;
 import edu.obya.blueprint.customer.domain.model.CustomerId;
 import io.cucumber.java.en.When;
@@ -33,8 +33,8 @@ public class ActionSteps {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(dto))
                 .with(httpBasic(
-                        TestContext.atOrDefault("userId", TestUser.TEST_USER_NAME),
-                        TestContext.atOrDefault("userPassword", TestUser.TEST_USER_PASSWORD)))
+                        TestContext.atOrDefault("userId", TestWebUser.TEST_USER_NAME),
+                        TestContext.atOrDefault("userPassword", TestWebUser.TEST_USER_PASSWORD)))
         ));
         entityManager.flush();
     }
@@ -43,8 +43,8 @@ public class ActionSteps {
     public void listingAllExistingCustomers() throws Exception {
         TestContext.set("result", mockMvc.perform(get("/customers")
                 .with(httpBasic(
-                        TestContext.atOrDefault("userId", TestUser.TEST_USER_NAME),
-                        TestContext.atOrDefault("userPassword", TestUser.TEST_USER_PASSWORD)))
+                        TestContext.atOrDefault("userId", TestWebUser.TEST_USER_NAME),
+                        TestContext.atOrDefault("userPassword", TestWebUser.TEST_USER_PASSWORD)))
         ));
     }
 
@@ -52,8 +52,8 @@ public class ActionSteps {
     public void gettingExistingCustomerWithId(CustomerId id) throws Exception {
         TestContext.set("result", mockMvc.perform(get("/customers/" + id.getId())
                 .with(httpBasic(
-                        TestContext.atOrDefault("userId", TestUser.TEST_USER_NAME),
-                        TestContext.atOrDefault("userPassword", TestUser.TEST_USER_PASSWORD)))
+                        TestContext.atOrDefault("userId", TestWebUser.TEST_USER_NAME),
+                        TestContext.atOrDefault("userPassword", TestWebUser.TEST_USER_PASSWORD)))
         ));
     }
 
@@ -64,8 +64,8 @@ public class ActionSteps {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(dto))
                 .with(httpBasic(
-                        TestContext.atOrDefault("userId", TestUser.TEST_USER_NAME),
-                        TestContext.atOrDefault("userPassword", TestUser.TEST_USER_PASSWORD)))
+                        TestContext.atOrDefault("userId", TestWebUser.TEST_USER_NAME),
+                        TestContext.atOrDefault("userPassword", TestWebUser.TEST_USER_PASSWORD)))
         ));
         entityManager.flush();
     }
@@ -74,8 +74,8 @@ public class ActionSteps {
     public void removingExistingCustomerWithId(CustomerId id) throws Exception {
         TestContext.set("result", mockMvc.perform(delete("/customers/" + id.getId())
                         .with(httpBasic(
-                                TestContext.atOrDefault("userId", TestUser.TEST_ADMIN_NAME),
-                                TestContext.atOrDefault("userPassword", TestUser.TEST_ADMIN_PASSWORD)))
+                                TestContext.atOrDefault("userId", TestWebUser.TEST_ADMIN_NAME),
+                                TestContext.atOrDefault("userPassword", TestWebUser.TEST_ADMIN_PASSWORD)))
         ));
         entityManager.flush();
     }

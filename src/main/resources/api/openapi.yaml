@@ -61,6 +61,9 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/ProblemOutput'
+      security:
+        - basicAuth: []
+
     post:
       tags:
         - customer
@@ -96,6 +99,8 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/ProblemOutput'
+      security:
+        - basicAuth: []
 
   /customers/{id}:
     get:
@@ -139,6 +144,8 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/ProblemOutput'
+      security:
+        - basicAuth: []
 
     put:
       tags:
@@ -183,6 +190,8 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/ProblemOutput'
+      security:
+        - basicAuth: []
 
     delete:
       tags:
@@ -221,6 +230,8 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/ProblemOutput'
+      security:
+        - basicAuth: []
 
 components:
   schemas:
@@ -231,6 +242,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/CustomerOutput'
+
     CustomerInput:
       type: object
       properties:
@@ -241,6 +253,7 @@ components:
       required:
         - firstName
         - lastName
+
     CustomerOutput:
       type: object
       properties:
@@ -282,4 +295,16 @@ components:
 
   responses:
     UnauthorizedError:
-      description: Access token is missing or invalid
+      description: Authentication information is missing or invalid
+      headers:
+        WWW_Authenticate:
+          schema:
+            type: string
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+
+security:
+  - basicAuth: []

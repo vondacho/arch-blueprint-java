@@ -1,7 +1,7 @@
 package edu.obya.blueprint.customer.cdc.spring.provider;
 
 import edu.obya.blueprint.customer.domain.model.TestCustomer;
-import edu.obya.blueprint.customer.cdc.TestUserTokens;
+import edu.obya.blueprint.customer.cdc.TestWebUserTokens;
 import edu.obya.blueprint.customer.domain.service.CustomerRepository;
 import edu.obya.blueprint.customer.adapter.rest.CustomerController;
 import io.micrometer.core.instrument.MeterRegistry;
@@ -55,10 +55,10 @@ public abstract class CustomerVerifierBase {
     }
 
     String userAuthToken() {
-        return TestUserTokens.TEST_USER_TOKEN;
+        return TestWebUserTokens.TEST_USER_TOKEN;
     }
 
     String adminAuthToken() {
-        return TestUserTokens.TEST_ADMIN_TOKEN;
+        return TestWebUserTokens.TEST_ADMIN_TOKEN;
     }
 }

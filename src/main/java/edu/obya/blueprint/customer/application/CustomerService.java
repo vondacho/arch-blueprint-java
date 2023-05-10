@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.springframework.lang.NonNull;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -20,7 +21,6 @@ import java.util.function.Supplier;
 
 @Component(description = "Manages customer entities", technology = "Java")
 @PreAuthorize("hasAnyRole('USER','ADMIN')")
-@Transactional
 @RequiredArgsConstructor
 public class CustomerService {
 
@@ -43,6 +43,7 @@ public class CustomerService {
                 .toList();
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
     public CustomerId create(@NonNull CustomerDto customerDto) {
         if (repository.findByFirstNameAndLastName(customerDto.firstName, customerDto.lastName).isPresent()) {
             throw new CustomerAlreadyExistException(customerDto.firstName, customerDto.lastName);
@@ -52,6 +53,7 @@ public class CustomerService {
         return customerId;
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
     public void update(@NonNull CustomerDto customerDto, @NonNull CustomerId customerId) {
         repository.findByFirstNameAndLastName(customerDto.firstName, customerDto.lastName).ifPresent(existing -> {
             if (!existing.getId().equals(customerId)) {
@@ -62,6 +64,7 @@ public class CustomerService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
+    @Transactional(propagation = Propagation.REQUIRED)
     public void remove(@NonNull CustomerId customerId) {
         repository.remove(customerId);
     }

@@ -4,12 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.obya.blueprint.config.ExceptionHandling;
 import edu.obya.blueprint.config.WebSecurityConfiguration;
 import edu.obya.blueprint.config.WebValidationConfiguration;
-import edu.obya.blueprint.customer.adapter.rest.CustomerSummary;
-import edu.obya.blueprint.customer.adapter.rest.CustomerWebConfiguration;
+import edu.obya.blueprint.customer.adapter.jpa.CustomerJpaConfiguration;
 import edu.obya.blueprint.customer.application.CustomerApplicationConfiguration;
 import edu.obya.blueprint.customer.application.CustomerDto;
 import edu.obya.blueprint.customer.domain.model.CustomerId;
-import edu.obya.blueprint.customer.adapter.jpa.CustomerJpaConfiguration;
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 import lombok.val;
 import org.junit.jupiter.api.Test;
@@ -29,7 +27,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static edu.obya.blueprint.customer.adapter.rest.TestUser.*;
+import static edu.obya.blueprint.customer.adapter.rest.TestWebUser.*;
 import static edu.obya.blueprint.customer.application.TestCustomerIn.TEST_CUSTOMER_IN;
 import static edu.obya.blueprint.customer.domain.model.TestCustomer.TEST_CUSTOMER_ID;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -39,7 +37,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@ActiveProfiles({"test","jpa"})
+@ActiveProfiles({"test", "jpa"})
 @Import({
         CustomerWebConfiguration.class,
         WebSecurityConfiguration.class,

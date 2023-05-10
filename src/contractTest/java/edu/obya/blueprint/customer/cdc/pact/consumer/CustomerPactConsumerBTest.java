@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 import static au.com.dius.pact.consumer.dsl.LambdaDsl.newJsonBody;
 import static edu.obya.blueprint.customer.adapter.rest.TestCustomerOut.TEST_CUSTOMER_OUT;
 import static edu.obya.blueprint.customer.domain.model.TestCustomer.TEST_CUSTOMER_ID;
-import static edu.obya.blueprint.customer.cdc.TestUserTokens.TEST_USER_TOKEN;
+import static edu.obya.blueprint.customer.cdc.TestWebUserTokens.TEST_USER_TOKEN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.springframework.cloud.contract.spec.internal.MediaTypes.APPLICATION_JSON_UTF8;

@@ -27,12 +27,12 @@ public class CustomerRepositoryJpaAdapter implements CustomerRepository {
 
     @Override
     public Optional<Customer> findById(@NonNull CustomerId customerId) {
-        return repository.findByLogicalId(customerId).map(this::toCustomer);
+        return repository.findByLogicalId(customerId).stream().findFirst().map(this::toCustomer);
     }
 
     @Override
     public Optional<Customer> findByFirstNameAndLastName(String firstName, String lastName) {
-        return repository.findByFirstNameAndLastName(firstName, lastName).map(this::toCustomer);
+        return repository.findByFirstNameAndLastName(firstName, lastName).stream().findFirst().map(this::toCustomer);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class CustomerRepositoryJpaAdapter implements CustomerRepository {
 
     @Override
     public void update(@NonNull CustomerId customerId, @NonNull CustomerState customer) {
-        JpaCustomer data = repository.findByLogicalId(customerId)
+        JpaCustomer data = repository.findByLogicalId(customerId).stream().findFirst()
                 .orElseThrow(() -> new CustomerNotFoundException(customerId));
         data.set(customer, customerId);
         repository.save(data);
@@ -60,7 +60,7 @@ public class CustomerRepositoryJpaAdapter implements CustomerRepository {
 
     @Override
     public void remove(@NonNull CustomerId customerId) {
-        JpaCustomer data = repository.findByLogicalId(customerId)
+        JpaCustomer data = repository.findByLogicalId(customerId).stream().findFirst()
                 .orElseThrow(() -> new CustomerNotFoundException(customerId));
         repository.deleteById(data.getPk());
     }

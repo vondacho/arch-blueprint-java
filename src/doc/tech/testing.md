@@ -1,28 +1,24 @@
 # Testing
 
 ## Getting started
-
-To launch the whole tests suite with `./gradlew clean check`.
+Launch the whole tests suite with `./gradlew clean check`.
 
 ## Unit and integration testing
+Launch the unit and integration tests with `./gradlew test`.
 
-To launch the unit and integration tests with `./gradlew test`.
+Record component interaction scenarios with `./gradlew appmap test`.
 
 ## Acceptance testing
-
-To launch the acceptance tests with `./gradlew acceptanceTest`.
+Launch the acceptance tests with `./gradlew acceptanceTest`.
 
 ## Contract testing
-
-To launch the contract tests with `./gradlew contractTest`.
+Launch the contract tests with `./gradlew contractTest`.
 
 ## Architecture testing
-
-To launch the architecture tests with `./gradlew archTest`.
+Launch the architecture tests with `./gradlew archTest`.
 
 ## Reporting
-
-- [Cucumber](../reports/tests/cucumber)
+- [Acceptance scenarios](../reports/tests/cucumber)
 - [Acceptance test](../reports/tests/acceptanceTest)
 - [Contract tests](../reports/tests/contractTest)
 - [Unit and integration tests](../reports/tests/test)

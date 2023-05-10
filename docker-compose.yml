@@ -5,8 +5,8 @@ services:
     container_name: postgres-blueprint
     image: postgres:12-alpine
     ports:
-      - 15432:5432
+      - "5432:5432"
     environment:
       - POSTGRES_DB=blueprint
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=blueprint
       - POSTGRES_PASSWORD=blueprint

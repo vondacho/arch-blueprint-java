@@ -1,4 +1,7 @@
 # Architecture
+![build workflow](https://github.com/vondacho/arch-blueprint-java/actions/workflows/build.yml/badge.svg)
+
+A Java project as template and pedagogical support for the teaching of Clean Architecture crafting practice.
 
 ## C4
 - [System context](https://www.structurizr.com/share/38199/diagrams#blueprint-context)
@@ -6,29 +9,13 @@
 - [Component view](https://www.structurizr.com/share/38199/diagrams#blueprint-api-components)
 
 ## AppMap
-
-### From your local machine
-To start the AppMap viewer web application on local port 3000 with
+Start the AppMap viewer on local port 3000 with
 `docker run -it -p 3000:8080 ghcr.io/vondacho/appmap-viewer:latest`.
 
-To visualize the behaviour of main use cases from the browser at
-`http://localhost:3000/appmap/appmap.html?appmap=<url_to_your_AppMap_file>`.
-
+Then, visualize the behaviour of main use cases from the browser
 - [E2E from API layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerEndpointIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json)
 - [E2E from Service layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
 - [E2E from Data layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
-
-#### Local AppMap file
-To start the AppMap viewer web application on local port 3000 with
-`docker run -it -p 3000:8080 -v $(pwd):/usr/appmap-viewer/maps ghcr.io/vondacho/appmap-viewer:latest`.
-
-To visualize your local AppMap file from the browser at
-`http://localhost:3000/appmap/appmap.html?appmap=/maps/<your_AppMap_file>`.
-
-### From your IDE
-- To install the AppMap extension in your IDE.
-- To build the app maps with `./gradlew appmap test`.
-- To visualize the app maps using the AppMap extension inside your IDE.
 
 ## Hexagonal
 The logical layers are organized like an onion with the domain layer at the center.

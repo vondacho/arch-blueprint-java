@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.function.Supplier;
 
-import static edu.obya.blueprint.customer.at.TestUser.*;
+import static edu.obya.blueprint.customer.at.TestWebUser.*;
 import static edu.obya.blueprint.customer.at.infra.TestContext.set;
 import static org.mockito.Mockito.when;
 

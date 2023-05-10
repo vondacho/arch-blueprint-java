@@ -1,4 +1,0 @@
-zonky:
-  test:
-    database:
-      type: H2
