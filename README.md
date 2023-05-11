@@ -15,10 +15,9 @@ CRUD operations on Customer entities exposed by a REST API.
 
 ## Getting started
 - Build the project with `./gradlew clean build`.
-- Launch the tests suite with `./gradlew clean check`.
 - Start the database with `docker-compose up`.
 - Launch the application with `./gradlew bootRun --args='--spring.profiles.active=test,jpa,postgres'`.
-- Play use cases in Postman using [this default Postman collection](https://vondacho.github.io/arch-blueprint-java/postman/postman_collection.json).
+- Play use cases with Postman using [this default collection](https://vondacho.github.io/arch-blueprint-java/postman/postman_collection.json) or with [Swagger UI](https://vondacho.github.io/arch-blueprint-java/api/).
 
 ## Technical documentation
 - Powered by [MkDocs](https://www.mkdocs.org/getting-started/)
