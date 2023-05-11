@@ -1,7 +1,4 @@
 # Architecture
-![build workflow](https://github.com/vondacho/arch-blueprint-java/actions/workflows/build.yml/badge.svg)
-
-A Java project as template and pedagogical support for the teaching of Clean Architecture crafting practice.
 
 ## C4
 - [System context](https://www.structurizr.com/share/38199/diagrams#blueprint-context)
@@ -13,6 +10,7 @@ Start the AppMap viewer on local port 3000 with
 `docker run -it -p 3000:8080 ghcr.io/vondacho/appmap-viewer:latest`.
 
 Then, visualize the behaviour of main use cases from the browser
+
 - [E2E from API layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerEndpointIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json)
 - [E2E from Service layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
 - [E2E from Data layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
@@ -32,6 +30,3 @@ ACL is used to protect the internal ubiquitous language from external languages.
 
 ## Data model
 ![Data model](../uml/data-model.svg)
-
-## CI/CD
-[Github actions](https://github.com/vondacho/arch-blueprint-java/actions)

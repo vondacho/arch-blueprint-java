@@ -10,6 +10,7 @@ nav:
   - API: api/
   - Architecture: architecture.md
   - Testing: testing.md
+  - CI/CD: https://github.com/vondacho/arch-blueprint-java/actions
   - Miscellaneous: miscellaneous.md
 
 plugins:
