@@ -9,6 +9,7 @@ import au.com.dius.pact.provider.junitsupport.loader.PactFolder;
 import edu.obya.blueprint.customer.domain.model.CustomerId;
 import edu.obya.blueprint.customer.domain.service.CustomerRepository;
 import io.micrometer.core.instrument.MeterRegistry;
+import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,10 +27,11 @@ import static edu.obya.blueprint.customer.domain.model.TestCustomer.TEST_CUSTOME
 import static edu.obya.blueprint.customer.domain.model.TestCustomer.TEST_CUSTOMER_ID;
 import static org.mockito.ArgumentMatchers.any;
 
-@ActiveProfiles("test")
+@ActiveProfiles({"test"})
 @Provider("customerAPI")
 @PactFolder("customer/cdc/pact")
 @Import(CustomerPactContextConfiguration.class)
+@AutoConfigureEmbeddedDatabase
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class CustomerPactProviderTest {
 
