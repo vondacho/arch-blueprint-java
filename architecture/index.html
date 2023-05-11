@@ -284,39 +284,6 @@
     AppMap
   </a>
   
-    <nav class="md-nav" aria-label="AppMap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#from-your-local-machine" class="md-nav__link">
-    From your local machine
-  </a>
-  
-    <nav class="md-nav" aria-label="From your local machine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-appmap-file" class="md-nav__link">
-    Local AppMap file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#from-your-ide" class="md-nav__link">
-    From your IDE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -370,6 +337,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miscellaneous/" class="md-nav__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -407,39 +389,6 @@
   <a href="#appmap" class="md-nav__link">
     AppMap
   </a>
-  
-    <nav class="md-nav" aria-label="AppMap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#from-your-local-machine" class="md-nav__link">
-    From your local machine
-  </a>
-  
-    <nav class="md-nav" aria-label="From your local machine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-appmap-file" class="md-nav__link">
-    Local AppMap file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#from-your-ide" class="md-nav__link">
-    From your IDE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -492,6 +441,8 @@
 
 
 <h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h1>
+<p><img alt="build workflow" src="https://github.com/vondacho/arch-blueprint-java/actions/workflows/build.yml/badge.svg" /></p>
+<p>A Java project as template and pedagogical support for the teaching of Clean Architecture crafting practice.</p>
 <h2 id="c4">C4<a class="headerlink" href="#c4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.structurizr.com/share/38199/diagrams#blueprint-context">System context</a></li>
@@ -499,27 +450,12 @@
 <li><a href="https://www.structurizr.com/share/38199/diagrams#blueprint-api-components">Component view</a></li>
 </ul>
 <h2 id="appmap">AppMap<a class="headerlink" href="#appmap" title="Permanent link">&para;</a></h2>
-<h3 id="from-your-local-machine">From your local machine<a class="headerlink" href="#from-your-local-machine" title="Permanent link">&para;</a></h3>
-<p>To start the AppMap viewer web application on local port 3000 with
+<p>Start the AppMap viewer on local port 3000 with
 <code>docker run -it -p 3000:8080 ghcr.io/vondacho/appmap-viewer:latest</code>.</p>
-<p>To visualize the behaviour of main use cases from the browser at
-<code>http://localhost:3000/appmap/appmap.html?appmap=&lt;url_to_your_AppMap_file&gt;</code>.</p>
-<ul>
-<li><a href="http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerEndpointIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json">E2E from API layer</a></li>
-<li><a href="http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json">E2E from Service layer</a></li>
-<li><a href="http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json">E2E from Data layer</a></li>
-</ul>
-<h4 id="local-appmap-file">Local AppMap file<a class="headerlink" href="#local-appmap-file" title="Permanent link">&para;</a></h4>
-<p>To start the AppMap viewer web application on local port 3000 with
-<code>docker run -it -p 3000:8080 -v $(pwd):/usr/appmap-viewer/maps ghcr.io/vondacho/appmap-viewer:latest</code>.</p>
-<p>To visualize your local AppMap file from the browser at
-<code>http://localhost:3000/appmap/appmap.html?appmap=/maps/&lt;your_AppMap_file&gt;</code>.</p>
-<h3 id="from-your-ide">From your IDE<a class="headerlink" href="#from-your-ide" title="Permanent link">&para;</a></h3>
-<ul>
-<li>To install the AppMap extension in your IDE.</li>
-<li>To build the app maps with <code>./gradlew appmap test</code>.</li>
-<li>To visualize the app maps using the AppMap extension inside your IDE.</li>
-</ul>
+<p>Then, visualize the behaviour of main use cases from the browser
+- <a href="http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerEndpointIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json">E2E from API layer</a>
+- <a href="http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json">E2E from Service layer</a>
+- <a href="http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json">E2E from Data layer</a></p>
 <h2 id="hexagonal">Hexagonal<a class="headerlink" href="#hexagonal" title="Permanent link">&para;</a></h2>
 <p>The logical layers are organized like an onion with the domain layer at the center.
 Infrastructure layer adapts the output ports exposed by the application and domain layers.

@@ -79,7 +79,10 @@ window.swaggerSpec={
               }
             }
           }
-        }
+        },
+        "security" : [ {
+          "basicAuth" : [ ]
+        } ]
       },
       "post" : {
         "tags" : [ "customer" ],
@@ -131,7 +134,10 @@ window.swaggerSpec={
               }
             }
           }
-        }
+        },
+        "security" : [ {
+          "basicAuth" : [ ]
+        } ]
       }
     },
     "/customers/{id}" : {
@@ -194,7 +200,10 @@ window.swaggerSpec={
               }
             }
           }
-        }
+        },
+        "security" : [ {
+          "basicAuth" : [ ]
+        } ]
       },
       "put" : {
         "tags" : [ "customer" ],
@@ -258,7 +267,10 @@ window.swaggerSpec={
               }
             }
           }
-        }
+        },
+        "security" : [ {
+          "basicAuth" : [ ]
+        } ]
       },
       "delete" : {
         "tags" : [ "customer" ],
@@ -312,7 +324,10 @@ window.swaggerSpec={
               }
             }
           }
-        }
+        },
+        "security" : [ {
+          "basicAuth" : [ ]
+        } ]
       }
     }
   },
@@ -385,8 +400,24 @@ window.swaggerSpec={
     },
     "responses" : {
       "UnauthorizedError" : {
-        "description" : "Access token is missing or invalid"
+        "description" : "Authentication information is missing or invalid",
+        "headers" : {
+          "WWW_Authenticate" : {
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "basicAuth" : {
+        "type" : "http",
+        "scheme" : "basic"
       }
     }
-  }
+  },
+  "security" : [ {
+    "basicAuth" : [ ]
+  } ]
 }
