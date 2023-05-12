@@ -6,14 +6,9 @@
 - [Component view](https://www.structurizr.com/share/38199/diagrams#blueprint-api-components)
 
 ## AppMap
-Start the AppMap viewer on local port 3000 with
-`docker run -it -p 3000:8080 ghcr.io/vondacho/appmap-viewer:latest`.
-
-Then, visualize the behaviour of main use cases from the browser
-
-- [E2E from API layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerEndpointIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json)
-- [E2E from Service layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
-- [E2E from Data layer](http://localhost:3000/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
+- [E2E from API layer](https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerEndpointIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json)
+- [E2E from Service layer](https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
+- [E2E from Data layer](https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
 
 ## Hexagonal
 The logical layers are organized like an onion with the domain layer at the center.
