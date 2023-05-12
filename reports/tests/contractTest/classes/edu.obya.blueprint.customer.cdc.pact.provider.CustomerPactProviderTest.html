@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.289s</div>
+<div class="counter">1.247s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,31 +81,31 @@
 <tr>
 <td class="success">consumerB - get existing customer interaction</td>
 <td class="success">verifyPact(PactVerificationContext)[1]</td>
-<td class="success">0.646s</td>
+<td class="success">0.633s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">consumerB - get existing customer without authentication</td>
 <td class="success">verifyPact(PactVerificationContext)[2]</td>
-<td class="success">0.106s</td>
+<td class="success">0.049s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">consumerA - get existing customer interaction</td>
 <td class="success">verifyPact(PactVerificationContext)[3]</td>
-<td class="success">0.140s</td>
+<td class="success">0.188s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">consumerA - remove existing customer interaction</td>
 <td class="success">verifyPact(PactVerificationContext)[4]</td>
-<td class="success">0.134s</td>
+<td class="success">0.118s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">consumerA - replace existing customer interaction</td>
 <td class="success">verifyPact(PactVerificationContext)[5]</td>
-<td class="success">0.140s</td>
+<td class="success">0.136s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -119,39 +119,39 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:00:49.460 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-14:00:49.462 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-14:00:49.483 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-14:00:49.495 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest], using SpringBootContextLoader
-14:00:49.497 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: class path resource [edu/obya/blueprint/customer/cdc/pact/provider/CustomerPactProviderTest-context.xml] does not exist
-14:00:49.497 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: class path resource [edu/obya/blueprint/customer/cdc/pact/provider/CustomerPactProviderTestContext.groovy] does not exist
-14:00:49.497 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-14:00:49.498 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: CustomerPactProviderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: Close connection
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-5: Close connection
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: Close connection
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: Close connection
-14:00:49.539 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
-14:00:49.600 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/runner/work/arch-blueprint-java/arch-blueprint-java/build/classes/java/main/edu/obya/blueprint/Application.class]
-14:00:49.600 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.obya.blueprint.Application for test class edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest
-14:00:49.671 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: using defaults.
-14:00:49.671 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener, io.zonky.test.db.event.EventPublishingTestExecutionListener, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener]
-14:00:49.688 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3db6dd52, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1e92c3b6, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6ef4cbe1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@207dd1b7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2baac4a7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23ad2d17, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener@6bce4140, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener@25f0c5e7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5882b202, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@120df990, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@b506ed0, org.springframework.test.context.event.EventPublishingTestExecutionListener@282c4da0, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@65f3e805, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@18cf5c52, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@10618775, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5aea8994, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@20a3e10c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@426c0486, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5e2a6991, io.zonky.test.db.event.EventPublishingTestExecutionListener@5002fde9]
-14:00:49.690 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5345dfe8 testClass = CustomerPactProviderTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@478967eb testClass = CustomerPactProviderTest, locations = '{}', classes = '{class edu.obya.blueprint.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6e24ce51, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2d28fb02, [ImportsContextCustomizer@4a1dda83 key = [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactContextConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51ff3c4b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4026461d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@978f9634, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@73bb1337, io.zonky.test.db.EmbeddedDatabaseContextCustomizerFactory$EmbeddedDatabaseContextCustomizer@874c2f43, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5c153b9e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>18:10:46.519 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+18:10:46.520 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+18:10:46.541 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+18:10:46.549 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest], using SpringBootContextLoader
+18:10:46.551 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: class path resource [edu/obya/blueprint/customer/cdc/pact/provider/CustomerPactProviderTest-context.xml] does not exist
+18:10:46.551 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: class path resource [edu/obya/blueprint/customer/cdc/pact/provider/CustomerPactProviderTestContext.groovy] does not exist
+18:10:46.551 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:10:46.552 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: CustomerPactProviderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-5: Close connection
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: Close connection
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: Close connection
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager is shutting down
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: Close connection
+18:10:46.588 [Finalizer] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection manager shut down
+18:10:46.661 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/runner/work/arch-blueprint-java/arch-blueprint-java/build/classes/java/main/edu/obya/blueprint/Application.class]
+18:10:46.663 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.obya.blueprint.Application for test class edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest
+18:10:46.746 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactProviderTest]: using defaults.
+18:10:46.746 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener, io.zonky.test.db.event.EventPublishingTestExecutionListener, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener]
+18:10:46.761 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@426c0486, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5e2a6991, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5002fde9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6f96dd64, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d7cac24, org.springframework.test.context.support.DirtiesContextTestExecutionListener@409732fb, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener@73d62b5, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener@5e99e2cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@76ac68b0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@f559c74, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@63917fe1, org.springframework.test.context.event.EventPublishingTestExecutionListener@720f56e2, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@677349fb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4466cf5d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2c60ce47, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2450256f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59918c8f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2b7facc7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1c74d19, io.zonky.test.db.event.EventPublishingTestExecutionListener@24197b13]
+18:10:46.766 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@61a87366 testClass = CustomerPactProviderTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3c33fcf8 testClass = CustomerPactProviderTest, locations = '{}', classes = '{class edu.obya.blueprint.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@14fc9bd, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5edc3e29, [ImportsContextCustomizer@dada335 key = [edu.obya.blueprint.customer.cdc.pact.provider.CustomerPactContextConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@23444a36, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@16a3cc88, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@4c73134d, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@20a24edf, io.zonky.test.db.EmbeddedDatabaseContextCustomizerFactory$EmbeddedDatabaseContextCustomizer@874c2f43, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5c153b9e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
  ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗███████╗██████╗ 
 ██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║██╔════╝██╔══██╗
 ██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║█████╗  ██████╔╝
 ██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗
 ╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║
  ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
-2023-05-11 14:00:49.984  WARN 3340 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2023-05-12 18:10:47.137  WARN 3440 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -160,24 +160,24 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-05-11 14:00:50.005  INFO 3340 --- [    Test worker] e.o.b.c.c.p.p.CustomerPactProviderTest   : Starting CustomerPactProviderTest using Java 17.0.7 on fv-az313-352 with PID 3340 (started by runner in /home/runner/work/arch-blueprint-java/arch-blueprint-java)
-2023-05-11 14:00:50.006  INFO 3340 --- [    Test worker] e.o.b.c.c.p.p.CustomerPactProviderTest   : The following 1 profile is active: &quot;test&quot;
-2023-05-11 14:00:51.100  INFO 3340 --- [    Test worker] EmbeddedDatabaseContextCustomizerFactory : Replacing 'dataSource' DataSource bean with embedded version
-2023-05-11 14:00:52.337  INFO 3340 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration' of type [org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-05-11 14:00:52.366  INFO 3340 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration' of type [io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$ff6adfa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-05-11 14:00:52.632  INFO 3340 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-05-11 14:00:52.641  INFO 3340 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-05-11 14:00:52.642  INFO 3340 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2023-05-11 14:00:52.736  INFO 3340 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-05-11 14:00:52.737  INFO 3340 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2518 ms
-2023-05-11 14:00:54.158  INFO 3340 --- [    Test worker] s.w.a.s.ProblemSecurityBeanPostProcessor : Register HttpSecurity's exceptionHandling
-2023-05-11 14:00:54.468  INFO 3340 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoint(s) beneath base path '/admin'
-2023-05-11 14:00:54.525  INFO 3340 --- [    Test worker] o.z.p.s.w.a.s.ProblemHttpConfigurer      : Register HttpSecurity's exceptionHandling
-2023-05-11 14:00:54.587  INFO 3340 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23043ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1088b120, org.springframework.security.web.context.SecurityContextPersistenceFilter@6682e9b0, org.springframework.security.web.header.HeaderWriterFilter@7a725c89, org.springframework.web.filter.CorsFilter@6b4133d0, org.springframework.security.web.authentication.logout.LogoutFilter@1c6ab85, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@50ade311, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a1e28ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b208574, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ebefe31, org.springframework.security.web.session.SessionManagementFilter@5a6dd1e7, org.springframework.security.web.access.ExceptionTranslationFilter@38e61b69, org.springframework.security.web.access.intercept.AuthorizationFilter@281f2d6c]
-2023-05-11 14:00:55.374  INFO 3340 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 45339 (http) with context path ''
-2023-05-11 14:00:55.397  INFO 3340 --- [    Test worker] e.o.b.c.c.p.p.CustomerPactProviderTest   : Started CustomerPactProviderTest in 5.682 seconds (JVM running for 9.793)
-2023-05-11 14:00:55.567  INFO 3340 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:38909/mem:37662fed-4401-4434-890b-a7459a7a533a;USER=sa', scope='CustomerPactProviderTest#verifyPact'
-2023-05-11 14:00:55.568  INFO 3340 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
+2023-05-12 18:10:47.149  INFO 3440 --- [    Test worker] e.o.b.c.c.p.p.CustomerPactProviderTest   : Starting CustomerPactProviderTest using Java 17.0.7 on fv-az370-986 with PID 3440 (started by runner in /home/runner/work/arch-blueprint-java/arch-blueprint-java)
+2023-05-12 18:10:47.149  INFO 3440 --- [    Test worker] e.o.b.c.c.p.p.CustomerPactProviderTest   : The following 1 profile is active: &quot;test&quot;
+2023-05-12 18:10:48.191  INFO 3440 --- [    Test worker] EmbeddedDatabaseContextCustomizerFactory : Replacing 'dataSource' DataSource bean with embedded version
+2023-05-12 18:10:49.200  INFO 3440 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration' of type [org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-12 18:10:49.220  INFO 3440 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration' of type [io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$b01aa621] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-12 18:10:49.403  INFO 3440 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-05-12 18:10:49.411  INFO 3440 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-12 18:10:49.412  INFO 3440 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-05-12 18:10:49.513  INFO 3440 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-12 18:10:49.513  INFO 3440 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2140 ms
+2023-05-12 18:10:51.072  INFO 3440 --- [    Test worker] s.w.a.s.ProblemSecurityBeanPostProcessor : Register HttpSecurity's exceptionHandling
+2023-05-12 18:10:51.325  INFO 3440 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoint(s) beneath base path '/admin'
+2023-05-12 18:10:51.375  INFO 3440 --- [    Test worker] o.z.p.s.w.a.s.ProblemHttpConfigurer      : Register HttpSecurity's exceptionHandling
+2023-05-12 18:10:51.442  INFO 3440 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20616795, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b61c1, org.springframework.security.web.context.SecurityContextPersistenceFilter@c62d08a, org.springframework.security.web.header.HeaderWriterFilter@79378802, org.springframework.web.filter.CorsFilter@3a571d3e, org.springframework.security.web.authentication.logout.LogoutFilter@2dacaa7f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@382fba37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f34d178, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75c8ba94, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d00b076, org.springframework.security.web.session.SessionManagementFilter@51413d02, org.springframework.security.web.access.ExceptionTranslationFilter@7b6824db, org.springframework.security.web.access.intercept.AuthorizationFilter@74de1e9d]
+2023-05-12 18:10:52.279  INFO 3440 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 38485 (http) with context path ''
+2023-05-12 18:10:52.302  INFO 3440 --- [    Test worker] e.o.b.c.c.p.p.CustomerPactProviderTest   : Started CustomerPactProviderTest in 5.508 seconds (JVM running for 9.669)
+2023-05-12 18:10:52.485  INFO 3440 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:46203/mem:0105ea81-f3af-4d41-a584-16f87a4ccd32;USER=sa', scope='CustomerPactProviderTest#verifyPact'
+2023-05-12 18:10:52.486  INFO 3440 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
 
 Verifying a pact between consumerB and customerAPI
   [Using File /home/runner/work/arch-blueprint-java/arch-blueprint-java/build/resources/contractTest/customer/cdc/pact/consumerB-customerAPI.json]
@@ -186,16 +186,16 @@ Verifying a pact between consumerB and customerAPI
 
   Comments:
 
-2023-05-11 14:00:55.777  INFO 3340 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-11 14:00:55.777  INFO 3340 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-05-11 14:00:55.778  INFO 3340 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-12 18:10:52.720  INFO 3440 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-12 18:10:52.720  INFO 3440 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-12 18:10:52.721  INFO 3440 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
     returns a response which
       has status code 200 (OK)
       has a matching body (OK)
-2023-05-11 14:00:56.180  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 2 were verified. The following were missing:
-2023-05-11 14:00:56.181  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     get existing customer without authentication
-2023-05-11 14:00:56.197  INFO 3340 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:38909/mem:37662fed-4401-4434-890b-a7459a7a533a;USER=sa', scope='CustomerPactProviderTest#verifyPact'
-2023-05-11 14:00:56.198  INFO 3340 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
+2023-05-12 18:10:53.082  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 2 were verified. The following were missing:
+2023-05-12 18:10:53.083  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     get existing customer without authentication
+2023-05-12 18:10:53.097  INFO 3440 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:46203/mem:0105ea81-f3af-4d41-a584-16f87a4ccd32;USER=sa', scope='CustomerPactProviderTest#verifyPact'
+2023-05-12 18:10:53.098  INFO 3440 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
 
 Verifying a pact between consumerB and customerAPI
   [Using File /home/runner/work/arch-blueprint-java/arch-blueprint-java/build/resources/contractTest/customer/cdc/pact/consumerB-customerAPI.json]
@@ -204,13 +204,13 @@ Verifying a pact between consumerB and customerAPI
 
   Comments:
 
-2023-05-11 14:00:56.248  WARN 3340 --- [o-auto-1-exec-2] o.z.problem.spring.common.AdviceTraits   : Unauthorized: Full authentication is required to access this resource
+2023-05-12 18:10:53.109  WARN 3440 --- [o-auto-1-exec-2] o.z.problem.spring.common.AdviceTraits   : Unauthorized: Full authentication is required to access this resource
     returns a response which
       has status code 401 (OK)
       has a matching body (OK)
-2023-05-11 14:00:56.295  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Skipping publishing of verification results as it has been disabled (pact.verifier.publishResults is not 'true')
-2023-05-11 14:00:56.314  INFO 3340 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:38909/mem:37662fed-4401-4434-890b-a7459a7a533a;USER=sa', scope='CustomerPactProviderTest#verifyPact'
-2023-05-11 14:00:56.316  INFO 3340 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
+2023-05-12 18:10:53.140  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Skipping publishing of verification results as it has been disabled (pact.verifier.publishResults is not 'true')
+2023-05-12 18:10:53.149  INFO 3440 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:46203/mem:0105ea81-f3af-4d41-a584-16f87a4ccd32;USER=sa', scope='CustomerPactProviderTest#verifyPact'
+2023-05-12 18:10:53.149  INFO 3440 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
 
 Verifying a pact between consumerA and customerAPI
   [Using File /home/runner/work/arch-blueprint-java/arch-blueprint-java/build/resources/contractTest/customer/cdc/pact/consumerA-customerAPI.json]
@@ -222,12 +222,12 @@ Verifying a pact between consumerA and customerAPI
     returns a response which
       has status code 200 (OK)
       has a matching body (OK)
-2023-05-11 14:00:56.437  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 4 were verified. The following were missing:
-2023-05-11 14:00:56.437  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     remove existing customer interaction
-2023-05-11 14:00:56.437  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     replace existing customer interaction
-2023-05-11 14:00:56.437  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     add new customer interaction
-2023-05-11 14:00:56.458  INFO 3340 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:38909/mem:37662fed-4401-4434-890b-a7459a7a533a;USER=sa', scope='CustomerPactProviderTest#verifyPact'
-2023-05-11 14:00:56.460  INFO 3340 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
+2023-05-12 18:10:53.331  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 4 were verified. The following were missing:
+2023-05-12 18:10:53.331  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     remove existing customer interaction
+2023-05-12 18:10:53.331  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     replace existing customer interaction
+2023-05-12 18:10:53.331  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     add new customer interaction
+2023-05-12 18:10:53.340  INFO 3440 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:46203/mem:0105ea81-f3af-4d41-a584-16f87a4ccd32;USER=sa', scope='CustomerPactProviderTest#verifyPact'
+2023-05-12 18:10:53.341  INFO 3440 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
 
 Verifying a pact between consumerA and customerAPI
   [Using File /home/runner/work/arch-blueprint-java/arch-blueprint-java/build/resources/contractTest/customer/cdc/pact/consumerA-customerAPI.json]
@@ -239,11 +239,11 @@ Verifying a pact between consumerA and customerAPI
     returns a response which
       has status code 204 (OK)
       has a matching body (OK)
-2023-05-11 14:00:56.580  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 4 were verified. The following were missing:
-2023-05-11 14:00:56.580  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     replace existing customer interaction
-2023-05-11 14:00:56.580  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     add new customer interaction
-2023-05-11 14:00:56.596  INFO 3340 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:38909/mem:37662fed-4401-4434-890b-a7459a7a533a;USER=sa', scope='CustomerPactProviderTest#verifyPact'
-2023-05-11 14:00:56.597  INFO 3340 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
+2023-05-12 18:10:53.453  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 4 were verified. The following were missing:
+2023-05-12 18:10:53.453  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     replace existing customer interaction
+2023-05-12 18:10:53.453  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     add new customer interaction
+2023-05-12 18:10:53.462  INFO 3440 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:46203/mem:0105ea81-f3af-4d41-a584-16f87a4ccd32;USER=sa', scope='CustomerPactProviderTest#verifyPact'
+2023-05-12 18:10:53.462  INFO 3440 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'an existing customer':SETUP
 
 Verifying a pact between consumerA and customerAPI
   [Using File /home/runner/work/arch-blueprint-java/arch-blueprint-java/build/resources/contractTest/customer/cdc/pact/consumerA-customerAPI.json]
@@ -255,10 +255,10 @@ Verifying a pact between consumerA and customerAPI
     returns a response which
       has status code 204 (OK)
       has a matching body (OK)
-2023-05-11 14:00:56.728  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 4 were verified. The following were missing:
-2023-05-11 14:00:56.728  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     add new customer interaction
-2023-05-11 14:00:56.737  INFO 3340 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:38909/mem:37662fed-4401-4434-890b-a7459a7a533a;USER=sa', scope='CustomerPactProviderTest#verifyPact'
-2023-05-11 14:00:56.738  INFO 3340 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'with default customer id':SETUP
+2023-05-12 18:10:53.592  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Not all of the 4 were verified. The following were missing:
+2023-05-12 18:10:53.592  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   :     add new customer interaction
+2023-05-12 18:10:53.601  INFO 3440 --- [    Test worker] i.z.t.d.l.EmbeddedDatabaseReporter       : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:46203/mem:0105ea81-f3af-4d41-a584-16f87a4ccd32;USER=sa', scope='CustomerPactProviderTest#verifyPact'
+2023-05-12 18:10:53.601  INFO 3440 --- [    Test worker] p.j.PactVerificationStateChangeExtension : Invoking state change method 'with default customer id':SETUP
 
 Verifying a pact between consumerA and customerAPI
   [Using File /home/runner/work/arch-blueprint-java/arch-blueprint-java/build/resources/contractTest/customer/cdc/pact/consumerA-customerAPI.json]
@@ -270,7 +270,7 @@ Verifying a pact between consumerA and customerAPI
     returns a response which
       has status code 201 (OK)
       has a matching body (OK)
-2023-05-11 14:00:56.855  WARN 3340 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Skipping publishing of verification results as it has been disabled (pact.verifier.publishResults is not 'true')
+2023-05-12 18:10:53.718  WARN 3440 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Skipping publishing of verification results as it has been disabled (pact.verifier.publishResults is not 'true')
 </pre>
 </span>
 </div>
@@ -282,7 +282,7 @@ Verifying a pact between consumerA and customerAPI
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 11, 2023, 2:01:00 PM</p>
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 12, 2023, 6:10:57 PM</p>
 </div>
 </div>
 </body>
