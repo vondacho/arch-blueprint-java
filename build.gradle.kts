@@ -5,7 +5,7 @@ import ru.vyarus.gradle.plugin.python.PythonExtension
 
 plugins {
     id("java")
-    id("org.springframework.boot") version "2.7.10"
+    id("org.springframework.boot") version "3.1.0"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
     id("org.springframework.cloud.contract") version "3.1.6"
     id("au.com.dius.pact") version "4.5.5"
