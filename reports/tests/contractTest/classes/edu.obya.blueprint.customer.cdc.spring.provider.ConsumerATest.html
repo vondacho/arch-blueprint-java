@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.087s</div>
+<div class="counter">1.003s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,22 +79,22 @@
 </thead>
 <tr>
 <td class="success">validate_should_remove_the_customer_at_given_id()</td>
-<td class="success">0.136s</td>
+<td class="success">0.099s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">validate_should_replace_the_existing_customer_at_given_id()</td>
-<td class="success">0.669s</td>
+<td class="success">0.632s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">validate_should_return_a_well_formatted_existing_customer()</td>
-<td class="success">0.150s</td>
+<td class="success">0.130s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">validate_should_return_the_id_of_created_customer()</td>
-<td class="success">0.132s</td>
+<td class="success">0.142s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,19 +102,19 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-05-12 18:10:53.728  INFO 3440 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest], using SpringBootContextLoader
-2023-05-12 18:10:53.728  INFO 3440 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-05-12 18:10:53.728  INFO 3440 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest]: ConsumerATest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-05-12 18:10:53.735  INFO 3440 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.obya.blueprint.Application for test class edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest
-2023-05-12 18:10:53.736  INFO 3440 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener, io.zonky.test.db.event.EventPublishingTestExecutionListener, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener]
-2023-05-12 18:10:53.737  INFO 3440 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5802572b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c05fb12, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@702f99a5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7b303608, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31419d4a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@220f2d1b, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener@2ee16a4e, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener@541b89ec, org.springframework.test.context.transaction.TransactionalTestExecutionListener@698df5e8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@32317a37, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1727d525, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f7b7ac4, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@19dffe76, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2086dfb8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@9a1b870, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d484eda, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2b82254b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3d6f549c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@39090979, io.zonky.test.db.event.EventPublishingTestExecutionListener@3638ae1c]
+<pre>2023-05-22 08:56:09.763  INFO 3425 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest], using SpringBootContextLoader
+2023-05-22 08:56:09.764  INFO 3425 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-22 08:56:09.764  INFO 3425 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest]: ConsumerATest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-22 08:56:09.785  INFO 3425 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.obya.blueprint.Application for test class edu.obya.blueprint.customer.cdc.spring.provider.ConsumerATest
+2023-05-22 08:56:09.786  INFO 3425 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener, io.zonky.test.db.event.EventPublishingTestExecutionListener, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener]
+2023-05-22 08:56:09.787  INFO 3425 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6f475ede, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@353f73ac, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2c47135c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3faadc24, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6acec4a1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@24a26847, io.zonky.test.db.EmbeddedDatabaseTestExecutionListener@30eb427c, io.zonky.test.db.flyway.OptimizedFlywayTestExecutionListener@59c9e3b9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@45bedfed, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7269674d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@187b33de, org.springframework.test.context.event.EventPublishingTestExecutionListener@e39df43, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3dcb28de, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4a16325, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@450555ac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5064988, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@616f1c2e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6e58f36d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@11f633f, io.zonky.test.db.event.EventPublishingTestExecutionListener@3662309d]
  ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗███████╗██████╗ 
 ██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║██╔════╝██╔══██╗
 ██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║█████╗  ██████╔╝
 ██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗
 ╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║
  ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
-2023-05-12 18:10:53.761  WARN 3440 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2023-05-22 08:56:09.843  WARN 3425 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -123,20 +123,20 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-05-12 18:10:53.762  INFO 3440 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : Starting ConsumerATest using Java 17.0.7 on fv-az370-986 with PID 3440 (started by runner in /home/runner/work/arch-blueprint-java/arch-blueprint-java)
-2023-05-12 18:10:53.762  INFO 3440 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : The following 1 profile is active: &quot;test&quot;
-2023-05-12 18:10:54.156  INFO 3440 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration' of type [org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-05-12 18:10:54.659  INFO 3440 --- [    Test worker] s.w.a.s.ProblemSecurityBeanPostProcessor : Register HttpSecurity's exceptionHandling
-2023-05-12 18:10:54.836  INFO 3440 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoint(s) beneath base path '/admin'
-2023-05-12 18:10:54.862  INFO 3440 --- [    Test worker] o.z.p.s.w.a.s.ProblemHttpConfigurer      : Register HttpSecurity's exceptionHandling
-2023-05-12 18:10:54.907  INFO 3440 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e66340, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52478bf5, org.springframework.security.web.context.SecurityContextPersistenceFilter@324fb35d, org.springframework.security.web.header.HeaderWriterFilter@26a8eaaa, org.springframework.web.filter.CorsFilter@50cbe633, org.springframework.security.web.authentication.logout.LogoutFilter@79200f8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1f8315cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ff5aa42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ee9fcac, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57e1bc88, org.springframework.security.web.session.SessionManagementFilter@540e593f, org.springframework.security.web.access.ExceptionTranslationFilter@364178de, org.springframework.security.web.access.intercept.AuthorizationFilter@88151e7]
-2023-05-12 18:10:55.159  INFO 3440 --- [    Test worker] o.s.c.c.v.m.i.ContractVerifierMessaging  : The message verifier implementation is of type [class org.springframework.cloud.contract.verifier.messaging.noop.NoOpStubMessages]
-2023-05-12 18:10:55.182  INFO 3440 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : Started ConsumerATest in 1.441 seconds (JVM running for 12.55)
-2023-05-12 18:10:55.552  INFO 3440 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2023-05-12 18:10:55.552  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-05-12 18:10:55.552  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-05-12 18:10:55.789  INFO 3440 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-05-12 18:10:55.803  INFO 3440 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-22 08:56:09.845  INFO 3425 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : Starting ConsumerATest using Java 17.0.7 on fv-az402-757 with PID 3425 (started by runner in /home/runner/work/arch-blueprint-java/arch-blueprint-java)
+2023-05-22 08:56:09.845  INFO 3425 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : The following 1 profile is active: &quot;test&quot;
+2023-05-22 08:56:10.224  INFO 3425 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration' of type [org.zalando.problem.spring.web.autoconfigure.security.ProblemSecurityAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-22 08:56:10.786  INFO 3425 --- [    Test worker] s.w.a.s.ProblemSecurityBeanPostProcessor : Register HttpSecurity's exceptionHandling
+2023-05-22 08:56:10.893  INFO 3425 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoint(s) beneath base path '/admin'
+2023-05-22 08:56:10.921  INFO 3425 --- [    Test worker] o.z.p.s.w.a.s.ProblemHttpConfigurer      : Register HttpSecurity's exceptionHandling
+2023-05-22 08:56:10.963  INFO 3425 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ed8a7ab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5afefa87, org.springframework.security.web.context.SecurityContextPersistenceFilter@60bd3a8b, org.springframework.security.web.header.HeaderWriterFilter@2defc6c1, org.springframework.web.filter.CorsFilter@4b0393ee, org.springframework.security.web.authentication.logout.LogoutFilter@542aa32a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5eab0592, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b5b5011, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8d15c75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d829889, org.springframework.security.web.session.SessionManagementFilter@298f8835, org.springframework.security.web.access.ExceptionTranslationFilter@3f008bb6, org.springframework.security.web.access.intercept.AuthorizationFilter@5f19dea8]
+2023-05-22 08:56:11.225  INFO 3425 --- [    Test worker] o.s.c.c.v.m.i.ContractVerifierMessaging  : The message verifier implementation is of type [class org.springframework.cloud.contract.verifier.messaging.noop.NoOpStubMessages]
+2023-05-22 08:56:11.246  INFO 3425 --- [    Test worker] e.o.b.c.c.spring.provider.ConsumerATest  : Started ConsumerATest in 1.452 seconds (JVM running for 12.446)
+2023-05-22 08:56:11.577  INFO 3425 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-22 08:56:11.577  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-22 08:56:11.577  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-22 08:56:11.792  INFO 3425 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-22 08:56:11.811  INFO 3425 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
 
 MockHttpServletRequest:
       HTTP Method = PUT
@@ -174,9 +174,9 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2023-05-12 18:10:55.872  INFO 3440 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2023-05-12 18:10:55.872  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-05-12 18:10:55.872  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-22 08:56:11.905  INFO 3425 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-22 08:56:11.905  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-22 08:56:11.905  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -210,13 +210,13 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Vary:&quot;Origin&quot;, &quot;Access-Control-Request-Method&quot;, &quot;Access-Control-Request-Headers&quot;, Content-Type:&quot;text/plain&quot;, Content-Length:&quot;36&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
      Content type = text/plain
-             Body = 96366b25-4321-4d59-b380-8fd5824e1332
+             Body = 07d7bdf8-3eaf-4130-8787-df182e673388
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2023-05-12 18:10:56.005  INFO 3440 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2023-05-12 18:10:56.005  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-05-12 18:10:56.005  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-22 08:56:12.044  INFO 3425 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-22 08:56:12.045  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-22 08:56:12.045  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = DELETE
@@ -224,7 +224,7 @@ MockHttpServletRequest:
        Parameters = {}
           Headers = [Authorization:&quot;Basic YWRtaW46YWRtaW4=&quot;]
              Body = &lt;no character encoding set&gt;
-    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]]}
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]]}
 
 Handler:
              Type = edu.obya.blueprint.customer.adapter.rest.CustomerController
@@ -254,9 +254,9 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2023-05-12 18:10:56.151  INFO 3440 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
-2023-05-12 18:10:56.151  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-05-12 18:10:56.151  INFO 3440 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-22 08:56:12.145  INFO 3425 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-22 08:56:12.145  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-22 08:56:12.145  INFO 3425 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -305,7 +305,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 12, 2023, 6:10:57 PM</p>
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 22, 2023, 8:56:13 AM</p>
 </div>
 </div>
 </body>

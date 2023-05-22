@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="14.951" tests="23" skipped="0" failures="0" errors="0">
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the read permission can read data - A user must be authenticated to read" time="0.284">
+<testsuite name="Cucumber" time="14.814" tests="23" skipped="0" failures="0" errors="0">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the read permission can read data - A user must be authenticated to read" time="0.308">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user is not authenticated.............................................passed
@@ -8,7 +8,7 @@ When getting existing customer ce751f30-217a-422c-b81b-8f75df4917b6.........pass
 Then the response status is UNAUTHORIZED....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the read permission can read data - A user with no permission cannot read" time="0.181">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the read permission can read data - A user with no permission cannot read" time="0.169">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user has no permission................................................passed
@@ -16,7 +16,7 @@ When getting existing customer ce751f30-217a-422c-b81b-8f75df4917b6.........pass
 Then the response status is FORBIDDEN.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user must be authenticated to create" time="0.139">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user must be authenticated to create" time="0.108">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user is not authenticated.............................................passed
@@ -24,7 +24,7 @@ When registering the new customer...........................................pass
 Then the response status is UNAUTHORIZED....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with no permission cannot create" time="0.135">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with no permission cannot create" time="0.108">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user has no permission................................................passed
@@ -32,7 +32,7 @@ When registering the new customer...........................................pass
 Then the response status is FORBIDDEN.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user must be authenticated to modify" time="0.119">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user must be authenticated to modify" time="0.099">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user is not authenticated.............................................passed
@@ -40,7 +40,7 @@ When replacing existing customer ce751f30-217a-422c-b81b-8f75df4917b6.......pass
 Then the response status is UNAUTHORIZED....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with no permission cannot modify" time="0.119">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with no permission cannot modify" time="0.098">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user has no permission................................................passed
@@ -48,7 +48,7 @@ When replacing existing customer ce751f30-217a-422c-b81b-8f75df4917b6.......pass
 Then the response status is FORBIDDEN.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user must be authenticated to remove" time="0.114">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user must be authenticated to remove" time="0.095">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user is not authenticated.............................................passed
@@ -56,7 +56,7 @@ When removing existing customer ce751f30-217a-422c-b81b-8f75df4917b6........pass
 Then the response status is UNAUTHORIZED....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with no permission cannot remove" time="0.118">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with no permission cannot remove" time="0.11">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user has no permission................................................passed
@@ -64,7 +64,7 @@ When removing existing customer ce751f30-217a-422c-b81b-8f75df4917b6........pass
 Then the response status is FORBIDDEN.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with write permission cannot remove" time="0.212">
+<testcase classname="To allow only legitimate users to read and write data" name="Only authenticated users who have the write permission can write data - A user with write permission cannot remove" time="0.227">
 <system-out><![CDATA[
 Given a following set of existing customers.................................passed
 Given user has write permission.............................................passed
@@ -72,7 +72,7 @@ When removing existing customer ce751f30-217a-422c-b81b-8f75df4917b6........pass
 Then the response status is FORBIDDEN.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To create one new customer" name="An existing customer is a persisted resource in the system. - Add a new customer to the existing customers" time="0.383">
+<testcase classname="To create one new customer" name="An existing customer is a persisted resource in the system. - Add a new customer to the existing customers" time="0.368">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -83,7 +83,7 @@ And the returned customer id is afd9ce9f-ee0e-4547-8c77-3cc43ec85dbc........pass
 And the set of existing customers is the following..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.1" time="0.173">
+<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.1" time="0.144">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -93,7 +93,7 @@ Then the response status is BAD_REQUEST.....................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.2" time="0.13">
+<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.2" time="0.15">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -103,7 +103,7 @@ Then the response status is BAD_REQUEST.....................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.3" time="0.13">
+<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.3" time="0.112">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -113,7 +113,7 @@ Then the response status is BAD_REQUEST.....................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.4" time="0.169">
+<testcase classname="To create one new customer" name="An existing customer has a valid set of attributes. - Add a customer with some invalid attributes - Example #1.4" time="0.111">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -123,7 +123,7 @@ Then the response status is BAD_REQUEST.....................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To list one or more customers" name="List all customers" time="0.163">
+<testcase classname="To list one or more customers" name="List all customers" time="0.274">
 <system-out><![CDATA[
 Given user has read permission..............................................passed
 And a following set of existing customers...................................passed
@@ -132,7 +132,7 @@ Then the response status is OK..............................................pass
 And the response contains the following customers...........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To list one or more customers" name="Show one customer" time="0.138">
+<testcase classname="To list one or more customers" name="Show one customer" time="0.108">
 <system-out><![CDATA[
 Given user has read permission..............................................passed
 And a following set of existing customers...................................passed
@@ -141,7 +141,7 @@ Then the response status is OK..............................................pass
 And the response contains only the following customer.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To remove one existing customer" name="customer does exist" time="0.129">
+<testcase classname="To remove one existing customer" name="customer does exist" time="0.107">
 <system-out><![CDATA[
 Given user has remove permission............................................passed
 And a following set of existing customers...................................passed
@@ -150,7 +150,7 @@ Then the response status is NO_CONTENT......................................pass
 And the set of existing customer ids is the following.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To remove one existing customer" name="customer does not exist" time="0.131">
+<testcase classname="To remove one existing customer" name="customer does not exist" time="0.113">
 <system-out><![CDATA[
 Given user has remove permission............................................passed
 And a following set of existing customers...................................passed
@@ -159,7 +159,7 @@ Then the response status is NOT_FOUND.......................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To update an existing customer" name="replace one customer" time="0.123">
+<testcase classname="To update an existing customer" name="replace one customer" time="0.108">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -168,7 +168,7 @@ Then the response status is NO_CONTENT......................................pass
 And the set of existing customers is the following..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.1" time="0.117">
+<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.1" time="0.099">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -177,7 +177,7 @@ Then the response status is BAD_REQUEST.....................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.2" time="0.116">
+<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.2" time="0.115">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -186,7 +186,7 @@ Then the response status is BAD_REQUEST.....................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.3" time="0.116">
+<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.3" time="0.109">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed
@@ -195,7 +195,7 @@ Then the response status is BAD_REQUEST.....................................pass
 And the set of existing customers is left unchanged.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.4" time="0.157">
+<testcase classname="To update an existing customer" name="replace a customer with some invalid attributes - Example #1.4" time="0.108">
 <system-out><![CDATA[
 Given user has write permission.............................................passed
 And a following set of existing customers...................................passed

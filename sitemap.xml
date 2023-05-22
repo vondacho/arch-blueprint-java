@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://vondacho.github.io/arch-blueprint-java/</loc>
-         <lastmod>2023-05-12</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vondacho.github.io/arch-blueprint-java/architecture/</loc>
-         <lastmod>2023-05-12</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vondacho.github.io/arch-blueprint-java/miscellaneous/</loc>
-         <lastmod>2023-05-12</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vondacho.github.io/arch-blueprint-java/testing/</loc>
-         <lastmod>2023-05-12</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

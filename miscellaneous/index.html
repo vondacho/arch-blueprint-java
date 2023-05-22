@@ -325,8 +325,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#appmap-resources" class="md-nav__link">
-    AppMap resources
+  <a href="#publication-to-structurizr-cloud" class="md-nav__link">
+    Publication to Structurizr cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-components-flows" class="md-nav__link">
+    Map components flows
   </a>
   
 </li>
@@ -394,8 +401,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#appmap-resources" class="md-nav__link">
-    AppMap resources
+  <a href="#publication-to-structurizr-cloud" class="md-nav__link">
+    Publication to Structurizr cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-components-flows" class="md-nav__link">
+    Map components flows
   </a>
   
 </li>
@@ -444,9 +458,21 @@
 <h1 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h1>
 <h2 id="this-documentation">This documentation<a class="headerlink" href="#this-documentation" title="Permanent link">&para;</a></h2>
 <p>Build technical documentation with <code>./gradlew allureAggregateReport plantumlAll generateSwaggerUI mkdocsBuild</code>.</p>
-<h2 id="appmap-resources">AppMap resources<a class="headerlink" href="#appmap-resources" title="Permanent link">&para;</a></h2>
-<p>Generate AppMap resources with <code>./gradlew appmap test</code>.</p>
-<p>View your local AppMap resources following <a href="https://github.com/vondacho/appmap-viewer#getting-started">this tutorial</a>.</p>
+<h2 id="publication-to-structurizr-cloud">Publication to Structurizr cloud<a class="headerlink" href="#publication-to-structurizr-cloud" title="Permanent link">&para;</a></h2>
+<ul>
+<li>To have a free account on https://structurizr.com/help/getting-started</li>
+<li>To run:
+  <code>java \
+  -cp ./build/libs/arch-blueprint-java.jar \
+  -Dloader.main=edu.obya.blueprint.customer.c4.BlueprintC4Model \
+  org.springframework.boot.loader.PropertiesLauncher \
+  ./src/c4/c4-blueprint-java.dsl \
+  &lt;workspace-id&gt;</code></li>
+<li>To visualize your architecture model at https://structurizr.com/</li>
+</ul>
+<h2 id="map-components-flows">Map components flows<a class="headerlink" href="#map-components-flows" title="Permanent link">&para;</a></h2>
+<p>Record components flows with <code>./gradlew appmap test</code>.</p>
+<p>Then, view your local AppMap JSON resources following <a href="https://github.com/vondacho/appmap-viewer#getting-started">this tutorial</a>.</p>
 <h2 id="release">Release<a class="headerlink" href="#release" title="Permanent link">&para;</a></h2>
 <p>Draft new release of the application from GitHub <a href="https://github.com/vondacho/arch-blueprint-java/releases">release panel</a>.</p>
 <h2 id="test-users">Test users<a class="headerlink" href="#test-users" title="Permanent link">&para;</a></h2>
