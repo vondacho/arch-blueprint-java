@@ -12,13 +12,18 @@ import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration;
+import org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration;
+import org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration;
+import org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration;
+import org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration;
+import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,17 +43,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ActiveProfiles({"test", "jpa"})
-@Import({
+@AutoConfigureDataJpa
+@AutoConfigureEmbeddedDatabase
+@ContextConfiguration(classes = {
+        CustomerController.class,
         CustomerWebConfiguration.class,
         WebSecurityConfiguration.class,
         WebValidationConfiguration.class,
         ExceptionHandling.class,
         CustomerJpaConfiguration.class,
-        CustomerApplicationConfiguration.class})
-@AutoConfigureEmbeddedDatabase
-@AutoConfigureMockMvc
-@SpringBootTest
-public class CustomerEndpointIT {
+        CustomerApplicationConfiguration.class,
+        MetricsAutoConfiguration.class,
+        CompositeMeterRegistryAutoConfiguration.class
+})
+@WebMvcTest(excludeAutoConfiguration = {
+        HealthEndpointAutoConfiguration.class,
+        InfoEndpointAutoConfiguration.class,
+        ShutdownEndpointAutoConfiguration.class
+})
+public class CustomerControllerIT {
 
     @Autowired
     MockMvc mockMvc;

@@ -6,9 +6,9 @@ import ru.vyarus.gradle.plugin.python.PythonExtension
 plugins {
     id("java")
     id("org.springframework.boot") version "2.7.10"
+    id("io.spring.dependency-management") version "1.0.15.RELEASE"
     id("org.springframework.cloud.contract") version "3.1.6"
     id("au.com.dius.pact") version "4.5.5"
-    id("io.spring.dependency-management") version "1.0.15.RELEASE"
     id("io.qameta.allure-aggregate-report") version "2.11.2"
     id("com.appland.appmap") version "1.1.1"
     id("org.hidetake.swagger.generator") version "2.19.2"
@@ -133,7 +133,7 @@ allure {
 }
 
 appmap {
-    configFile.set(file("$projectDir/src/doc/appmap.yml"))
+    configFile.set(file("$projectDir/appmap.yml"))
     outputDirectory.set(file("$buildDir/appmap"))
     isSkip = false
     debug = "info"
@@ -153,13 +153,13 @@ plantuml {
     }
     diagrams {
         create("hexagonal") {
-            sourceFile = project.file("src/doc/uml/hexagonal.puml")
+            sourceFile = project.file("doc/uml/hexagonal.puml")
         }
         create("domain-model") {
-            sourceFile = project.file("src/doc/uml/domain-model.puml")
+            sourceFile = project.file("doc/uml/domain-model.puml")
         }
         create("data-model") {
-            sourceFile = project.file("src/doc/uml/data-model.puml")
+            sourceFile = project.file("doc/uml/data-model.puml")
         }
     }
 }
@@ -171,7 +171,7 @@ python {
 mkdocs {
     strict = false
     updateSiteUrl = false
-    sourcesDir = "src/doc"
+    sourcesDir = "doc"
     buildDir = "build/mkdocs"
     publish.docPath = ""
 }
@@ -188,7 +188,7 @@ gitPublish {
         from("build/swagger-ui-apidoc") {
             into("api")
         }
-        from("src/doc/postman") {
+        from("doc/postman") {
             into("postman")
         }
         from("build/appmap/junit") {

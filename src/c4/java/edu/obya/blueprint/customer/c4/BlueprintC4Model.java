@@ -17,8 +17,7 @@ public class BlueprintC4Model {
     public static void main(String... args) {
         if (args.length >= 1) {
             try {
-                val dslPath = args[0];
-                val workspace = getWorkspaceFromDslFile(dslPath);
+                val workspace = getWorkspaceFromDslFile(args[0]);
 
                 // find predefined blueprint api container
                 val system = workspace.getModel().getSoftwareSystemWithName("blueprint-system");
@@ -42,13 +41,13 @@ public class BlueprintC4Model {
                         "blueprint-api-components",
                         "The components inside the Blueprint API container"
                 );
+                componentView.setExternalSoftwareSystemBoundariesVisible(true);
                 componentView.addAllElements();
 
                 WorkspaceUtils.printWorkspaceAsJson(workspace);
 
                 if (args.length > 1) {
-                    val workspaceId = Long.valueOf(args[1]);
-                    uploadWorkspace(workspace, workspaceId);
+                    uploadWorkspace(workspace, Long.valueOf(args[1]));
                 }
 
             } catch (Exception e) {

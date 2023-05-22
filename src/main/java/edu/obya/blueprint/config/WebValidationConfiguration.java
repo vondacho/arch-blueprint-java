@@ -12,7 +12,6 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.servlet.Filter;
-import java.io.IOException;
 
 @Configuration
 public class WebValidationConfiguration {
@@ -23,7 +22,7 @@ public class WebValidationConfiguration {
     }
 
     @Bean
-    public WebMvcConfigurer addOpenApiValidationInterceptor(OpenApiValidationInterceptor interceptor) throws IOException {
+    public WebMvcConfigurer addOpenApiValidationInterceptor(OpenApiValidationInterceptor interceptor) {
         return new WebMvcConfigurer() {
             @Override
             public void addInterceptors(final @NonNull InterceptorRegistry registry) {

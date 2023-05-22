@@ -1,12 +1,9 @@
 package edu.obya.blueprint.customer.application;
 
-import edu.obya.blueprint.customer.application.CustomerApplicationConfiguration;
-import edu.obya.blueprint.customer.application.CustomerDto;
-import edu.obya.blueprint.customer.application.CustomerService;
-import edu.obya.blueprint.customer.domain.model.Customer;
-import edu.obya.blueprint.customer.domain.service.CustomerNotFoundException;
-import edu.obya.blueprint.customer.domain.model.CustomerId;
 import edu.obya.blueprint.customer.adapter.jpa.CustomerJpaConfiguration;
+import edu.obya.blueprint.customer.domain.model.Customer;
+import edu.obya.blueprint.customer.domain.model.CustomerId;
+import edu.obya.blueprint.customer.domain.service.CustomerNotFoundException;
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +47,7 @@ public class CustomerServiceIT {
                 .containsExactly(modified.getFirstName(), modified.getLastName());
 
         service.remove(id);
-        assertThatThrownBy(() -> { service.get(id); }).isInstanceOf(CustomerNotFoundException.class);
+        assertThatThrownBy(() -> service.get(id)).isInstanceOf(CustomerNotFoundException.class);
     }
 
 }

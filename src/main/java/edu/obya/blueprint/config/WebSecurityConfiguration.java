@@ -33,7 +33,7 @@ public class WebSecurityConfiguration {
         http
                 .cors(withDefaults())
                 .authorizeHttpRequests((authz) -> authz
-                        .mvcMatchers("/customers", "/customers/**").hasAnyRole("USER","ADMIN")
+                        .mvcMatchers("/customers", "/customers/**").hasRole("USER")
                         .requestMatchers(EndpointRequest.to("health","info","metrics","loggers")).permitAll()
                         .requestMatchers(EndpointRequest.toAnyEndpoint()).hasAnyRole("ADMIN")
                         .anyRequest()
@@ -72,7 +72,7 @@ public class WebSecurityConfiguration {
                 User.builder()
                         .username("admin")
                         .password(passwordEncoder.encode("admin"))
-                        .roles("ADMIN")
+                        .roles("USER", "ADMIN")
                         .build()
         );
     }
@@ -95,7 +95,7 @@ public class WebSecurityConfiguration {
             User.builder()
                     .username("admin")
                     .password(passwordEncoder.encode("admin"))
-                    .roles("ADMIN")
+                    .roles("USER", "ADMIN")
                     .build()
         );
     }

@@ -30,7 +30,6 @@ Feature: To create one new customer
         | <first-name> | <last-name> |
       Then the response status is BAD_REQUEST
       And the set of existing customers is left unchanged
-
       Examples:
         | first-name | last-name |
         |            |           |

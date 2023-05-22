@@ -8,6 +8,7 @@ CRUD operations on Customer entities exposed by a REST API.
 
 - Web request validation with [Swagger request validator](https://bitbucket.org/atlassian/swagger-request-validator/src/master/)
 - Web security based on Basic Authentication
+- Exception handling with [Zalando problem handling](https://github.com/zalando/problem-spring-web)
 - Application management with Spring Actuator
 - Acceptance testing with [Cucumber](https://cucumber.io/docs/cucumber/)
 - Contract testing with [Pact](https://docs.pact.io/) and [Spring Cloud Contract](https://softwaremill.com/contract-testing-spring-cloud-contract/)

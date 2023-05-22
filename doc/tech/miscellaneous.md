@@ -3,10 +3,23 @@
 ## This documentation
 Build technical documentation with `./gradlew allureAggregateReport plantumlAll generateSwaggerUI mkdocsBuild`.
 
-## AppMap resources
-Generate AppMap resources with `./gradlew appmap test`.
+## Publication to Structurizr cloud
+- To have a free account on https://structurizr.com/help/getting-started
+- To run:
+  ```
+  java \
+  -cp ./build/libs/arch-blueprint-java.jar \
+  -Dloader.main=edu.obya.blueprint.customer.c4.BlueprintC4Model \
+  org.springframework.boot.loader.PropertiesLauncher \
+  ./src/c4/c4-blueprint-java.dsl \
+  <workspace-id>
+  ```
+- To visualize your architecture model at https://structurizr.com/
 
-View your local AppMap resources following [this tutorial](https://github.com/vondacho/appmap-viewer#getting-started).
+## Map components flows
+Record components flows with `./gradlew appmap test`.
+
+Then, view your local AppMap JSON resources following [this tutorial](https://github.com/vondacho/appmap-viewer#getting-started).
 
 ## Release
 Draft new release of the application from GitHub [release panel](https://github.com/vondacho/arch-blueprint-java/releases).

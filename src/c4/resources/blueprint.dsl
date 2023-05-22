@@ -15,7 +15,7 @@ workspace "Obya" "A set of system architectures represented with the C4 model" {
                 dbServer = container "database-server" "Manages database instances" "PostgreSQL" "infrastructure,database" {
                     dbInstance = component "database" "Stores customer data" "PostgreSQL" "infrastructure,schema"
                 }
-           }
+            }
             # internal persons
             user = person "User" "API client"
         }

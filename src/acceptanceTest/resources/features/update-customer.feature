@@ -24,7 +24,6 @@ Feature: To update an existing customer
       | <first-name> | <last-name> |
     Then the response status is BAD_REQUEST
     And the set of existing customers is left unchanged
-
     Examples:
       | id                                   | first-name | last-name |
       | ce751f30-217a-422c-b81b-8f75df4917b6 |            |           |

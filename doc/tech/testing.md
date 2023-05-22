@@ -6,8 +6,6 @@ Launch the whole tests suite with `./gradlew clean check`.
 ## Unit and integration testing
 Launch the unit and integration tests with `./gradlew test`.
 
-Record component interaction scenarios with `./gradlew appmap test`.
-
 ## Acceptance testing
 Launch the acceptance tests with `./gradlew acceptanceTest`.
 

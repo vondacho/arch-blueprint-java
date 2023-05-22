@@ -41,10 +41,10 @@ public class CustomerPactConsumerATest {
                 .uponReceiving("get existing customer interaction")
                 .method("GET")
                 .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID))
-                .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
                 .willRespondWith()
                 .status(200)
+                .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .body(newJsonBody(object -> {
                     object.uuid("id", TEST_CUSTOMER_ID.getId());
                     object.stringType("firstName", TEST_CUSTOMER_OUT.getFirstName());
@@ -66,11 +66,12 @@ public class CustomerPactConsumerATest {
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
                 .body(newJsonBody(object -> {
-                    object.stringType("firstName", TEST_CUSTOMER_STATE.getFirstName());
-                    object.stringType("lastName", TEST_CUSTOMER_STATE.getLastName());
+                    object.stringType("firstName", TEST_CUSTOMER_IN.getFirstName());
+                    object.stringType("lastName", TEST_CUSTOMER_IN.getLastName());
                 }).build())
                 .willRespondWith()
                 .status(201)
+                .matchHeader(CONTENT_TYPE, TEXT_PLAIN_VALUE, TEXT_PLAIN_VALUE)
                 .body(TEST_CUSTOMER_ID.getId().toString(), TEXT_PLAIN_VALUE)
                 .toPact()
                 .asV4Pact().get();
@@ -87,8 +88,8 @@ public class CustomerPactConsumerATest {
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
                 .body(newJsonBody(object -> {
-                    object.stringType("firstName", TEST_CUSTOMER_STATE.getFirstName());
-                    object.stringType("lastName", TEST_CUSTOMER_STATE.getLastName());
+                    object.stringType("firstName", TEST_CUSTOMER_IN.getFirstName());
+                    object.stringType("lastName", TEST_CUSTOMER_IN.getLastName());
                 }).build())
                 .willRespondWith()
                 .status(204)
