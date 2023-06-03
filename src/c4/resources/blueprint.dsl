@@ -7,6 +7,7 @@ enterprise "Obya" {
 
 # internal systems
 system = softwareSystem "blueprint-system" "A small system with one service and one database" "blueprint" {
+url https://vondacho.github.io/arch-blueprint-java/
 
 # containers
 api = container "blueprint-api" "Provides customer management endpoint" "Java/SpringBoot" "api,microservice" {
@@ -15,7 +16,9 @@ url https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondac
 
 # infrastructure containers
 dbServer = container "database-server" "Manages database instances" "PostgreSQL" "infrastructure,database" {
-dbInstance = component "database" "Stores customer data" "PostgreSQL" "infrastructure,schema"
+dbInstance = component "database" "Stores customer data" "PostgreSQL" "infrastructure,schema" {
+url https://vondacho.github.io/arch-blueprint-java/uml/data-model.svg
+}
 }
 }
 # internal persons
@@ -39,6 +42,9 @@ systemContext system "blueprint-context" "The context of the blueprint system" {
 include *
 }
 container system "blueprint-containers" "The containers inside the blueprint system" {
+include *
+}
+component dbServer "blueprint-databases" "The database instances inside the blueprint system" {
 include *
 }
 
