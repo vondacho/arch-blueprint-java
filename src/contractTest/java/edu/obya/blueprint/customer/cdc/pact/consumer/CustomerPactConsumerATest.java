@@ -45,12 +45,11 @@ public class CustomerPactConsumerATest {
                 .willRespondWith()
                 .status(200)
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
-                .body(newJsonBody(object -> {
-                    object.uuid("id", TEST_CUSTOMER_ID.getId());
-                    object.stringType("firstName", TEST_CUSTOMER_OUT.getFirstName());
-                    object.stringType("lastName", TEST_CUSTOMER_OUT.getLastName());
-                    object.stringType("fullName", TEST_CUSTOMER_OUT.getFullName());
-                }).build())
+                .body(newJsonBody(object -> object
+                    .uuid("id", TEST_CUSTOMER_ID.getId())
+                    .stringType("firstName", TEST_CUSTOMER_OUT.getFirstName())
+                    .stringType("lastName", TEST_CUSTOMER_OUT.getLastName())
+                    .stringType("fullName", TEST_CUSTOMER_OUT.getFullName())).build())
                 .toPact()
                 .asV4Pact().get();
     }
@@ -65,10 +64,9 @@ public class CustomerPactConsumerATest {
                 .path("/customers")
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
-                .body(newJsonBody(object -> {
-                    object.stringType("firstName", TEST_CUSTOMER_IN.getFirstName());
-                    object.stringType("lastName", TEST_CUSTOMER_IN.getLastName());
-                }).build())
+                .body(newJsonBody(object -> object
+                        .stringType("firstName", TEST_CUSTOMER_IN.getFirstName())
+                        .stringType("lastName", TEST_CUSTOMER_IN.getLastName())).build())
                 .willRespondWith()
                 .status(201)
                 .matchHeader(CONTENT_TYPE, TEXT_PLAIN_VALUE, TEXT_PLAIN_VALUE)
@@ -87,10 +85,9 @@ public class CustomerPactConsumerATest {
                 .matchPath(URI_WITH_ID_REGEX, String.format("/customers/%s", TEST_CUSTOMER_ID))
                 .matchHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE, APPLICATION_JSON_VALUE)
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
-                .body(newJsonBody(object -> {
-                    object.stringType("firstName", TEST_CUSTOMER_IN.getFirstName());
-                    object.stringType("lastName", TEST_CUSTOMER_IN.getLastName());
-                }).build())
+                .body(newJsonBody(object -> object
+                    .stringType("firstName", TEST_CUSTOMER_IN.getFirstName())
+                    .stringType("lastName", TEST_CUSTOMER_IN.getLastName())).build())
                 .willRespondWith()
                 .status(204)
                 .toPact()

@@ -45,12 +45,11 @@ public class CustomerPactConsumerBTest {
                 .matchHeader(AUTHORIZATION, BASIC_AUTH_REGEX, TEST_USER_TOKEN)
                 .willRespondWith()
                 .status(200)
-                .body(newJsonBody(object -> {
-                    object.uuid("id", TEST_CUSTOMER_ID.getId());
-                    object.stringType("firstName", TEST_CUSTOMER_OUT.getFirstName());
-                    object.stringType("lastName", TEST_CUSTOMER_OUT.getLastName());
-                    object.stringType("fullName", TEST_CUSTOMER_OUT.getFullName());
-                }).build())
+                .body(newJsonBody(object -> object
+                    .uuid("id", TEST_CUSTOMER_ID.getId())
+                    .stringType("firstName", TEST_CUSTOMER_OUT.getFirstName())
+                    .stringType("lastName", TEST_CUSTOMER_OUT.getLastName())
+                    .stringType("fullName", TEST_CUSTOMER_OUT.getFullName())).build())
                 .toPact()
                 .asV4Pact().get();
     }
