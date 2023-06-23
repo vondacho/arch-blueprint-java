@@ -8,7 +8,7 @@ plugins {
     id("org.springframework.boot") version "2.7.10"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
     id("org.springframework.cloud.contract") version "3.1.6"
-    id("au.com.dius.pact") version "4.5.5"
+    id("au.com.dius.pact") version "4.6.1"
     id("io.qameta.allure-aggregate-report") version "2.11.2"
     id("com.appland.appmap") version "1.1.1"
     id("org.hidetake.swagger.generator") version "2.19.2"
