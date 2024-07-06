@@ -1,4 +1,4 @@
-workspace "Obya" "A set of system architectures represented with the C4 model" {
+workspace "Arch-Blueprint-Java" "A set of system architectures represented with the C4 model" {
 
 model {
 impliedRelationships true
@@ -11,7 +11,7 @@ url https://vondacho.github.io/arch-blueprint-java/
 
 # containers
 api = container "blueprint-api" "Provides customer management endpoint" "Java/SpringBoot" "api,microservice" {
-url https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerControllerIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json
+url https://labor.obya.ch/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerControllerIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json
 }
 
 # infrastructure containers
@@ -34,6 +34,7 @@ url https://vondacho.github.io/arch-blueprint-java/api/
 
 # external systems
 # relationships
+api -> dbServer "reads from/writes to"
 }
 
 # views

@@ -1,14 +1,14 @@
 # Architecture
 
 ## C4
-- [System context](https://www.structurizr.com/share/38199/diagrams#blueprint-context)
-- [Container view](https://www.structurizr.com/share/38199/diagrams#blueprint-containers)
-- [Component view](https://www.structurizr.com/share/38199/diagrams#blueprint-api-components)
+- [System context](https://structurizr.obya.ch/share/1/diagrams#blueprint-context)
+- [Container view](https://structurizr.obya.ch/share/1diagrams#blueprint-containers)
+- [Component view](https://structurizr.obya.ch/share/1/diagrams#blueprint-api-components)
 
 ## AppMap
-- [E2E from API layer](https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerControllerIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json)
-- [E2E from Service layer](https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
-- [E2E from Data layer](https://appmap-viewer.herokuapp.com/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
+- [E2E from API layer](https://labor.obya.ch/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_rest_CustomerControllerIT_shouldCreateAndModifyAndDeleteCustomer.appmap.json)
+- [E2E from Service layer](https://labor.obya.ch/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_application_CustomerServiceIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
+- [E2E from Data layer](https://labor.obya.ch/appmap/appmap.html?appmap=https://vondacho.github.io/arch-blueprint-java/appmap/edu_obya_blueprint_customer_adapter_jpa_CustomerRepositoryIT_shouldCreateAndFindAndModifyAndRemoveACustomer.appmap.json)
 
 ## Hexagonal
 The logical layers are organized like an onion with the domain layer at the center.

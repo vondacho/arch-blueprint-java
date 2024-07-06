@@ -134,10 +134,10 @@ allure {
 
 appmap {
     configFile.set(file("$projectDir/appmap.yml"))
-    outputDirectory.set(file("$buildDir/appmap"))
+    outputDirectory.set(file("${layout.buildDirectory}/appmap"))
     isSkip = false
     debug = "info"
-    debugFile.set(file("$buildDir/appmap/agent.log"))
+    debugFile.set(file("${layout.buildDirectory}/appmap/agent.log"))
     eventValueSize = 1024
 }
 
