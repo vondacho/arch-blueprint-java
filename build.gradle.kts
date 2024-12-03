@@ -106,7 +106,7 @@ dependencies {
     }
     testImplementation("org.springframework.cloud:spring-cloud-starter-contract-verifier:${property("spring.cloud.contract.version")}")
     testImplementation("org.springframework.cloud:spring-cloud-contract-spec-kotlin:${property("spring.cloud.contract.version")}")
-    testImplementation("org.hibernate:hibernate-validator:5.2.5.Final")
+    testImplementation("org.hibernate:hibernate-validator:8.0.1.Final")
 
     // ARCH testing
     testImplementation("com.tngtech.archunit:archunit-junit5:1.0.1")
